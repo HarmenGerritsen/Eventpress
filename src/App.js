@@ -34,12 +34,12 @@ function App() {
       <Modal show={show} onHide={handleClose}>
 
         <Modal.Header className="popup">
-          <Modal.Title className="ModalTitle">Popup Titel</Modal.Title>
+          <Modal.Title className="ModalTitle">Evenement aanmaken</Modal.Title>
           <button className="closeButton" onClick={handleClose}>X</button>
         </Modal.Header>
 
         <Modal.Body>
-          <textarea className="textarea">Vul je event informatie in...</textarea>
+          <textarea className="textarea" placeholder="Vul hier je event informatie in..."></textarea>
         </Modal.Body>
 
         <Modal.Footer class="col text-center">
