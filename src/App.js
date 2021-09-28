@@ -1,42 +1,42 @@
 import plus from "./plus.png";
-import Popup from 'reactjs-popup';
+import Modal from "react-bootstrap/Modal";
+import { useState } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
-import 'reactjs-popup/dist/index.css';
 
 function App() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <div className="App">
       <div className="App-header">
         <p className="title">
           Eventpress
         </p>
-        <PopupButton />
+        <a href="#">
+          <img className="plus" onClick={handleShow} src={plus} alt=''>
+          </img>
+        </a>
       </div>
       <div>
-        <PopupExample />
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Popup Titel</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Popup</Modal.Body>
+        <Modal.Footer>
+          <button variant="secondary" onClick={handleClose}>
+            Close
+          </button>
+        </Modal.Footer>
+      </Modal>
       </div>
     </div>
   );
 }
-
-const PopupButton = () => (
-  <a href="#">
-    <img className="plus" src={plus} alt=''>
-    </img>
-  </a>
-)
-
-const PopupExample = () => (
-  <Popup trigger={PopupButton} position="left center">
-  {close => (
-    <div className="popup">
-      popup!
-      <a className="close" onClick={close}>
-      &times;
-      </a>
-    </div>
-  )}
-</Popup>
-);
 
 export default App;
