@@ -21,20 +21,27 @@ function App() {
           </img>
         </a>
       </div>
-      <div>
 
+      <div>
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+        
+        <Modal.Header className="popup" closeButton>
           <Modal.Title>Popup Titel</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Popup</Modal.Body>
+
+        <Modal.Body>
+          Popup
+        </Modal.Body>
+
         <Modal.Footer>
           <button variant="secondary" onClick={handleClose}>
             Close
           </button>
         </Modal.Footer>
+
       </Modal>
       </div>
+
     </div>
   );
 }
