@@ -24,19 +24,22 @@ function App() {
 
       <div>
       <Modal show={show} onHide={handleClose}>
-        
-        <Modal.Header className="popup" closeButton>
-          <Modal.Title>Popup Titel</Modal.Title>
+
+        <Modal.Header className="popup">
+          <Modal.Title className="ModalTitle">Popup Titel</Modal.Title>
+          <button className="closeButton" onClick={handleClose}>X</button>
         </Modal.Header>
 
         <Modal.Body>
-          Popup
+          <textarea className="textarea">Vul je event informatie in...</textarea>
         </Modal.Body>
 
-        <Modal.Footer>
-          <button variant="secondary" onClick={handleClose}>
-            Close
+        <Modal.Footer class="col text-center">
+          <button  type="button" class="btn btn-dark" variant="secondary" onClick={handleClose}>
+            Verzenden
           </button>
+          <br />
+          <p className="white">.</p>
         </Modal.Footer>
 
       </Modal>
