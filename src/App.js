@@ -3,6 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
+import fe1 from "./frontend1.png";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -18,6 +19,13 @@ function App() {
         </p>
         <a href="#">
           <img className="plus" onClick={handleShow} src={plus} alt=''>
+          </img>
+        </a>
+      </div>
+
+      <div className="App">
+        <a href="#">
+          <img className="fe1" src={fe1} alt=''>
           </img>
         </a>
       </div>
