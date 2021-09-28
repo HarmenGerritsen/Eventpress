@@ -28,7 +28,7 @@
   height: auto;
   background-color: rgb(44, 44, 97);
   border: none;
-  border-radius: 30px;
+  border-radius: 15px;
   margin-top: 5vh;
 }
 
@@ -43,11 +43,14 @@
 
 .textarea {
   color: black;
-  width: 20vw;
+  width: 23vw;
   height: 50vh;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border: solid 1px lightgrey;
+  border-radius: 2%;
+  padding: 2%;
 }
 
 .white {
