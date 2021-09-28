@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: rgb(244, 246, 247);
+  background-color: rgb(255, 0, 157);
   height: 100vh;
 }
 
@@ -52,6 +52,7 @@
 .textarea {
   color: black;
   width: 23vw;
+  height: 5vh;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -76,6 +77,12 @@
   font-size: 150%;
 }
 
+.backButton {
+  color: white;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  font-size: 200%;
+}
 .button {
   margin: 1%;
 }

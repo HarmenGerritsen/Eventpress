@@ -103,6 +103,9 @@ function App() {
           </Modal.Body>
 
           <Modal.Footer class="col text-center">
+          <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { handleClose3(); handleShow2(); }}>
+              Terug
+            </button>
             <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { handleClose3(); handleShow4(); }}>
               Verzenden
             </button>
