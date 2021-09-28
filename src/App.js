@@ -47,7 +47,7 @@ function App() {
         </Modal.Body>
 
         <Modal.Footer class="col text-center">
-          <button  type="button" class="btn btn-dark button" variant="secondary" onClick={handleClose2}>
+          <button  type="button" class="btn btn-dark button" variant="secondary" onClick={handleClose1}>
             Sluiten
           </button>
           <br />
@@ -74,7 +74,7 @@ function App() {
           <button type="button" class="btn btn-dark button" variant="secondary">
             Inschrijven
           </button>
-          <button  type="button" class="btn btn-dark button" variant="secondary" onClick={handleClose1}>
+          <button  type="button" class="btn btn-dark button" variant="secondary" onClick={handleClose2}>
             Sluiten
           </button>
           <br />

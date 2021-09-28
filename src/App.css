@@ -26,10 +26,11 @@
 .plus {
   width: 8vw;
   height: auto;
-  background-color: rgb(44, 44, 97);
-  border: none;
-  border-radius: 15px;
+  background-color: rgb(97, 97, 117);
+  border: solid 5px white;
+  border-radius: 50px;
   margin-top: 5vh;
+  padding: 10%;
 }
 
 .fe1 {
