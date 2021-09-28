@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Eventpressz
+          Eventpress
         </p>
       </header>
     </div>
