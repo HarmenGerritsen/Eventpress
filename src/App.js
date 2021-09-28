@@ -27,7 +27,7 @@ function App() {
         </a>
       </div>
 
-      <div className="App">
+      <div>
         <a href="#">
           <img onClick={handleShow2} className="fe1" src={fe1} alt=''>
           </img>
