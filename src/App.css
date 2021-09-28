@@ -52,13 +52,16 @@
 .textarea {
   color: black;
   width: 23vw;
-  height: 50vh;
   display: block;
   margin-left: auto;
   margin-right: auto;
   border: solid 1px lightgrey;
   border-radius: 2%;
   padding: 2%;
+}
+
+.eventtextarea {
+  height: 50vh;
 }
 
 .white {
