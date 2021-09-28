@@ -9,6 +9,7 @@ function App() {
   const [show1, setShow1] = useState(false);
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
+  const [show4, setShow4] = useState(false);
 
   const handleClose1 = () => setShow1(false);
   const handleShow1 = () => setShow1(true);
@@ -18,6 +19,9 @@ function App() {
 
   const handleClose3 = () => setShow3(false);
   const handleShow3 = () => setShow3(true);
+
+  const handleClose4 = () => setShow4(false);
+  const handleShow4 = () => setShow4(true);
 
   return (
     <div className="App">
@@ -99,8 +103,29 @@ function App() {
           </Modal.Body>
 
           <Modal.Footer class="col text-center">
-            <button type="button" class="btn btn-dark button" variant="secondary" onClick={handleClose3}>
+            <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { handleClose3(); handleShow4(); }}>
               Verzenden
+            </button>
+            <br />
+            <p className="white">.</p>
+          </Modal.Footer>
+
+        </Modal>
+
+        <Modal show={show4} onHide={handleClose4}>
+
+          <Modal.Header className="popup">
+            <Modal.Title className="ModalTitle">Inschrijven</Modal.Title>
+            <button className="closeButton" onClick={handleClose4}>X</button>
+          </Modal.Header>
+
+          <Modal.Body>
+            <p>Je bent ingeschreven</p>
+          </Modal.Body>
+
+          <Modal.Footer class="col text-center">
+            <button type="button" class="btn btn-dark button" variant="secondary" onClick={handleClose4}>
+              Sluiten
             </button>
             <br />
             <p className="white">.</p>
