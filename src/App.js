@@ -5,14 +5,9 @@ import fe1 from "./frontend1.png";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
-<<<<<<< HEAD
-=======
-import fe1 from "./frontend1.png";
-import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
->>>>>>> 2ad0a32c0339c0439d42130ea8fe9972ff033fe6
 
 function App() {
   const [show1, setShow1] = useState(false);
