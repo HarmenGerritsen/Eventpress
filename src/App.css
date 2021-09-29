@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  background-color: rgb(255, 255, 255);
   height: 100vh;
+  font-family: Gill Sans, sans-serif;
 }
 
 .App-header {
@@ -16,12 +16,6 @@
   width: 20vw;
   position: fixed;
   left: 80vw;
-}
-
-.title {
-  font-size: 150%;
-  font-family:Verdana, sans-serif;
-  margin-top: 5vh;
 }
 
 .plus {
@@ -151,7 +145,7 @@
 
   background-color: white;
   font-size: 75%;
-  border: 1px solid rgb(201, 200, 230);
+  border: 1px solid rgb(216, 216, 228);
   padding: 4%;
   width: 10vw;
   border-radius: 10px;
