@@ -51,9 +51,9 @@ function App() {
           <button type="button" className="menuButton" onClick={handleClose1}>Sorteren op</button>
         </div>
         <a href="#">
-          <img className="plus" onClick={handleShow1} src={plus} alt=''></img>
+          <img className="plus plus2" onClick={handleShow1} src={plus} alt=''></img>
         </a>
-        <button type="button" className="requestButton" onClick={handleShow5}>evenement<br />aanvragen</button>
+        <button type="button" className="requestButton" onClick={handleShow5}><span className="requestButtonF">evenement<br />aanvragen</span></button>
       </div>
 
       <div className="rowBlock">
