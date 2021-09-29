@@ -83,6 +83,19 @@
   border: none;
   font-size: 200%;
 }
+
+.requestButton {
+  border-radius: 10px;
+  background-color: white;
+  font-size: 75%;
+  border: none;
+  padding: 2%;
+  width: 10vw;
+  position: absolute;
+  margin-top: 85vh;
+}
+
 .button {
   margin: 1%;
 }
+
