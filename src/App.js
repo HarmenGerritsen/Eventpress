@@ -204,7 +204,9 @@ function App() {
             <button className="closeButton" onClick={handleClose3}>X</button>
           </Modal.Header>
           <Modal.Body>
-            <textarea className="textarea" placeholder="vul je mailadres in..."></textarea>
+            <textarea className="textarea" placeholder="vul je naam in..."></textarea>
+            <textarea className="textarea" placeholder="vul je studentnummer in..."></textarea>
+            <textarea className="textarea" placeholder="vul je e-mailadres in..."></textarea>
           </Modal.Body>
           <Modal.Footer class="col text-center">
           <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { handleClose3(); handleShow2(); }}>
