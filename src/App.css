@@ -36,8 +36,6 @@
 
 .fe1 {
   width: 15vw;
-  margin-top: 6vh;
-  margin-right: 150vh;
 }
 
 .popup {
@@ -85,4 +83,14 @@
 }
 .button {
   margin: 1%;
+}
+
+.rowBlock {
+  display: block;
+  width: 80vw; 
+  padding: 30;
+}
+
+.row {
+  padding: 3vh;
 }

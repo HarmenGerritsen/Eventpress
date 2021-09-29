@@ -4,6 +4,10 @@ import { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import fe1 from "./frontend1.png";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 function App() {
   const [show1, setShow1] = useState(false);
@@ -35,11 +39,98 @@ function App() {
         </a>
       </div>
 
-      <div>
-        <a href="#">
+      <div className="rowBlock">
+        <Row classname="row">
+          <Col style={{
+          }}>
+                    <a href="#">
           <img onClick={handleShow2} className="fe1" src={fe1} alt=''>
           </img>
         </a>
+        </Col>
+          <Col style={{
+        }}>
+          <a href="#">
+          <img onClick={handleShow2} className="fe1" src={fe1} alt=''>
+          </img>
+        </a>
+        </Col>
+          <Col style={{
+          }}>
+          <a href="#">
+          <img onClick={handleShow2} className="fe1" src={fe1} alt=''>
+          </img>
+        </a>
+        </Col>
+        <Col style={{
+          }}>
+          <a href="#">
+          <img onClick={handleShow2} className="fe1" src={fe1} alt=''>
+          </img>
+        </a>
+        </Col>
+        </Row>
+
+        <Row classname="row">
+          <Col style={{
+          }}>
+                    <a href="#">
+          <img onClick={handleShow2} className="fe1" src={fe1} alt=''>
+          </img>
+        </a>
+        </Col>
+          <Col style={{
+        }}>
+          <a href="#">
+          <img onClick={handleShow2} className="fe1" src={fe1} alt=''>
+          </img>
+        </a>
+        </Col>
+          <Col style={{
+          }}>
+          <a href="#">
+          <img onClick={handleShow2} className="fe1" src={fe1} alt=''>
+          </img>
+        </a>
+        </Col>
+        <Col style={{
+          }}>
+          <a href="#">
+          <img onClick={handleShow2} className="fe1" src={fe1} alt=''>
+          </img>
+        </a>
+        </Col>
+        </Row>
+        <Row classname="row">
+          <Col style={{
+          }}>
+                    <a href="#">
+          <img onClick={handleShow2} className="fe1" src={fe1} alt=''>
+          </img>
+        </a>
+        </Col>
+          <Col style={{
+        }}>
+          <a href="#">
+          <img onClick={handleShow2} className="fe1" src={fe1} alt=''>
+          </img>
+        </a>
+        </Col>
+          <Col style={{
+          }}>
+          <a href="#">
+          <img onClick={handleShow2} className="fe1" src={fe1} alt=''>
+          </img>
+        </a>
+        </Col>
+        <Col style={{
+          }}>
+          <a href="#">
+          <img onClick={handleShow2} className="fe1" src={fe1} alt=''>
+          </img>
+        </a>
+        </Col>
+        </Row>
       </div>
 
       <div>
@@ -138,7 +229,10 @@ function App() {
       </div>
 
     </div>
+
+    
   );
 }
 
 export default App;
+
