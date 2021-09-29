@@ -13,8 +13,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-
-
 function App() {
   const [show1, setShow1] = useState(false);
   const [show2, setShow2] = useState(false);
@@ -56,7 +54,6 @@ function App() {
         </a>
         <button type="button" className="requestButton" onClick={handleShow5}><span className="requestButtonF">evenement<br />aanvragen</span></button>
       </div>
-
       <div className="rowBlock">
         <Row classname="row">
           <Col style={{}}>
@@ -144,7 +141,6 @@ function App() {
       <div>
         <evenementAanmaken />
         <div id="popup-root" />
-
         <Modal show={show2} onHide={handleClose2}>
           <Modal.Header className="popup">
             <Modal.Title className="ModalTitle">Evenement inzien</Modal.Title>
@@ -259,10 +255,7 @@ function App() {
             </Modal.Footer>
           </Modal>
       </div>
-
-    </div>
-
-    
+    </div> 
   );
 }
 
