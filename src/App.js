@@ -8,6 +8,7 @@ import po1 from "./productowner1.png";
 import ai1 from "./artint1.png";
 import be1 from "./backend1.png";
 import csc1 from "./cloud1.png";
+import logo from "./logo.png";
 import { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
@@ -42,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <div className="App-header">
-        <p className="title">Eventpress</p>
+        <img className="logo" src={logo}></img>
         <div className="menu">
           <button type="button" className="menuButton" onClick={handleClose1}>Categorie</button>
           <button type="button" className="menuButton" onClick={handleClose1}>Jaar</button>
