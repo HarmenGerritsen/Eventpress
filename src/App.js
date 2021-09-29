@@ -1,13 +1,14 @@
 import plus from "./plus.png";
 import Modal from "react-bootstrap/Modal";
-import { useState } from 'react';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import fe1 from "./frontend1.png";
 import React from "react";
+import { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+
 
 function App() {
   const [show1, setShow1] = useState(false);
