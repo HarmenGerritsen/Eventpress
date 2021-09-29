@@ -54,20 +54,16 @@ function App() {
 
       <div className="rowBlock">
         <Row classname="row">
-          <Col style={{
-          }}>
-                    <a href="#">
-          <img onClick={handleShow2} className="fe1" src={fe1} alt=''>
-          </img>
-        </a>
-        </Col>
-        <Col style={{
-          }}>
-                    <a href="#">
-          <img onClick={handleShow2} className="fe1" src={fe1} alt=''>
-          </img>
-        </a>
-        </Col>
+          <Col style={{}}>
+            <a href="#">
+              <img onClick={handleShow2} className="fe1" src={fe1} alt=''></img>
+            </a>
+          </Col>
+          <Col style={{}}>
+            <a href="#">
+              <img onClick={handleShow2} className="fe1" src={fe1} alt=''></img>
+            </a>
+          </Col>
           <Col style={{
         }}>
           <a href="#">
