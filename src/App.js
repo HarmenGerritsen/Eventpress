@@ -40,6 +40,12 @@ function App() {
     <div className="App">
       <div className="App-header">
         <p className="title">Eventpress</p>
+        <div className="menu">
+          <button type="button" className="menuButton" onClick={handleClose1}>Categorie</button>
+          <button type="button" className="menuButton" onClick={handleClose1}>Jaar</button>
+          <button type="button" className="menuButton" onClick={handleClose1}>Locatie</button>
+          <button type="button" className="menuButton" onClick={handleClose1}>Sorteren op</button>
+        </div>
         <a href="#">
           <img className="plus" onClick={handleShow1} src={plus} alt=''></img>
         </a>
