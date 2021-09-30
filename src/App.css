@@ -55,12 +55,22 @@
 
 .popup {
   width: auto;
-  background-color: rgb(36, 36, 158);
+  background-color: rgb(36, 36, 158); 
+}
+
+.modal-dialog{
+  max-width: 80vw !important;
 }
 
 .ModalTitle {
   color: white;
+    
 }
+
+.modal-content{
+  width: auto;
+}
+
 
 .textarea {
   color: black;
