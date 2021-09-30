@@ -54,6 +54,7 @@
 }
 
 .popup {
+  width: auto;
   background-color: rgb(36, 36, 158);
 }
 
