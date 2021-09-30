@@ -8,6 +8,7 @@ app = flask.Flask(__name__)
 CORS(app)
 app.config["DEBUG"] = True
 
+#De inloggegevens van de database staan in een apart document in de volgende vorm: 'user','password','host','naam van de database'
 
 with open(r"C:\Users\caspe\OneDrive\Documents\GitHub\Eventpress\txt\mysql.txt") as f1:
         data=csv.reader(f1,delimiter=",")
