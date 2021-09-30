@@ -145,13 +145,13 @@ function App() {
             <Modal.Title className="ModalTitle">Evenement inzien</Modal.Title>
             <button className="closeButton" onClick={handleClose2}>X</button>
           </Modal.Header>
-          <Modal.Body className="popupBody">
+          <Modal.Body>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at rhoncus nunc, faucibus sagittis erat. Sed quis iaculis sem. Etiam sed elementum dolor, ut bibendum nunc. Sed vel mollis risus, nec consectetur dui. Aliquam finibus molestie arcu eget ornare. Vestibulum in dolor nisl. Sed quis egestas tellus.
               Nunc dolor ligula, hendrerit a enim nec, aliquet semper ipsum. Pellentesque massa dolor, venenatis at molestie nec, bibendum eu metus. Suspendisse egestas mattis varius. Maecenas id fringilla diam. Nulla placerat vehicula aliquam. Aliquam erat volutpat. Nam finibus sodales auctor. Aliquam ultrices mi sed lacus aliquam ultrices sed eu lectus. Vestibulum maximus nisl velit, sed tristique magna tristique et. Praesent sit amet rhoncus est, nec suscipit massa. Suspendisse potenti. Integer ex turpis, pretium ac dolor et, vulputate lobortis ante. Sed eu consectetur justo, vitae semper nulla. Vestibulum volutpat risus quis erat ultrices aliquam.
             </p>
           </Modal.Body>
-          <Modal.Footer className="popupFooter" class="col text-center">
+          <Modal.Footer class="col text-center">
             <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { handleClose2(); handleShow3(); }}>
               Inschrijven
             </button>
