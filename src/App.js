@@ -140,9 +140,9 @@ function App() {
       </div>
 
       <div>
-        <Modal show={show2} onHide={handleClose2}>
-          <Modal.Header className="popup">
-            <Modal.Title className="ModalTitle">Evenement inzien</Modal.Title>
+        <Modal show={show2} onHide={handleClose2} className="modal">
+          <Modal.Header className="modal-header">
+            <Modal.Title className="modal-title">Evenement inzien</Modal.Title>
             <button className="closeButton" onClick={handleClose2}>X</button>
           </Modal.Header>
           <Modal.Body>
@@ -164,7 +164,7 @@ function App() {
         </Modal>
 
         <Modal show={show3} onHide={handleClose3}>
-          <Modal.Header className="popup">
+          <Modal.Header className="modal-header">
             <Modal.Title className="ModalTitle">Inschrijven</Modal.Title>
             <button className="closeButton" onClick={handleClose3}>X</button>
           </Modal.Header>
@@ -186,7 +186,7 @@ function App() {
         </Modal>
 
         <Modal show={show4} onHide={handleClose4}>
-          <Modal.Header className="popup">
+          <Modal.Header className="modal-header">
             <Modal.Title className="ModalTitle">Inschrijven</Modal.Title>
             <button className="closeButton" onClick={handleClose4}>X</button>
           </Modal.Header>
@@ -203,7 +203,7 @@ function App() {
         </Modal>
 
         <Modal show={show5} onHide={handleClose5}>
-          <Modal.Header className="popup">
+          <Modal.Header className="modal-header">
             <Modal.Title className="ModalTitle">Aanvragen</Modal.Title>
             <button className="closeButton" onClick={handleClose5}>X</button>
           </Modal.Header>
@@ -221,7 +221,7 @@ function App() {
         </Modal>
 
         <Modal show={show6} onHide={handleClose6}>
-          <Modal.Header className="popup">
+          <Modal.Header className="modal-header">
             <Modal.Title className="ModalTitle">Aanvragen</Modal.Title>
             <button className="closeButton" onClick={handleClose6}>X</button>
           </Modal.Header>
@@ -238,7 +238,7 @@ function App() {
         </Modal>
 
         <Modal show={show1} onHide={handleClose1}>
-            <Modal.Header className="popup">
+            <Modal.Header className="modal-header">
               <Modal.Title className="ModalTitle">Evenement aanmaken</Modal.Title>
               <button className="closeButton" onClick={handleClose1}>X</button>
             </Modal.Header>
