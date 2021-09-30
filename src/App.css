@@ -160,10 +160,22 @@
   width: 10vw;
   border-radius: 10px;
   box-shadow: 0 0.3em rgb(124, 124, 155);
+  margin-top: 5%;
 }
 
 .logo {
   width: 13vw;
   height: auto;
   margin: 3vh 0 3vh 0;
+}
+
+.testPopup {
+  display: block;
+  background-color: rgb(255, 255, 167);
+  width: 200%;
+}
+
+.modal-header {
+  background-color: rgb(36, 36, 167);
+  color: white;
 }
