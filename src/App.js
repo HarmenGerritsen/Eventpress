@@ -39,7 +39,7 @@ function App() {
 
   const handleClose6 = () => setShow6(false);
   const handleShow6 = () => setShow6(true);
-
+ 
   return (
     <div className="App">
       <div className="App-header">
