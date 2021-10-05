@@ -1,7 +1,7 @@
 from flask_cors import CORS
 import flask
 import csv
-from flask import jsonify,Flask
+from flask import jsonify
 import mysql.connector
 
 app = flask.Flask(__name__)
@@ -27,8 +27,8 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-@ app.route('/evenementen', methods=['GET'])
-def users_fetch():
+@ app.route("/evenementen", methods = ["GET"])
+def evenementen():
     connection = connectie()
     cursor = connection.cursor()
     cursor.execute("""SELECT titel_evenement, naam_categorie, naam_niveau, naam_locatie, omschrijving_evenement, voornaam_gebruiker, achternaam_gebruiker, deelnemers_evenement, max_deelnemers_evenement, gepland_evenement, aangemaakt_evenement
@@ -42,6 +42,7 @@ def users_fetch():
     results = cursor.fetchall()
     return jsonify(results), 200
 
+@ app.route("/suggestie", methods = ["PUT"])
 
 def connectie():
     return mysql.connector.connect(
