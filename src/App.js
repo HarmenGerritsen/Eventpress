@@ -1,4 +1,3 @@
-import plus from "./Images/Plus.png";
 import Modal from "react-bootstrap/Modal";
 import React from "react";
 import Col from 'react-bootstrap/Col';
@@ -8,12 +7,12 @@ import po1 from "./Images/PO.png";
 import ai1 from "./Images/AI.png";
 import be1 from "./Images/BE.png";
 import csc1 from "./Images/CSC.png";
-import logo from "./Images/logo.png";
 import { useState } from 'react';
 import DiscreteSliderValues from './Components/slider';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import Sidebar from "./Components/Sidebar.js";
 
 function App() {
   const [show1, setShow1] = useState(false);
@@ -43,19 +42,7 @@ function App() {
  
   return (
     <div className="App">
-      <div className="App-header">
-        <img className="logo" src={logo}></img>
-        <div className="menu">
-          <button type="button" className="menuButton" onClick={handleClose1}>Categorie</button>
-          <button type="button" className="menuButton" onClick={handleClose1}>Jaar</button>
-          <button type="button" className="menuButton" onClick={handleClose1}>Locatie</button>
-          <button type="button" className="menuButton" onClick={handleClose1}>Sorteren op</button>
-        </div>
-        <a href="#">
-          <img className="plus plus2" onClick={handleShow1} src={plus} alt=''></img>
-        </a>
-        <button type="button" className="requestButton" onClick={handleShow5}><span className="requestButtonF">evenement<br />aanvragen</span></button>
-      </div>
+      <Sidebar handlec1={handleClose1} handles1={handleShow1} handles5={handleShow5} />
       <div className="rowBlock">
         <Row classname="row">
           <Col style={{}}>

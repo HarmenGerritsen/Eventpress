@@ -5,19 +5,15 @@ import Slider from '@mui/material/Slider';
 const marks = [
   {
     value: 0,
-    label: '50%',
   },
   {
     value: 33,
-    label: '100%',
   },
   {
     value: 66,
-    label: '150%',
   },
   {
     value: 100,
-    label: '200%',
   },
 ];
 
