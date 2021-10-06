@@ -13,6 +13,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Sidebar from "./Components/Sidebar.js";
+import Rowblock from "./Components/Rowblock.js";
 
 function App() {
   const [show1, setShow1] = useState(false);
@@ -43,90 +44,7 @@ function App() {
   return (
     <div className="App">
       <Sidebar handlec1={handleClose1} handles1={handleShow1} handles5={handleShow5} />
-      <div className="rowBlock">
-        <Row classname="row">
-          <Col style={{}}>
-            <a href="#">
-              <img onClick={handleShow2} className="fe1" src={fe1} alt=''></img>
-            </a>
-          </Col>
-          <Col style={{}}>
-            <a href="#">
-              <img onClick={handleShow2} className="fe1" src={fe1} alt=''></img>
-            </a>
-          </Col>
-          <Col style={{}}>
-            <a href="#">
-              <img onClick={handleShow2} className="be1" src={be1} alt=''></img>
-            </a>
-          </Col>
-          <Col style={{}}>
-            <a href="#">
-              <img onClick={handleShow2} className="fe1" src={fe1} alt=''></img>
-            </a>
-          </Col>
-          <Col style={{}}>
-            <a href="#">
-              <img onClick={handleShow2} className="be1" src={be1} alt=''></img>
-            </a>
-          </Col>
-        </Row>
-        <Row classname="row">
-          <Col style={{}}>
-            <a href="#">
-              <img onClick={handleShow2} className="po1" src={po1} alt=''></img>
-            </a>
-          </Col>
-          <Col style={{}}>
-            <a href="#">
-              <img onClick={handleShow2} className="ai1" src={ai1} alt=''></img>
-            </a>
-          </Col>
-          <Col style={{}}>
-            <a href="#">
-              <img onClick={handleShow2} className="csc1" src={csc1} alt=''></img>
-            </a>
-          </Col>
-          <Col style={{}}>
-            <a href="#">
-              <img onClick={handleShow2} className="ai1" src={ai1} alt=''></img>
-            </a>
-          </Col>
-          <Col style={{}}>
-            <a href="#">
-              <img onClick={handleShow2} className="fe1" src={fe1} alt=''></img>
-            </a>
-          </Col>
-        </Row>
-        <Row classname="row">
-          <Col style={{}}>
-            <a href="#">
-              <img onClick={handleShow2} className="fe1" src={fe1} alt=''></img>
-            </a>
-          </Col>
-          <Col style={{}}>
-            <a href="#">
-              <img onClick={handleShow2} className="be1" src={be1} alt=''></img>
-            </a>
-          </Col>
-          <Col style={{}}>
-            <a href="#">
-              <img onClick={handleShow2} className="csc1" src={csc1} alt=''></img>
-            </a>
-          </Col>
-          <Col style={{}}>
-            <a href="#">
-              <img onClick={handleShow2} className="ai1" src={ai1} alt=''></img>
-            </a>
-          </Col>
-          <Col style={{}}>
-            <a href="#">
-              <img onClick={handleShow2} className="po1" src={po1} alt=''></img>
-            </a>
-          </Col>
-        </Row>
-        <div className="slider"><DiscreteSliderValues /></div>
-      </div>
+      <Rowblock handles2={handleShow2}/>
 
       <div>
         <Modal show={show2} onHide={handleClose2} className="modal">
