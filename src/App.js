@@ -158,7 +158,7 @@ function App() {
             <button className="closeButton" onClick={handleClose3}>X</button>
           </Modal.Header>
           <Modal.Body className="popupBody">
-          <input className="textarea" type="text" placeholder="vul je naam in..." />
+            <input className="textarea" type="text" placeholder="vul je naam in..." />
             <input className="textarea" type="text" placeholder="vul je studentnummer in..." />
             <input className="textarea" type="text" placeholder="vul je email in..." />
           </Modal.Body>
