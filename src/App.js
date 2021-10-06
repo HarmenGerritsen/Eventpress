@@ -10,6 +10,7 @@ import be1 from "./Images/BE.png";
 import csc1 from "./Images/CSC.png";
 import logo from "./Images/logo.png";
 import { useState } from 'react';
+import DiscreteSliderValues from './Components/slider';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -137,6 +138,7 @@ function App() {
             </a>
           </Col>
         </Row>
+        <div className="slider"><DiscreteSliderValues /></div>
       </div>
 
       <div>

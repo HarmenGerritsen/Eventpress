@@ -179,3 +179,14 @@
   background-color: rgb(36, 36, 167);
   color: white;
 }
+
+.slider {
+  display: block;
+  margin-left: 20vw;
+  position: fixed;
+  transform: translateY(-5vh);
+  background-color: white;
+  border-radius: 25px;
+  width: 40vw;
+  padding: 0.5vh 2vw;
+}
