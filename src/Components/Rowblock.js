@@ -17,81 +17,81 @@ class Rowblock extends React.Component {
             <Row className="row">
                 <Col style={{}}>
                     <a href="#">
-                        <img className="fe1" onClick={this.props.handles2} src={fe1} alt=''></img>
+                        <img className="fe1 img-fluid" onClick={this.props.handles2} src={fe1} alt=''></img>
                     </a>
                 </Col>
                 <Col style={{}}>
                     <a href="#">
-                        <img className="be1" onClick={this.props.handles2} src={be1} alt=''></img>
+                        <img className="be1 img-fluid" onClick={this.props.handles2} src={be1} alt=''></img>
                     </a>
                 </Col>
                 <Col style={{}}>
                     <a href="#">
-                        <img className="ai1" onClick={this.props.handles2} src={ai1} alt=''></img>
+                        <img className="ai1 img-fluid" onClick={this.props.handles2} src={ai1} alt=''></img>
                     </a>
                 </Col>
                 <Col style={{}}>
                     <a href="#">
-                        <img className="po1" onClick={this.props.handles2} src={po1} alt=''></img>
+                        <img className="po1 img-fluid" onClick={this.props.handles2} src={po1} alt=''></img>
                     </a>
                 </Col>
                 <Col style={{}}>
                     <a href="#">
-                        <img className="csc1" onClick={this.props.handles2} src={csc1} alt=''></img>
-                    </a>
-                </Col>
-            </Row>
-            <Row className="row">
-                <Col style={{}}>
-                    <a href="#">
-                        <img className="fe1" onClick={this.props.handles2} src={fe1} alt=''></img>
-                    </a>
-                </Col>
-                <Col style={{}}>
-                    <a href="#">
-                        <img className="be1" onClick={this.props.handles2} src={be1} alt=''></img>
-                    </a>
-                </Col>
-                <Col style={{}}>
-                    <a href="#">
-                        <img className="ai1" onClick={this.props.handles2} src={ai1} alt=''></img>
-                    </a>
-                </Col>
-                <Col style={{}}>
-                    <a href="#">
-                        <img className="po1" onClick={this.props.handles2} src={po1} alt=''></img>
-                    </a>
-                </Col>
-                <Col style={{}}>
-                    <a href="#">
-                        <img className="csc1" onClick={this.props.handles2} src={csc1} alt=''></img>
+                        <img className="csc1 img-fluid" onClick={this.props.handles2} src={csc1} alt=''></img>
                     </a>
                 </Col>
             </Row>
             <Row className="row">
                 <Col style={{}}>
                     <a href="#">
-                        <img className="fe1" onClick={this.props.handles2} src={fe1} alt=''></img>
+                        <img className="fe1 img-fluid" onClick={this.props.handles2} src={fe1} alt=''></img>
                     </a>
                 </Col>
                 <Col style={{}}>
                     <a href="#">
-                        <img className="be1" onClick={this.props.handles2} src={be1} alt=''></img>
+                        <img className="be1 img-fluid" onClick={this.props.handles2} src={be1} alt=''></img>
                     </a>
                 </Col>
                 <Col style={{}}>
                     <a href="#">
-                        <img className="ai1" onClick={this.props.handles2} src={ai1} alt=''></img>
+                        <img className="ai1 img-fluid" onClick={this.props.handles2} src={ai1} alt=''></img>
                     </a>
                 </Col>
                 <Col style={{}}>
                     <a href="#">
-                        <img className="po1" onClick={this.props.handles2} src={po1} alt=''></img>
+                        <img className="po1 img-fluid" onClick={this.props.handles2} src={po1} alt=''></img>
                     </a>
                 </Col>
                 <Col style={{}}>
                     <a href="#">
-                        <img className="csc1" onClick={this.props.handles2} src={csc1} alt=''></img>
+                        <img className="csc1 img-fluid" onClick={this.props.handles2} src={csc1} alt=''></img>
+                    </a>
+                </Col>
+            </Row>
+            <Row className="row">
+                <Col style={{}}>
+                    <a href="#">
+                        <img className="fe1 img-fluid" onClick={this.props.handles2} src={fe1} alt=''></img>
+                    </a>
+                </Col>
+                <Col style={{}}>
+                    <a href="#">
+                        <img className="be1 img-fluid" onClick={this.props.handles2} src={be1} alt=''></img>
+                    </a>
+                </Col>
+                <Col style={{}}>
+                    <a href="#">
+                        <img className="ai1 img-fluid" onClick={this.props.handles2} src={ai1} alt=''></img>
+                    </a>
+                </Col>
+                <Col style={{}}>
+                    <a href="#">
+                        <img className="po1 img-fluid" onClick={this.props.handles2} src={po1} alt=''></img>
+                    </a>
+                </Col>
+                <Col style={{}}>
+                    <a href="#">
+                        <img className="csc1 img-fluid" onClick={this.props.handles2} src={csc1} alt=''></img>
                     </a>
                 </Col>
             </Row>
