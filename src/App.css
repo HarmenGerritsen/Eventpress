@@ -191,7 +191,7 @@
   background-color: white;
   border-radius: 25px;
   width: 40vw;
-  padding: 0.5vh 2vw;
+  padding: 1vh 2vw;
 }
 
 figcaption {
@@ -199,4 +199,39 @@ figcaption {
   font-size: 1.5vw;
   color: white;
   padding: 0.1% 0.5%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .fe1 {
+    width: 18vw;
+  }
+  .po1 {
+    width: 18vw;
+  }
+  .ai1 {
+    width: 18vw;
+  }
+  .be1 {
+    width: 18vw;
+  }
+  .csc1 {
+    width: 18vw;
+  }
+  .row {
+    padding: 2vh 0.5vw;
+  }
+  .menuButton {
+    font-size: 50%;
+    width: 16vw;
+  }
+  .requestButtonF {
+    font-size: 50%;
+    width: 16vw;
+  }
+  figcaption {
+    font-size: 1.2vw;
+  }
+  .plus {
+    border: 1px solid rgb(59, 59, 129);
+  }
 }
