@@ -120,9 +120,10 @@
 
 .requestButtonF {
   display: block;
-  padding: 12px 42px;
+  padding: 4%;
   border-radius: 12px;
-  font-size: 1.25rem;
+  font-size: 75%;
+  width: 10vw;
   background-color: white;
   transform: translateY(-6px);
 }
@@ -138,11 +139,10 @@
 .rowBlock {
   display: block;
   width: 80vw; 
-  padding: 30;
 }
 
 .row {
-  padding: 2vh;
+  padding: 2vh 1vw;
 }
 
 .menu {
@@ -188,5 +188,32 @@
   background-color: white;
   border-radius: 25px;
   width: 40vw;
-  padding: 0.5vh 2vw;
+  padding: 1vh 2vw;
+}
+
+@media only screen and (max-width: 1200px) {
+  .fe1 {
+    width: 18vw;
+  }
+  .po1 {
+    width: 18vw;
+  }
+  .ai1 {
+    width: 18vw;
+  }
+  .be1 {
+    width: 18vw;
+  }
+  .csc1 {
+    width: 18vw;
+  }
+  .row {
+    padding: 2vh 0.5vw;
+  }
+  .menuButton {
+    font-size: 50%;
+  }
+  .requestButtonF {
+    font-size: 50%;
+  }
 }
