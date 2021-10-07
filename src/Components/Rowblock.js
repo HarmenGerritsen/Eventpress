@@ -16,9 +16,12 @@ class Rowblock extends React.Component {
         <div className="rowBlock">
             <Row className="row">
                 <Col style={{}}>
+                    <div>
+                        <figcaption>Ma 4/11 15:20</figcaption>
                     <a href="#">
                         <img className="fe1 img-fluid" onClick={this.props.handles2} src={fe1} alt=''></img>
                     </a>
+                    </div>
                 </Col>
                 <Col style={{}}>
                     <a href="#">
