@@ -1,12 +1,5 @@
 import Modal from "react-bootstrap/Modal";
 import React from "react";
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import fe1 from "./Images/FE.png";
-import po1 from "./Images/PO.png";
-import ai1 from "./Images/AI.png";
-import be1 from "./Images/BE.png";
-import csc1 from "./Images/CSC.png";
 import { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
