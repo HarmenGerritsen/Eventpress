@@ -201,6 +201,15 @@ figcaption {
   padding: 0.1% 0.5%;
 }
 
+.Table {
+  width: 80vw;
+  font-size: 200%;
+}
+
+td {
+  height: 5vh;
+}
+
 @media only screen and (max-width: 1200px) {
   .fe1 {
     width: 18vw;

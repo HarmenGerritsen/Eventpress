@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Sidebar from "./Components/Sidebar.js";
+import EventTable from "./Components/Table.js";
 
 function App() {
   const [show1, setShow1] = useState(false);
@@ -35,7 +36,7 @@ function App() {
   return (
     <div className="App">
       <Sidebar handlec1={handleClose1} handles1={handleShow1} handles5={handleShow5} />
-
+      <EventTable />
       <div>
         <Modal show={show2} onHide={handleClose2} className="modal">
           <Modal.Header className="modal-header">
