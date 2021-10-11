@@ -210,7 +210,11 @@ td {
   height: 5vh;
 }
 
-@media only screen and (max-width: 1200px) {
+.Omschrijving {
+  width: 20vw;
+}
+
+@media only screen and (max-width: 1300px) {
   .fe1 {
     width: 18vw;
   }
@@ -243,4 +247,8 @@ td {
   .plus {
     border: 1px solid rgb(59, 59, 129);
   }
+  .Table {
+    font-size: 100%;
+  }
+
 }

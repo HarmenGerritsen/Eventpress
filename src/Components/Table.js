@@ -12,99 +12,175 @@ class EventTable extends React.Component {
     <tr>
       <th>Datum</th>
       <th>Tijd</th>
+      <th>Titel</th>
+      <th className="Omschrijving">Omschrijving</th>
+      <th>Categorie</th>
       <th>Locatie</th>
+      <th>Organisator</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>24-11-2021</td>
       <td>15:30-17:00</td>
-      <td>Lokaal 4.097</td>
-    </tr>
-    <tr>
-      <td>22-10-2021</td>
-      <td>12:15-13:30</td>
-      <td>Teams</td>
-    </tr>
-    <tr>
-      <td>26-10-2021</td>
-      <td>14:00-15:00</td>
-      <td>Front-end Gilde Discord</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
     </tr>
     <tr>
       <td>24-11-2021</td>
       <td>15:30-17:00</td>
-      <td>Lokaal 4.097</td>
-    </tr>
-    <tr>
-      <td>22-10-2021</td>
-      <td>12:15-13:30</td>
-      <td>Teams</td>
-    </tr>
-    <tr>
-      <td>26-10-2021</td>
-      <td>14:00-15:00</td>
-      <td>Front-end Gilde Discord</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
     </tr>
     <tr>
       <td>24-11-2021</td>
       <td>15:30-17:00</td>
-      <td>Lokaal 4.097</td>
-    </tr>
-    <tr>
-      <td>22-10-2021</td>
-      <td>12:15-13:30</td>
-      <td>Teams</td>
-    </tr>
-    <tr>
-      <td>26-10-2021</td>
-      <td>14:00-15:00</td>
-      <td>Front-end Gilde Discord</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
     </tr>
     <tr>
       <td>24-11-2021</td>
       <td>15:30-17:00</td>
-      <td>Lokaal 4.097</td>
-    </tr>
-    <tr>
-      <td>22-10-2021</td>
-      <td>12:15-13:30</td>
-      <td>Teams</td>
-    </tr>
-    <tr>
-      <td>26-10-2021</td>
-      <td>14:00-15:00</td>
-      <td>Front-end Gilde Discord</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
     </tr>
     <tr>
       <td>24-11-2021</td>
       <td>15:30-17:00</td>
-      <td>Lokaal 4.097</td>
-    </tr>
-    <tr>
-      <td>22-10-2021</td>
-      <td>12:15-13:30</td>
-      <td>Teams</td>
-    </tr>
-    <tr>
-      <td>26-10-2021</td>
-      <td>14:00-15:00</td>
-      <td>Front-end Gilde Discord</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
     </tr>
     <tr>
       <td>24-11-2021</td>
       <td>15:30-17:00</td>
-      <td>Lokaal 4.097</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
     </tr>
     <tr>
-      <td>22-10-2021</td>
-      <td>12:15-13:30</td>
-      <td>Teams</td>
+      <td>24-11-2021</td>
+      <td>15:30-17:00</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
     </tr>
     <tr>
-      <td>26-10-2021</td>
-      <td>14:00-15:00</td>
-      <td>Front-end Gilde Discord</td>
+      <td>24-11-2021</td>
+      <td>15:30-17:00</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
+    </tr>
+    <tr>
+      <td>24-11-2021</td>
+      <td>15:30-17:00</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
+    </tr>
+    <tr>
+      <td>24-11-2021</td>
+      <td>15:30-17:00</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
+    </tr>
+    <tr>
+      <td>24-11-2021</td>
+      <td>15:30-17:00</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
+    </tr>
+    <tr>
+      <td>24-11-2021</td>
+      <td>15:30-17:00</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
+    </tr>
+    <tr>
+      <td>24-11-2021</td>
+      <td>15:30-17:00</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
+    </tr>
+    <tr>
+      <td>24-11-2021</td>
+      <td>15:30-17:00</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
+    </tr>
+    <tr>
+      <td>24-11-2021</td>
+      <td>15:30-17:00</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
+    </tr>
+    <tr>
+      <td>24-11-2021</td>
+      <td>15:30-17:00</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
+    </tr>
+    <tr>
+      <td>24-11-2021</td>
+      <td>15:30-17:00</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
+    </tr>
+    <tr>
+      <td>24-11-2021</td>
+      <td>15:30-17:00</td>
+      <td>React</td>
+      <td>React en alles erbij</td>
+      <td>FE</td>
+      <td>Front-end Discord</td>
+      <td>Jan</td>
     </tr>
   </tbody>
 </Table>
