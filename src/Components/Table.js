@@ -7,7 +7,7 @@ class EventTable extends React.Component {
     return (
 
 <div className="Table">
-<Table striped bordered hover>
+<Table bordered hover>
   <thead>
     <tr>
       <th>Datum</th>
