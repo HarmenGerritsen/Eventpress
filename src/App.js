@@ -8,12 +8,10 @@ import ai1 from "./Images/AI.png";
 import be1 from "./Images/BE.png";
 import csc1 from "./Images/CSC.png";
 import { useState } from 'react';
-import DiscreteSliderValues from './Components/slider';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Sidebar from "./Components/Sidebar.js";
-import Rowblock from "./Components/Rowblock.js";
 
 function App() {
   const [show1, setShow1] = useState(false);
@@ -44,7 +42,6 @@ function App() {
   return (
     <div className="App">
       <Sidebar handlec1={handleClose1} handles1={handleShow1} handles5={handleShow5} />
-      <Rowblock handles2={handleShow2}/>
 
       <div>
         <Modal show={show2} onHide={handleClose2} className="modal">
