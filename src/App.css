@@ -30,7 +30,6 @@
   background-color: rgb(27, 27, 90);
   border-radius: 50px;
   position: relative;
-  top: 0;
   transition: all 100ms ease-in-out;
   box-shadow: 0 0.6em rgb(34, 34, 63), 0 0.9em rgba(0, 0, 0, 0.4);
 }
@@ -38,22 +37,6 @@
 .plus.plus2:active {
   top: 0.6em;
   box-shadow: 0 0.2em rgba(0, 0, 0, 0.4);
-}
-
-.fe1 {
-  width: 14vw;
-}
-.po1 {
-  width: 14vw;
-}
-.ai1 {
-  width: 14vw;
-}
-.be1 {
-  width: 14vw;
-}
-.csc1 {
-  width: 14vw;
 }
 
 .popup {
@@ -110,42 +93,20 @@
   font-size: 200%;
 }
 
-.requestButton {
-  position: absolute;
-  margin-top: 85vh;
-  background-color: rgb(124, 124, 155);
-  border-radius: 12px;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  outline-offset: 0.2em;
-}
-
-.requestButtonF {
-  display: block;
-  padding: 4%;
-  border-radius: 12px;
-  font-size: 75%;
-  width: 10vw;
-  background-color: white;
-  transform: translateY(-6px);
-}
-
-.requestButton:active .requestButtonF {
-  transform: translateY(-2px);
-}
-
 .button {
   margin: 1%;
 }
 
-.rowBlock {
-  display: block;
-  width: 80vw; 
-}
-
-.row {
-  padding: 2vh 1vw;
+.requestButton {
+  background-color: white;
+  font-size: 75%;
+  border: 1px solid rgb(216, 216, 228);
+  padding: 4%;
+  width: 10vw;
+  border-radius: 10px;
+  box-shadow: 0 0.3em rgb(124, 124, 155);
+  margin-bottom: 10vh;
+  margin-top: 15vh;
 }
 
 .menu {
@@ -155,7 +116,6 @@
 }
 
 .menuButton {
-
   background-color: white;
   font-size: 75%;
   border: 1px solid rgb(216, 216, 228);
@@ -183,17 +143,6 @@
   color: white;
 }
 
-.slider {
-  display: block;
-  margin-left: 20vw;
-  position: fixed;
-  transform: translateY(-2vh);
-  background-color: white;
-  border-radius: 25px;
-  width: 40vw;
-  padding: 1vh 2vw;
-}
-
 figcaption {
   position: absolute;
   font-size: 1.5vw;
@@ -215,24 +164,6 @@ td {
 }
 
 @media only screen and (max-width: 1300px) {
-  .fe1 {
-    width: 18vw;
-  }
-  .po1 {
-    width: 18vw;
-  }
-  .ai1 {
-    width: 18vw;
-  }
-  .be1 {
-    width: 18vw;
-  }
-  .csc1 {
-    width: 18vw;
-  }
-  .row {
-    padding: 2vh 0.5vw;
-  }
   .menuButton {
     font-size: 50%;
     width: 16vw;
@@ -251,4 +182,46 @@ td {
     font-size: 100%;
   }
 
+}
+
+@media only screen and (max-width: 720px) {
+  .Table {
+    width: 100vw;
+  }
+  .App-header {
+    min-height: 100px;
+    max-height: 100px;
+    min-width: 100vw;
+    left: 0vw;
+    flex-direction: row;
+  }
+  
+.logo {
+  margin: 3vh 0 3vh 3vw;
+  }
+  .plus {
+    margin: -3vh -30vw auto auto;
+  }
+  .menu {
+    width: auto;
+  }
+  .menuButton {
+    padding: 1px;
+    width: 10vw;
+    border-radius: 1vw;
+    height: 10vh;
+    font-size: 50%;
+    font-weight: bold;
+    margin: 5vh auto;
+  }
+  .requestButton {
+    position: absolute;
+    padding: 1px;
+    width: 15vw;
+    border-radius: 1vw;
+    height: 10vh;
+    font-size: 50%;
+    font-weight: bold;
+    margin: 5vh auto 5vh 61vw;
+  }
 }
