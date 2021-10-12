@@ -20,7 +20,7 @@ class EventTable extends React.Component {
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr onClick={this.props.handles1}>
       <td>24-11-2021</td>
       <td>15:30-17:00</td>
       <td>React</td>
