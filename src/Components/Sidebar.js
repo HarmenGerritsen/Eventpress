@@ -13,12 +13,12 @@ class Sidebar extends React.Component {
           <button type="button" className="menuButton" onClick={this.props.handlec1}>Categorie</button>
           <button type="button" className="menuButton" onClick={this.props.handlec1}>Jaar</button>
           <button type="button" className="menuButton" onClick={this.props.handlec1}>Locatie</button>
-          <button type="button" className="menuButton" onClick={this.props.handlec1}>Sorteren op</button>
+          <button type="button" className="menuButton" onClick={this.props.handlec1}>Sorteren</button>
         </div>
         <a href="#">
           <img className="plus plus2" onClick={this.props.handles1} src={plus} alt=''></img>
         </a>
-        <button type="button" className="requestButton" onClick={this.props.handles5}><span className="requestButtonF">evenement<br />aanvragen</span></button>
+        <button type="button" className="requestButton" onClick={this.props.handles5}>evenement<br />aanvragen</button>
       </div>
   )
   }

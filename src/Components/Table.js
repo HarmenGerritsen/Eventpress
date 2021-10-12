@@ -30,7 +30,7 @@ class EventTable extends React.Component {
       <td>Jan</td>
     </tr>
     <tr>
-      <td>24-11-2021</td>
+      <td>13-10-2021</td>
       <td>15:30-17:00</td>
       <td>React</td>
       <td>React en alles erbij</td>
@@ -39,7 +39,7 @@ class EventTable extends React.Component {
       <td>Jan</td>
     </tr>
     <tr>
-      <td>24-11-2021</td>
+      <td>14-10-2021</td>
       <td>15:30-17:00</td>
       <td>React</td>
       <td>React en alles erbij</td>
@@ -48,7 +48,7 @@ class EventTable extends React.Component {
       <td>Jan</td>
     </tr>
     <tr>
-      <td>24-11-2021</td>
+      <td>20-10-2021</td>
       <td>15:30-17:00</td>
       <td>React</td>
       <td>React en alles erbij</td>
@@ -57,7 +57,7 @@ class EventTable extends React.Component {
       <td>Jan</td>
     </tr>
     <tr>
-      <td>24-11-2021</td>
+      <td>24-10-2021</td>
       <td>15:30-17:00</td>
       <td>React</td>
       <td>React en alles erbij</td>
