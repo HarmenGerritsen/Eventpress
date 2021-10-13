@@ -168,7 +168,7 @@ td {
     font-size: 50%;
     width: 16vw;
   }
-  .requestButtonF {
+  .requestButton {
     font-size: 50%;
     width: 16vw;
   }
@@ -200,7 +200,7 @@ td {
   margin: 3vh 0 3vh 3vw;
   }
   .plus {
-    margin: -3vh -30vw auto auto;
+    margin: -3vh -50vw auto auto;
   }
   .menu {
     width: auto;
@@ -223,5 +223,8 @@ td {
     font-size: 50%;
     font-weight: bold;
     margin: 5vh auto 5vh 61vw;
+  }
+  .Table {
+    font-size: 50%;
   }
 }
