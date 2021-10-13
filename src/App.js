@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="App">
       <Sidebar handlec1={handleClose1} handles1={handleShow1} handles5={handleShow5} />
-      <EventTable handles1={handleShow1} />
+      <EventTable handles2={handleShow2} />
       <div>
         <Modal show={show2} onHide={handleClose2} className="modal">
           <Modal.Header className="modal-header">
