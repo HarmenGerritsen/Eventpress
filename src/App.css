@@ -197,7 +197,6 @@ td {
     flex-direction: row;
     margin-top: -100px;
   }
-  
 .logo {
   margin: 3vh 0 3vh 3vw;
   }
@@ -227,6 +226,9 @@ td {
     margin: 5vh auto 5vh 61vw;
   }
   .Table {
-    font-size: 50%;
+    font-size: 100%;
+  }
+  .phonehide {
+    display: none;
   }
 }
