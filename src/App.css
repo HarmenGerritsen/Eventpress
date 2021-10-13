@@ -163,6 +163,19 @@ td {
   width: 20vw;
 }
 
+#dropdownMenu {
+  display: none;
+  color: black;
+  background-color: white;
+  font-size: 75%;
+  border: 1px solid rgb(216, 216, 228);
+  padding: 4%;
+  width: 10vw;
+  border-radius: 10px;
+  box-shadow: 0 0.3em rgb(124, 124, 155);
+  margin-top: 7%;
+}
+
 @media only screen and (max-width: 1300px) {
   .menuButton {
     font-size: 50%;
@@ -201,7 +214,7 @@ td {
   margin: 3vh 0 3vh 3vw;
   }
   .plus {
-    margin: -3vh -50vw auto auto;
+    margin-top: -3vh;
   }
   .menu {
     width: auto;
@@ -218,17 +231,28 @@ td {
   .requestButton {
     position: absolute;
     padding: 1px;
-    width: 15vw;
+    width: 30vw;
     border-radius: 1vw;
     height: 10vh;
-    font-size: 50%;
+    font-size: 100%;
     font-weight: bold;
-    margin: 5vh auto 5vh 61vw;
+    margin: 5vh auto 5vh 65vw;
+    position: absolute;
   }
   .Table {
     font-size: 100%;
   }
-  .phonehide {
+  #dropdownMenu {
+    display: initial;
+    padding: 1px;
+    border-radius: 1vw;
+    height: 10vh;
+    font-size: 100%;
+    font-weight: bold;
+    margin: 5vh auto;
+    width: 26vw;
+  }
+  .hide {
     display: none;
   }
 }

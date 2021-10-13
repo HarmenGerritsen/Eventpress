@@ -1,5 +1,6 @@
 import React from "react";
 import Table from 'react-bootstrap/Table';
+import TableRow from "./TableRow.js";
 
 class EventTable extends React.Component {
 
@@ -13,175 +14,32 @@ class EventTable extends React.Component {
       <th>Datum</th>
       <th>Tijd</th>
       <th>Titel</th>
-      <th className="Omschrijving" className="phonehide">Omschrijving</th>
-      <th className="phonehide">Categorie</th>
-      <th className="phonehide">Locatie</th>
-      <th className="phonehide">Organisator</th>
+        <th className="Omschrijving hide">Omschrijving</th>
+      <th className="hide">Categorie</th>
+      <th className="hide">Locatie</th>
+      <th className="hide">Organisator</th>
     </tr>
   </thead>
   <tbody>
-    <tr onClick={this.props.handles2}>
-      <td>24-11</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>13-10</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>14-10</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>20-10</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>24-10</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>24-11</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>24-11</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>24-11</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>24-11</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>24-11</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>24-11</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>24-11</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>24-11</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>24-11</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>24-11</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>24-11</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>24-11</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
-    <tr onClick={this.props.handles2}>
-      <td>24-11</td>
-      <td>15:30-17:00</td>
-      <td>React</td>
-      <td  className="phonehide">React en alles erbij</td>
-      <td  className="phonehide">FE</td>
-      <td  className="phonehide">Front-end Discord</td>
-      <td  className="phonehide">Jan</td>
-    </tr>
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
+    <TableRow />
   </tbody>
 </Table>
 </div>
