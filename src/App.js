@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Sidebar from "./Components/Sidebar.js";
-import EventTable from "./Components/Table.js";
+import LoopTable from "./Components/Loop.js";
 
 function App() {
   const [show1, setShow1] = useState(false);
@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="App">
       <Sidebar handlec1={handleClose1} handles1={handleShow1} handles5={handleShow5} />
-      <EventTable handles2={handleShow2} />
+      <LoopTable handles2={handleShow2} />
       <div>
         <Modal show={show2} onHide={handleClose2} className="modal">
           <Modal.Header className="modal-header">
