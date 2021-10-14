@@ -3,7 +3,8 @@
 
 .App {
   text-align: center;
-  height: 100vh;
+  height: auto;
+  padding-bottom: 62vh;
   font-family: Gill Sans, sans-serif;
   background-color: rgb(190, 188, 202);
 }
@@ -163,7 +164,6 @@ tr {
 
 td {
   height: 5vh;
-
 }
 
 .Omschrijving {
