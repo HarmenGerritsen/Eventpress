@@ -10,7 +10,7 @@ function LoopTable() {
     ])
    
     const addRow=()=>{
-        let newEmp={date:"12-11",time:"12:00-13:00",title:"React",text:"React en alles erbij",category:"FE",location:"Frontend Discord",name:"Jan"}
+        let newEmp={date:"date",time:"time",title:"title",text:"description",category:"category",location:"location",name:"name"}
         setEmps([...emps,newEmp])
     }
 
