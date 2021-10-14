@@ -5,6 +5,7 @@
   text-align: center;
   height: 100vh;
   font-family: Gill Sans, sans-serif;
+  background-color: rgb(190, 188, 202);
 }
 
 .App-header {
@@ -23,6 +24,7 @@
 
 .plus {
   width: 8vw;
+  color: white;
   height: auto;
   margin-top: 5vh;
   padding: 15%;
@@ -155,8 +157,13 @@ figcaption {
   font-size: 150%;
 }
 
+tr {
+  background-color: white;
+}
+
 td {
   height: 5vh;
+
 }
 
 .Omschrijving {

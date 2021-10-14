@@ -18,7 +18,7 @@ class Sidebar extends React.Component {
           <DropdownMenu />
         </div>
         <a href="#">
-          <img className="plus plus2" onClick={this.props.handles1} src={plus} alt=''></img>
+          <img className="plus plus2" onClick={this.props.handles5} src={plus} alt=''></img>
         </a>
         <button type="button" className="requestButton" onClick={this.props.handles5}><div className="hide">evenement<br /></div>aanvragen</button>
       </div>

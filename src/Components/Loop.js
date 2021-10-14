@@ -14,12 +14,6 @@ function LoopTable() {
         setEmps([...emps,newEmp])
     }
 
-    const deleteRow = () => {
-        let copy_emp=[...emps]
-        copy_emp.splice(0,1)
-        setEmps(copy_emp)
-    }
-
 return ( 
     <div className="Table">
         <Table bordered hover>
@@ -47,8 +41,7 @@ return (
                 </tr>
                 )
             )}
-            <button onClick={addRow}>Add</button>
-            <button onClick={deleteRow}>Delete</button>
+            <button className="plus plus2" onClick={addRow}>Meer</button>
             </tbody>
         </Table>
     </div>);
