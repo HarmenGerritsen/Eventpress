@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Table from 'react-bootstrap/Table';
 
 function LoopTable() {
@@ -13,6 +13,30 @@ function LoopTable() {
         let newEmp={date:"date",time:"time",title:"title",text:"description",category:"category",location:"location",name:"name"}
         setEmps([...emps,newEmp])
     }
+
+    const [data,setData]=useState([]);
+
+    const getData=()=>{
+        fetch('data.json'
+        ,{
+          headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+           }
+        }
+        )
+          .then(function(response){
+            console.log(response)
+            return response.json();
+          })
+          .then(function(myJson) {
+            console.log(myJson);
+            setData(myJson)
+          });
+      }
+      useEffect(()=>{
+        getData()
+      },[])
 
 return ( 
     <div className="Table">
@@ -31,9 +55,12 @@ return (
             <tbody>
             {emps.map( (emp,index)=> (
                 <tr key={index}>
-                    <td>{emp.date}</td>
-                    <td>{emp.time}</td>
-                    <td>{emp.title}</td>
+                    {data && data.length>0 && data.map((item)=>
+                    <td>{item.date}</td>)}
+                    {data && data.length>0 && data.map((item)=>
+                    <td>{item.time}</td>)}
+                    {data && data.length>0 && data.map((item)=>
+                    <td>{item.title}</td>)}
                     <td className="hide">{emp.text}</td>
                     <td className="hide">{emp.category}</td>
                     <td className="hide">{emp.location}</td>
