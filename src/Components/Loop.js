@@ -3,14 +3,10 @@ import { useEffect, useState } from 'react';
 import Table from 'react-bootstrap/Table';
 
 function LoopTable() {
-    const [emps,setEmps]=useState([
-        {date:"14-11",time:"14:00-15:00",title:"NodeJS",text:"Dit is een placeholder",category:"FE",location:"Lokaal 4.094",name:"Gert"},
-        {date:"17-11",time:"11:00-13:30",title:"JavaScript",text:"Open-ICT is ok",category:"FE",location:"Ergens in Utrecht",name:"Arno"},
-        {date:"12-11",time:"12:00-13:00",title:"React",text:"React en alles erbij",category:"FE",location:"Frontend Discord",name:"Jan"},
-    ])
+    const [emps,setEmps]=useState([{},{},{}])
    
     const addRow=()=>{
-        let newEmp={date:"date",time:"time",title:"title",text:"description",category:"category",location:"location",name:"name"}
+        let newEmp={}
         setEmps([...emps,newEmp])
     }
 
@@ -52,24 +48,24 @@ return (
                     <th className="hide">Organisator</th>
                 </tr>
             </thead>
+            {data && data.length>0 && data.map((item)=> (
             <tbody>
-            {emps.map( (emp,index)=> (
+            {emps.map( (index)=> (
                 <tr key={index}>
-                    {data && data.length>0 && data.map((item)=>
-                    <td>{item.date}</td>)}
-                    {data && data.length>0 && data.map((item)=>
-                    <td>{item.time}</td>)}
-                    {data && data.length>0 && data.map((item)=>
-                    <td>{item.title}</td>)}
-                    <td className="hide">{emp.text}</td>
-                    <td className="hide">{emp.category}</td>
-                    <td className="hide">{emp.location}</td>
-                    <td className="hide">{emp.name}</td>
+                    <td>{item.date}</td>
+                    <td>{item.time}</td>
+                    <td>{item.title}</td>
+                    <td className="hide">{item.text}</td>
+                    <td className="hide">{item.category}</td>
+                    <td className="hide">{item.location}</td>
+                    <td className="hide">{item.name}</td>
                 </tr>
                 )
             )}
             <button className="plus plus2" onClick={addRow}>Meer</button>
             </tbody>
+            )
+        )}
         </Table>
     </div>);
 }
