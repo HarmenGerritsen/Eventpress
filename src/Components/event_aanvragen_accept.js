@@ -3,10 +3,10 @@ import Modal from "react-bootstrap/Modal";
 
 class EventAanvragenAccept extends React.Component {
 
-    render() {
-      return (
-          <div>
-<Modal show={this.props.handleshow6} onHide={this.props.handlec6}>
+  render() {
+    return (
+      <div>
+        <Modal show={this.props.handleshow6} onHide={this.props.handlec6}>
           <Modal.Header className="modal-header">
             <Modal.Title className="ModalTitle">Aanvragen</Modal.Title>
             <button className="closeButton" onClick={this.props.handlec6}>X</button>
@@ -22,6 +22,8 @@ class EventAanvragenAccept extends React.Component {
             <p className="white">.</p>
           </Modal.Footer>
         </Modal>
-        </div>)}}
+      </div>)
+  }
+}
 
 export default EventAanvragenAccept;

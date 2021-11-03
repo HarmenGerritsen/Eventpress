@@ -3,10 +3,10 @@ import Modal from "react-bootstrap/Modal";
 
 class EventInzien extends React.Component {
 
-    render() {
-      return (
-          <div>
-<Modal show={this.props.handleshow2} onHide={this.props.handlec2} className="modal">
+  render() {
+    return (
+      <div>
+        <Modal show={this.props.handleshow2} onHide={this.props.handlec2} className="modal">
           <Modal.Header className="modal-header">
             <Modal.Title className="modal-title">Evenement inzien</Modal.Title>
             <button className="closeButton" onClick={this.props.handlec2}>X</button>
@@ -28,6 +28,8 @@ class EventInzien extends React.Component {
             <p className="white">.</p>
           </Modal.Footer>
         </Modal>
-        </div>)}}
+      </div>)
+  }
+}
 
 export default EventInzien;

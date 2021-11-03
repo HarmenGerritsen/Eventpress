@@ -3,10 +3,10 @@ import Modal from "react-bootstrap/Modal";
 
 class EventInschrijven extends React.Component {
 
-    render() {
-      return (
-          <div>
-<Modal show={this.props.handleshow3} onHide={this.props.handlec3}>
+  render() {
+    return (
+      <div>
+        <Modal show={this.props.handleshow3} onHide={this.props.handlec3}>
           <Modal.Header className="modal-header">
             <Modal.Title className="ModalTitle">Inschrijven</Modal.Title>
             <button className="closeButton" onClick={this.props.handlec3}>X</button>
@@ -27,6 +27,8 @@ class EventInschrijven extends React.Component {
             <p className="white">.</p>
           </Modal.Footer>
         </Modal>
-        </div>)}}
+      </div>)
+  }
+}
 
 export default EventInschrijven;
