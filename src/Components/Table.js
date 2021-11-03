@@ -13,7 +13,7 @@ function LoopTable() {
     const [data, setData] = useState([]);
 
     const getData = () => {
-        fetch('data.json'
+        fetch('http://localhost:8000/Events'
             , {
                 headers: {
                     'Content-Type': 'application/json',

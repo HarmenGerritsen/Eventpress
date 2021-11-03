@@ -1,0 +1,13 @@
+{
+  "Events": [
+    {
+      "date": "20-11",
+      "time": "15:30",
+      "title": "React",
+      "text": "React intro en andere dingen",
+      "category": "Frontend",
+      "location": "Lokaal 4.094",
+      "name": "Jan"  
+    }
+  ]
+}
