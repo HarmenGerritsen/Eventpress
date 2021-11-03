@@ -5,10 +5,10 @@ import DropdownMenu from "./Dropdown.js";
 
 class Sidebar extends React.Component {
 
-  render(){
-  return (
+  render() {
+    return (
 
-<div className="App-header">
+      <div className="App-header">
         <img className="logo" src={logo}></img>
         <div className="menu">
           <button type="button" className="menuButton hide" onClick={this.props.handlec1}>Categorie</button>
@@ -22,7 +22,7 @@ class Sidebar extends React.Component {
         </a>
         <button type="button" className="requestButton" onClick={this.props.handles5}><div className="hide">Evenement<br /></div>suggereren</button>
       </div>
-  )
+    )
   }
-      }
-      export default Sidebar;
+}
+export default Sidebar;
