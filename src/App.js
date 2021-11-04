@@ -45,7 +45,7 @@ function App() {
         <EventInzien handleshow2={show2} handlec2={handleClose2} handles3={handleShow3} />
         <EventInschrijven handleshow3={show3} handlec3={handleClose3} handles2={handleShow2} handles4={handleShow4} />
         <EventInschrijvenAccept handleshow4={show4} handlec4={handleClose4} />
-        <EventAanvragenAccept handles6={handleShow6} handlec6={handleClose6} />
+        <EventAanvragenAccept handles6={show6} handlec6={handleClose6} />
         <EventAanmaken handleshow1={show1} handlec1={handleClose1} />
       </div>
     </div>
