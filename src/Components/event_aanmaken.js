@@ -69,11 +69,11 @@ function LoopTable(props) {
             <div>
                 <Modal show={props.handleshow5} onHide={props.handlec5}>
                     <Modal.Header className="modal-header">
-                        <Modal.Title className="ModalTitle">Aanvragen</Modal.Title>
+                        <Modal.Title className="ModalTitle">Evenement Aanmaken</Modal.Title>
                         <button className="closeButton" onClick={props.handlec5}>X</button>
                     </Modal.Header>
                     <Modal.Body>
-                        <p>Vraag evenement aan</p>
+                        <p>Maak evenement aan</p>
                         <textarea className="textarea" placeholder="Datum"></textarea>
                         <textarea className="textarea" placeholder="Tijd"></textarea>
                         <textarea className="textarea" placeholder="Titel"></textarea>
@@ -84,7 +84,7 @@ function LoopTable(props) {
                     </Modal.Body>
                     <Modal.Footer class="col text-center">
                         <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { props.handlec5(); props.handles6(); addRow();}}>
-                            Aanvragen
+                            Aanmaken
                         </button>
                         <br />
                         <p className="white">.</p>
