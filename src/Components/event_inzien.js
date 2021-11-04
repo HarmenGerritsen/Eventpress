@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
+import imgfe1 from './FE1.png';
 
 class EventInzien extends React.Component {
 
@@ -12,10 +13,16 @@ class EventInzien extends React.Component {
             <button className="closeButton" onClick={this.props.handlec2}>X</button>
           </Modal.Header>
           <Modal.Body className="popupbody">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at rhoncus nunc, faucibus sagittis erat. Sed quis iaculis sem. Etiam sed elementum dolor, ut bibendum nunc. Sed vel mollis risus, nec consectetur dui. Aliquam finibus molestie arcu eget ornare. Vestibulum in dolor nisl. Sed quis egestas tellus.
-              Nunc dolor ligula, hendrerit a enim nec, aliquet semper ipsum. Pellentesque massa dolor, venenatis at molestie nec, bibendum eu metus. Suspendisse egestas mattis varius. Maecenas id fringilla diam. Nulla placerat vehicula aliquam. Aliquam erat volutpat. Nam finibus sodales auctor. Aliquam ultrices mi sed lacus aliquam ultrices sed eu lectus. Vestibulum maximus nisl velit, sed tristique magna tristique et. Praesent sit amet rhoncus est, nec suscipit massa. Suspendisse potenti. Integer ex turpis, pretium ac dolor et, vulputate lobortis ante. Sed eu consectetur justo, vitae semper nulla. Vestibulum volutpat risus quis erat ultrices aliquam.
-            </p>
+            <h1>
+            React 15:30
+            </h1>
+            <h4>
+            Datum: 20-11 Lokaal: 4.094
+            </h4>
+            <h5>
+            React intro en andere dingen
+            </h5>
+            <img class="img-responsive" src={imgfe1} alt=""></img>
           </Modal.Body>
           <Modal.Footer class="col text-center">
             <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { this.props.handlec2(); this.props.handles3(); }}>

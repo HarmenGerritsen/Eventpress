@@ -40,7 +40,7 @@ function App() {
   return (
     <div className="App">
       <Sidebar handlec1={handleClose1} handles1={handleShow1} handles5={handleShow5} />
-      <LoopTable handleshow5={show5} handlec5={handleClose5} handles6={handleShow6} />
+      <LoopTable handles2={handleShow2} handleshow5={show5} handlec5={handleClose5} handles6={handleShow6} />
       <div>
         <EventInzien handleshow2={show2} handlec2={handleClose2} handles3={handleShow3} />
         <EventInschrijven handleshow3={show3} handlec3={handleClose3} handles2={handleShow2} handles4={handleShow4} />
