@@ -20,7 +20,7 @@ class EventInschrijven extends React.Component {
             <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { this.props.handlec3(); this.props.handles2(); }}>
               Terug
             </button>
-            <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { this.props.handlec(); this.props.handles4(); }}>
+            <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { this.props.handlec3(); this.props.handles4(); }}>
               Verzenden
             </button>
             <br />
