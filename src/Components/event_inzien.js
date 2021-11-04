@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
+import imgfe1 from './FE1.png';
 
 class EventInzien extends React.Component {
 
@@ -18,9 +19,10 @@ class EventInzien extends React.Component {
             <h4>
             Datum: 20-11 Lokaal: 4.094
             </h4>
-            <h3>
+            <h5>
             React intro en andere dingen
-            </h3>
+            </h5>
+            <img class="img-responsive" src={imgfe1} alt=""></img>
           </Modal.Body>
           <Modal.Footer class="col text-center">
             <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { this.props.handlec2(); this.props.handles3(); }}>

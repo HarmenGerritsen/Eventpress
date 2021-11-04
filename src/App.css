@@ -235,6 +235,11 @@ td {
     font-weight: bold;
     margin: 5vh auto;
   }
+
+  .img-responsive {
+    position: relative;
+    width: 10vh;
+}
   .requestButton {
     position: absolute;
     padding: 1px;
@@ -263,3 +268,4 @@ td {
     display: none;
   }
 }
+
