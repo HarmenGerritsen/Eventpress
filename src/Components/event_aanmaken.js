@@ -32,6 +32,26 @@ function LoopTable(props) {
     }
     useEffect(() => { getData() }, [])
 
+    const [datum, setDatum] = useState('');
+    const [tijd, setTijd] = useState('');
+    const [titel, setTitel] = useState('');
+    const [omschrijving, setOmschrijving] = useState('');
+    const [categorie, setCategorie] = useState('');
+    const [locatie, setLocatie] = useState('');
+    const [organisator, setOrganisator] = useState('');
+
+    const handleSubmit = (e) => {
+        const newData = { datum, tijd, titel, omschrijving, categorie, locatie, organisator };
+
+        fetch('http://localhost:8000/Events/', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newData)
+        }).then(() => {
+            console.log('new data added')
+        })
+    }
+
     return (
         <div>
             <div className="Table">
@@ -50,14 +70,14 @@ function LoopTable(props) {
                     {data && data.length > 0 && data.map((item) => (
                         <tbody>
                             {emps.map((index) => (
-                                <tr key={index} onClick={props.handles2}>
-                                    <td>{item.date}</td>
-                                    <td>{item.time}</td>
-                                    <td>{item.title}</td>
-                                    <td className="hide">{item.text}</td>
-                                    <td className="hide">{item.category}</td>
-                                    <td className="hide">{item.location}</td>
-                                    <td className="hide">{item.name}</td>
+                                <tr key={index}>
+                                    <td>{item.datum}</td>
+                                    <td>{item.tijd}</td>
+                                    <td>{item.titel}</td>
+                                    <td className="hide">{item.omschrijving}</td>
+                                    <td className="hide">{item.categorie}</td>
+                                    <td className="hide">{item.locatie}</td>
+                                    <td className="hide">{item.organisator}</td>
                                 </tr>
                             )
                             )}
@@ -73,17 +93,19 @@ function LoopTable(props) {
                         <button className="closeButton" onClick={props.handlec5}>X</button>
                     </Modal.Header>
                     <Modal.Body>
+                        
                         <p>Maak evenement aan</p>
-                        <textarea className="textarea" placeholder="Datum"></textarea>
-                        <textarea className="textarea" placeholder="Tijd"></textarea>
-                        <textarea className="textarea" placeholder="Titel"></textarea>
-                        <textarea className="textarea" placeholder="Omschrijving"></textarea>
-                        <textarea className="textarea" placeholder="Categorie"></textarea>
-                        <textarea className="textarea" placeholder="Locatie"></textarea>
-                        <textarea className="textarea" placeholder="Organisator"></textarea>
-                    </Modal.Body>
-                    <Modal.Footer class="col text-center">
-                        <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { props.handlec5(); props.handles6(); addRow();}}>
+                        <textarea className="textarea" placeholder="Datum" value={datum} onChange={(e) => setDatum(e.target.value)} ></textarea>
+                        <textarea className="textarea" placeholder="Tijd" value={tijd} onChange={(e) => setTijd(e.target.value)}></textarea>
+                        <textarea className="textarea" placeholder="Titel" value={titel} onChange={(e) => setTitel(e.target.value)}></textarea>
+                        <textarea className="textarea" placeholder="Omschrijving" value={omschrijving} onChange={(e) => setOmschrijving(e.target.value)}></textarea>
+                        <textarea className="textarea" placeholder="Categorie" value={categorie} onChange={(e) => setCategorie(e.target.value)}></textarea>
+                        <textarea className="textarea" placeholder="Locatie" value={locatie} onChange={(e) => setLocatie(e.target.value)}></textarea>
+                        <textarea className="textarea" placeholder="Organisator" value={organisator} onChange={(e) => setOrganisator(e.target.value)}></textarea>
+                        </Modal.Body>
+                    
+                        <Modal.Footer class="col text-center">
+                        <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => {handleSubmit(); props.handlec5(); props.handles6(); addRow();}}>
                             Aanmaken
                         </button>
                         <br />
