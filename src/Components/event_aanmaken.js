@@ -70,7 +70,7 @@ function LoopTable(props) {
                     {data && data.length > 0 && data.map((item) => (
                         <tbody>
                             {emps.map((index) => (
-                                <tr key={index}>
+                                <tr key={index}  onClick={() => { props.handles2(); }}>
                                     <td>{item.datum}</td>
                                     <td>{item.tijd}</td>
                                     <td>{item.titel}</td>
