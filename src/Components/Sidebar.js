@@ -20,7 +20,7 @@ class Sidebar extends React.Component {
         <a href="#">
           <img className="plus plus2" onClick={this.props.handles5} src={plus} alt=''></img>
         </a>
-        <button type="button" className="requestButton" onClick={this.props.handles5}><div className="hide">Evenement<br /></div>suggereren</button>
+        <button type="button" className="requestButton" onClick={this.props.handles1}><div className="hide">Evenement<br /></div>suggereren</button>
       </div>
     )
   }

@@ -110,12 +110,14 @@
   box-shadow: 0 0.3em rgb(124, 124, 155);
   margin-bottom: 10vh;
   margin-top: 15vh;
+  display: none;
 }
 
 .menu {
   display: block;
   align-items: center;
   margin: 1vh 5vw 1vh 5vw;
+  display: none;
 }
 
 .menuButton {

@@ -1,13 +1,13 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 
-class EventAanmaken extends React.Component {
+class EventAanvragen extends React.Component {
   render() {
     return (
       <div>
         <Modal show={this.props.handleshow1} onHide={this.props.handlec1}>
           <Modal.Header className="modal-header">
-            <Modal.Title className="ModalTitle">Evenement aanmaken</Modal.Title>
+            <Modal.Title className="ModalTitle">Evenement suggereren</Modal.Title>
             <button className="closeButton" onClick={this.props.handlec1}>X</button>
           </Modal.Header>
           <Modal.Body>
@@ -25,4 +25,4 @@ class EventAanmaken extends React.Component {
   }
 }
 
-export default EventAanmaken;
+export default EventAanvragen;

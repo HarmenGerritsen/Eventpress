@@ -8,7 +8,7 @@ import EventInzien from "./Components/event_inzien.js";
 import EventInschrijven from "./Components/event_inschrijven.js";
 import EventInschrijvenAccept from "./Components/event_inschrijven_accept.js";
 import EventAanvragenAccept from "./Components/event_aanvragen_accept.js";
-import EventAanmaken from "./Components/event_aanvragen.js";
+import EventAanvragen from "./Components/event_aanvragen.js";
 import LoopTable from "./Components/event_aanmaken.js";
 
 function App() {
@@ -46,7 +46,7 @@ function App() {
         <EventInschrijven handleshow3={show3} handlec3={handleClose3} handles2={handleShow2} handles4={handleShow4} />
         <EventInschrijvenAccept handleshow4={show4} handlec4={handleClose4} />
         <EventAanvragenAccept handles6={handleShow6} handlec6={handleClose6} />
-        <EventAanmaken handleshow1={show1} handlec1={handleClose1} />
+        <EventAanvragen handleshow1={show1} handlec1={handleClose1} />
       </div>
     </div>
   );
