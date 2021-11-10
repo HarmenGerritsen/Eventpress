@@ -3,7 +3,7 @@ import Table from 'react-bootstrap/Table';
 import Modal from "react-bootstrap/Modal";
 
 function LoopTable(props) {
-    const [emps, setEmps] = useState([{}, {}, {}])
+    const [emps, setEmps] = useState([{}])
 
     const addRow = () => {
         let newEmp = {}
