@@ -11,6 +11,8 @@ import EventAanvragenAccept from "./Components/event_aanvragen_accept.js";
 import EventAanvragen from "./Components/event_aanvragen.js";
 import LoopTable from "./Components/event_aanmaken.js";
 
+document.body.style.backgroundColor = "rgb(190, 188, 202)";
+
 function App() {
   const [show1, setShow1] = useState(false);
   const [show2, setShow2] = useState(false);

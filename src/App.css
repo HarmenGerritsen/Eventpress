@@ -4,9 +4,8 @@
 .App {
   text-align: center;
   height: auto;
-  padding-bottom: 76.5vh;
+  padding-bottom: auto;
   font-family: Gill Sans, sans-serif;
-  background-color: rgb(190, 188, 202);
 }
 
 .App-header {
