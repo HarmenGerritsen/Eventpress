@@ -9,6 +9,26 @@
       "locatie": "Lokaal 4.094",
       "organisator": "Jan",
       "id": 1
+    },
+    {
+      "datum": "20 Juli",
+      "tijd": "15:00",
+      "titel": "Borreltje",
+      "omschrijving": "we gaan een borreltje doen",
+      "categorie": "Overig",
+      "locatie": "op Locatie",
+      "organisator": "Ik",
+      "id": 2
+    },
+    {
+      "datum": "Morgen",
+      "tijd": "uh savonds",
+      "titel": "Frontend ofzo",
+      "omschrijving": "ja",
+      "categorie": "Frontend",
+      "locatie": "op school",
+      "organisator": "Arno",
+      "id": 3
     }
   ]
 }
