@@ -12,8 +12,6 @@ class EventInschrijven extends React.Component {
             <button className="closeButton" onClick={this.props.handlec3}>X</button>
           </Modal.Header>
           <Modal.Body className="popupBody">
-            <input className="textarea" type="text" placeholder="vul je naam in..." />
-            <input className="textarea" type="text" placeholder="vul je studentnummer in..." />
             <input className="textarea" type="text" placeholder="vul je email in..." />
           </Modal.Body>
           <Modal.Footer className="popupFooter" class="col text-center">

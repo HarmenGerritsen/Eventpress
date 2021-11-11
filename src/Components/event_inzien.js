@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
-import imgfe1 from './FE1.png';
+import imgfe1 from '../Images/FE1.png';
 
 class EventInzien extends React.Component {
 
