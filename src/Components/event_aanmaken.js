@@ -3,11 +3,12 @@ import Table from 'react-bootstrap/Table';
 import Modal from "react-bootstrap/Modal";
 
 function LoopTable(props) {
-  const [emps, setEmps] = useState([{}])
+  const [events, setEvent] = useState([{}])
 
   const addRow = () => {
-    let newEmp = {}
-    setEmps([...emps, newEmp])
+    let newEvent = [{}]
+    console.log(setEvent);
+    setEvent([...events, newEvent])
   }
 
   const [data, setData] = useState([]);
@@ -22,13 +23,11 @@ function LoopTable(props) {
       }
     )
       .then(function (response) {
-        console.log(response)
-        return response.json();
+        return response.json()
       })
       .then(function (myJson) {
-        console.log(myJson);
         setData(myJson)
-      });
+      })
   }
   useEffect(() => { getData() }, [])
 
@@ -61,23 +60,23 @@ function LoopTable(props) {
               <th>Datum</th>
               <th>Tijd</th>
               <th>Titel</th>
-              <th className="Omschrijving hide">Omschrijving</th>
-              <th className="hide">Categorie</th>
-              <th className="hide">Locatie</th>
-              <th className="hide">Organisator</th>
+              <th className="Omschrijving">Omschrijving</th>
+              <th>Categorie</th>
+              <th>Locatie</th>
+              <th>Organisator</th>
             </tr>
           </thead>
           {data && data.length > 0 && data.map((item) => (
             <tbody>
-              {emps.map((index) => (
+              {events.map((index) => (
                 <tr key={index} onClick={() => { props.handles2(); }}>
                   <td>{item.datum}</td>
                   <td>{item.tijd}</td>
                   <td>{item.titel}</td>
-                  <td className="hide">{item.omschrijving}</td>
-                  <td className="hide">{item.categorie}</td>
-                  <td className="hide">{item.locatie}</td>
-                  <td className="hide">{item.organisator}</td>
+                  <td>{item.omschrijving}</td>
+                  <td>{item.categorie}</td>
+                  <td>{item.locatie}</td>
+                  <td>{item.organisator}</td>
                 </tr>
               )
               )}
@@ -105,7 +104,11 @@ function LoopTable(props) {
           </Modal.Body>
 
           <Modal.Footer class="col text-center">
-            <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { handleSubmit(); props.handlec5(); props.handles6(); addRow(); }}>
+            <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => {
+              handleSubmit();
+              props.handlec5();
+              //addRow();
+            }}>
               Aanmaken
             </button>
             <br />
