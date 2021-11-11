@@ -11,16 +11,6 @@
       "id": 1
     },
     {
-      "datum": "d",
-      "tijd": "d",
-      "titel": "d",
-      "omschrijving": "d",
-      "categorie": "dd",
-      "locatie": "d",
-      "organisator": "d",
-      "id": 2
-    },
-    {
       "datum": "Morgen",
       "tijd": "uh savonds",
       "titel": "Frontend ofzo",
@@ -28,17 +18,7 @@
       "categorie": "Frontend",
       "locatie": "op school",
       "organisator": "Arno",
-      "id": 3
-    },
-    {
-      "datum": "1",
-      "tijd": "1",
-      "titel": "1",
-      "omschrijving": "1",
-      "categorie": "1",
-      "locatie": "1",
-      "organisator": "1",
-      "id": 4
+      "id": 2
     }
   ]
 }
