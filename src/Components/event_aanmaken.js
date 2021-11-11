@@ -3,16 +3,13 @@ import Table from 'react-bootstrap/Table';
 import Modal from "react-bootstrap/Modal";
 
 function LoopTable(props) {
-  const [events, setEvent] = useState([{}])
 
-  const addRow = () => {
-    let newEvent = [{}]
-    console.log(setEvent);
-    setEvent([...events, newEvent])
+  function refreshPage() {
+    window.location.reload(false);
   }
 
+  const [events, setEvent] = useState([{}])
   const [data, setData] = useState([]);
-
   const getData = () => {
     fetch('http://localhost:8000/Events'
       , {
@@ -107,7 +104,7 @@ function LoopTable(props) {
             <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => {
               handleSubmit();
               props.handlec5();
-              //addRow();
+              refreshPage();
             }}>
               Aanmaken
             </button>
