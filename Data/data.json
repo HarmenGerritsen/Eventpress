@@ -19,6 +19,16 @@
       "locatie": "op school",
       "organisator": "Arno",
       "id": 2
+    },
+    {
+      "datum": "1",
+      "tijd": "1",
+      "titel": "1",
+      "omschrijving": "1",
+      "categorie": "1",
+      "locatie": "1",
+      "organisator": "1",
+      "id": 3
     }
   ]
 }
