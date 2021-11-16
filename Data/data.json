@@ -19,6 +19,26 @@
       "locatie": "op school",
       "organisator": "Arno",
       "id": 2
+    },
+    {
+      "datum": "22-12-21",
+      "tijd": "5 uur",
+      "titel": "Snowboarden",
+      "omschrijving": "We gaan allemaal snowboarden",
+      "categorie": "Else",
+      "locatie": "Friesland",
+      "organisator": "HU",
+      "id": 3
+    },
+    {
+      "datum": "1-1-22",
+      "tijd": "12.23",
+      "titel": "Python",
+      "omschrijving": "Gilde Python presentatie over vanalles en nogwat, wat precies weet ik nog niet want dan weet ik nog niet.",
+      "categorie": "Back-end",
+      "locatie": "4.094",
+      "organisator": "Henk",
+      "id": 4
     }
   ]
 }
