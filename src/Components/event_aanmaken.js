@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Table from 'react-bootstrap/Table';
 import Modal from "react-bootstrap/Modal";
+import imgfe1 from '../Images/FE1.png';
 
 function LoopTable(props) {
 
@@ -70,7 +71,7 @@ function LoopTable(props) {
                   <td>{item.datum}</td>
                   <td>{item.tijd}</td>
                   <td>{item.titel}</td>
-                  <td>{item.omschrijving}</td>
+                  <td className="Omschrijving">{item.omschrijving}</td>
                   <td>{item.categorie}</td>
                   <td>{item.locatie}</td>
                   <td>{item.organisator}</td>

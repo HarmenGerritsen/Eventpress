@@ -165,9 +165,15 @@ tr {
 
 td {
   height: 5vh;
+  width: 10vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .Omschrijving {
+  display: block;
+  height: auto;
   width: 20vw;
 }
 

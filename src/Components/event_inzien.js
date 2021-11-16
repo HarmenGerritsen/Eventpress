@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 import imgfe1 from '../Images/FE1.png';
+import LoopTable from "./event_aanmaken.js";
 
 class EventInzien extends React.Component {
 
@@ -14,7 +15,7 @@ class EventInzien extends React.Component {
           </Modal.Header>
           <Modal.Body className="popupbody">
             <h1>
-            React 15:30
+            React
             </h1>
             <h4>
             Datum: 20-11 Lokaal: 4.094
