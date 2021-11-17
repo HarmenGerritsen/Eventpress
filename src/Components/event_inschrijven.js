@@ -1,9 +1,8 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 
-class EventInschrijven extends React.Component {
+function EventInschrijven() {
 
-  render() {
     return (
       <div>
         <Modal show={this.props.handleshow3} onHide={this.props.handlec3}>
@@ -30,7 +29,6 @@ class EventInschrijven extends React.Component {
           </Modal.Footer>
         </Modal>
       </div>)
-  }
 }
 
 export default EventInschrijven;
