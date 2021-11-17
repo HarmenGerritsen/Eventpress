@@ -3,9 +3,8 @@ import Modal from "react-bootstrap/Modal";
 import imgfe1 from '../Images/FE1.png';
 import LoopTable from "./event_aanmaken.js";
 
-class EventInzien extends React.Component {
-
-  render() {
+function EventInzien() {
+  
     return (
       <div>
         <Modal show={this.props.handleshow2} onHide={this.props.handlec2} className="modal">
@@ -37,7 +36,6 @@ class EventInzien extends React.Component {
           </Modal.Footer>
         </Modal>
       </div>)
-  }
 }
 
 export default EventInzien;

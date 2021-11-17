@@ -1,9 +1,8 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 
-class EventAanvragenAccept extends React.Component {
+function EventAanvragenAccept() {
 
-  render() {
     return (
       <div>
         <Modal show={this.props.handleshow6} onHide={this.props.handlec6}>
@@ -23,7 +22,6 @@ class EventAanvragenAccept extends React.Component {
           </Modal.Footer>
         </Modal>
       </div>)
-  }
 }
 
 export default EventAanvragenAccept;

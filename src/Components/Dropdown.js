@@ -2,9 +2,8 @@ import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 
-class DropdownMenu extends React.Component {
+function DropdownMenu() {
 
-  render() {
     return (
       <DropdownButton id="dropdownMenu" title="Sorteren">
         <Dropdown.Item href="#">Categorie</Dropdown.Item>
@@ -13,6 +12,5 @@ class DropdownMenu extends React.Component {
         <Dropdown.Item href="#">Sorteren op</Dropdown.Item>
       </DropdownButton>
     )
-  }
 };
 export default DropdownMenu;

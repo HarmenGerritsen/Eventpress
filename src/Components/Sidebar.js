@@ -3,9 +3,8 @@ import React from "react";
 import plus from "../Images/Plus.png";
 import DropdownMenu from "./Dropdown.js";
 
-class Sidebar extends React.Component {
+function Sidebar() {
 
-  render() {
     return (
 
       <div className="App-header">
@@ -23,6 +22,5 @@ class Sidebar extends React.Component {
         <button type="button" className="requestButton" onClick={this.props.handles1}><div className="hide">Evenement<br /></div>suggereren</button>
       </div>
     )
-  }
 }
 export default Sidebar;
