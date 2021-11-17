@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import imgfe1 from '../Images/FE1.png';
 import LoopTable from "./event_aanmaken.js";
 
 class EventInzien extends React.Component {
+
+  const [events, setEvent] = useState([{}])
+  const [data, setData] = useState([]);
+  const getData = () => {
+    fetch('http://localhost:8000/Events'
+      , {
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      }
+    )
+      .then(function (response) {
+        return response.json()
+      })
+      .then(function (myJson) {
+        setData(myJson)
+      })
+  }
 
   render() {
     return (
@@ -15,13 +34,13 @@ class EventInzien extends React.Component {
           </Modal.Header>
           <Modal.Body className="popupbody">
             <h1>
-            React
+              React
             </h1>
             <h4>
-            Datum: 20-11 Lokaal: 4.094
+              Datum
             </h4>
             <h5>
-            React intro en andere dingen
+              React intro en andere dingen
             </h5>
             <img class="img-responsive" src={imgfe1} alt=""></img>
           </Modal.Body>
