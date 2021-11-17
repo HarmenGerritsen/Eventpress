@@ -5,25 +5,6 @@ import LoopTable from "./event_aanmaken.js";
 
 class EventInzien extends React.Component {
 
-  const [events, setEvent] = useState([{}])
-  const [data, setData] = useState([]);
-  const getData = () => {
-    fetch('http://localhost:8000/Events'
-      , {
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        }
-      }
-    )
-      .then(function (response) {
-        return response.json()
-      })
-      .then(function (myJson) {
-        setData(myJson)
-      })
-  }
-
   render() {
     return (
       <div>
