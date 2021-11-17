@@ -15,10 +15,14 @@ class EventInschrijven extends React.Component {
             <input className="textarea" type="text" placeholder="vul je email in..." />
           </Modal.Body>
           <Modal.Footer className="popupFooter" class="col text-center">
-            <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { this.props.handlec3(); this.props.handles2(); }}>
+            <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => {
+              this.props.handlec3(); this.props.handles2(); 
+              }}>
               Terug
             </button>
-            <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { this.props.handlec3(); this.props.handles4(); }}>
+            <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => {
+              this.props.handlec3(); this.props.handles4(); 
+              }}>
               Verzenden
             </button>
             <br />
