@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import imgfe1 from '../Images/FE1.png';
-import data from '../event_aanmaken.js';
 
 
 function EventInzien(props, state) {
