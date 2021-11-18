@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import imgfe1 from '../Images/FE1.png';
 
-
 function EventInzien(props, state) {
   
-  const [data] = useState([{}]);
-  console.log (data);
 
+
+function showData(item) {
+  return (<h3>{item}</h3>)
+}
     return (
       <div>
         <Modal show={props.handleshow2} onHide={props.handlec2} className="modal">
@@ -16,18 +17,7 @@ function EventInzien(props, state) {
             <button className="closeButton" onClick={props.handlec2}>X</button>
           </Modal.Header>
           <Modal.Body className="popupbody">
-            { data && data.length > 0 && data.map(item => {
-              return(
-            <div key={ item.id }>
-              { item.titel}
-            </div>
-            )})}
-            <h4>
-            datum
-            </h4>
-            <h5>
-              React intro en andere dingen
-            </h5>
+      { Object.values(props.event).map(item => showData(item))}
             <img class="img-responsive" src={imgfe1} alt=""></img>
           </Modal.Body>
           <Modal.Footer class="col text-center">

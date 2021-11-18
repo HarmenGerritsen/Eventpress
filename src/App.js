@@ -20,12 +20,15 @@ function App() {
   const [show4, setShow4] = useState(false);
   const [show5, setShow5] = useState(false);
   const [show6, setShow6] = useState(false);
-
+  const [eventItem , setEventItem] = useState(false);
   const handleClose1 = () => setShow1(false);
   const handleShow1 = () => setShow1(true);
 
-  const handleClose2 = () => setShow2(false);
-  const handleShow2 = () => setShow2(true);
+  const handleClose2 = () =>  setShow2(false);
+  const handleShow2 = (event) => {
+    setEventItem(event)
+    setShow2(true);
+  }
 
   const handleClose3 = () => setShow3(false);
   const handleShow3 = () => setShow3(true);
@@ -44,7 +47,7 @@ function App() {
       <Sidebar handlec1={handleClose1} handles1={handleShow1} handles5={handleShow5} />
       <LoopTable handles2={handleShow2} handleshow5={show5} handlec5={handleClose5} handles6={handleShow6} />
       <div>
-        <EventInzien handleshow2={show2} handlec2={handleClose2} handles3={handleShow3} />
+        <EventInzien handleshow2={show2} event={eventItem} handlec2={handleClose2} handles3={handleShow3} />
         <EventInschrijven handleshow3={show3} handlec3={handleClose3} handles2={handleShow2} handles4={handleShow4} />
         <EventInschrijvenAccept handleshow4={show4} handlec4={handleClose4} />
         <EventAanvragenAccept handles6={handleShow6} handlec6={handleClose6} />
