@@ -3,14 +3,14 @@ import Modal from "react-bootstrap/Modal";
 import imgfe1 from '../Images/FE1.png';
 import LoopTable from "./event_aanmaken.js";
 
-function EventInzien() {
+function EventInzien(props) {
   
     return (
       <div>
-        <Modal show={this.props.handleshow2} onHide={this.props.handlec2} className="modal">
+        <Modal show={props.handleshow2} onHide={props.handlec2} className="modal">
           <Modal.Header className="modal-header">
             <Modal.Title className="modal-title">Evenement inzien</Modal.Title>
-            <button className="closeButton" onClick={this.props.handlec2}>X</button>
+            <button className="closeButton" onClick={props.handlec2}>X</button>
           </Modal.Header>
           <Modal.Body className="popupbody">
             <h1>
@@ -25,10 +25,10 @@ function EventInzien() {
             <img class="img-responsive" src={imgfe1} alt=""></img>
           </Modal.Body>
           <Modal.Footer class="col text-center">
-            <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { this.props.handlec2(); this.props.handles3(); }}>
+            <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { props.handlec2(); props.handles3(); }}>
               Inschrijven
             </button>
-            <button type="button" class="btn btn-dark button" variant="secondary" onClick={this.props.handlec2}>
+            <button type="button" class="btn btn-dark button" variant="secondary" onClick={props.handlec2}>
               Sluiten
             </button>
             <br />
