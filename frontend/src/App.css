@@ -171,6 +171,23 @@ td {
   text-overflow: ellipsis;
 }
 
+.info {
+  width: 50vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.listItem {
+  color: red
+  
+  
+
+
+
+  
+}
+
 .Omschrijving {
   display: block;
   height: auto;
