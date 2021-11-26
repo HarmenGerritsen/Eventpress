@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "Event",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titel": {
+      "type": "string"
+    },
+    "Datum": {
+      "type": "date"
+    },
+    "Tijd": {
+      "type": "time"
+    },
+    "Omschrijving": {
+      "type": "text"
+    },
+    "Organisator": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "Categorie": {
+      "type": "enumeration",
+      "enum": [
+        "frontend",
+        "backend",
+        "overig"
+      ]
+    }
+  }
+}
