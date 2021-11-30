@@ -6,7 +6,7 @@ function EventInzien(props, state) {
 
   function showData(item) {
     return (
-      <div>{item}</div>
+      <div>hoi</div>
     )
   }
 

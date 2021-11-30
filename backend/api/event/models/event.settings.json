@@ -13,13 +13,16 @@
   "pluginOptions": {},
   "attributes": {
     "Titel": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Datum": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "Tijd": {
-      "type": "time"
+      "type": "time",
+      "required": true
     },
     "Omschrijving": {
       "type": "text"
@@ -37,7 +40,8 @@
       ]
     },
     "Locatie": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

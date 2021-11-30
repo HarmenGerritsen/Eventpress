@@ -516,7 +516,11 @@
     "schemas": {
       "Event": {
         "required": [
-          "id"
+          "id",
+          "Titel",
+          "Datum",
+          "Tijd",
+          "Locatie"
         ],
         "properties": {
           "id": {
@@ -598,6 +602,12 @@
         }
       },
       "NewEvent": {
+        "required": [
+          "Titel",
+          "Datum",
+          "Tijd",
+          "Locatie"
+        ],
         "properties": {
           "Titel": {
             "type": "string"
