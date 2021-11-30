@@ -35,6 +35,9 @@
         "backend",
         "overig"
       ]
+    },
+    "Locatie": {
+      "type": "string"
     }
   }
 }

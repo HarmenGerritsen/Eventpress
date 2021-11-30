@@ -588,6 +588,9 @@
               "overig"
             ]
           },
+          "Locatie": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -619,6 +622,9 @@
               "backend",
               "overig"
             ]
+          },
+          "Locatie": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

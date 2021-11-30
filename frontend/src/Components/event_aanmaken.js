@@ -11,7 +11,7 @@ function LoopTable(props) {
   const [events, setEvent] = useState([{}])
   const [data, setData] = useState([]);
   const getData = () => {
-    fetch('http://localhost:8000/Events'
+    fetch('http://localhost:1337/events/'
       , {
         headers: {
           'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ function LoopTable(props) {
   const handleSubmit = (e) => {
     const newData = { datum, tijd, titel, omschrijving, categorie, locatie, organisator };
 
-    fetch('http://localhost:8000/Events/', {
+    fetch('http://localhost:1337/events/', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newData)
@@ -67,13 +67,13 @@ function LoopTable(props) {
             <tbody>
               {events.map((index) => (
                 <tr key={index} onClick={() => { props.handles2(item); }}>
-                  <td>{item.datum}</td>
-                  <td>{item.tijd}</td>
-                  <td>{item.titel}</td>
-                  <td className="Omschrijving">{item.omschrijving}</td>
-                  <td>{item.categorie}</td>
-                  <td>{item.locatie}</td>
-                  <td>{item.organisator}</td>
+                  <td>{item.Datum}</td>
+                  <td>{item.Tijd}</td>
+                  <td>{item.Titel}</td>
+                  <td className="Omschrijving">{item.Omschrijving}</td>
+                  <td>{item.Categorie}</td>
+                  <td>{item.Locatie}</td>
+                  <td>{item.Organisator.username}</td>
                 </tr>
               )
               )}
