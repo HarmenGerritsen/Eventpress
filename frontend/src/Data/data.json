@@ -49,6 +49,16 @@
       "locatie": "counter",
       "organisator": "strike",
       "id": 5
+    },
+    {
+      "datum": "asf",
+      "tijd": "asdf",
+      "titel": "asdf",
+      "omschrijving": "asdf",
+      "categorie": "asf",
+      "locatie": "asdf",
+      "organisator": "asdf",
+      "id": 6
     }
   ]
 }
