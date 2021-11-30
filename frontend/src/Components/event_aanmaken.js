@@ -91,13 +91,9 @@ function LoopTable(props) {
           <Modal.Body>
 
             <p>Maak evenement aan</p>
-            <textarea className="textarea" placeholder="Datum" value={datum} onChange={(e) => setDatum(e.target.value)} ></textarea>
-            <textarea className="textarea" placeholder="Tijd" value={tijd} onChange={(e) => setTijd(e.target.value)}></textarea>
-            <textarea className="textarea" placeholder="Titel" value={titel} onChange={(e) => setTitel(e.target.value)}></textarea>
-            <textarea className="textarea" placeholder="Omschrijving" value={omschrijving} onChange={(e) => setOmschrijving(e.target.value)}></textarea>
-            <textarea className="textarea" placeholder="Categorie" value={categorie} onChange={(e) => setCategorie(e.target.value)}></textarea>
-            <textarea className="textarea" placeholder="Locatie" value={locatie} onChange={(e) => setLocatie(e.target.value)}></textarea>
-            <textarea className="textarea" placeholder="Organisator" value={organisator} onChange={(e) => setOrganisator(e.target.value)}></textarea>
+            
+            <a target="_blank" href="http://localhost:1337/admin/plugins/content-manager/collectionType/application::event.event?page=1&pageSize=10&_sort=Titel:ASC">Klik hier om een evenement aan te maken</a>
+
           </Modal.Body>
 
           <Modal.Footer class="col text-center">
@@ -117,3 +113,11 @@ function LoopTable(props) {
   );
 }
 export default LoopTable;
+
+//<textarea className="textarea" placeholder="Datum" value={datum} onChange={(e) => setDatum(e.target.value)} ></textarea>
+//<textarea className="textarea" placeholder="Tijd" value={tijd} onChange={(e) => setTijd(e.target.value)}></textarea>
+//<textarea className="textarea" placeholder="Titel" value={titel} onChange={(e) => setTitel(e.target.value)}></textarea>
+//<textarea className="textarea" placeholder="Omschrijving" value={omschrijving} onChange={(e) => setOmschrijving(e.target.value)}></textarea>
+//<textarea className="textarea" placeholder="Categorie" value={categorie} onChange={(e) => setCategorie(e.target.value)}></textarea>
+//<textarea className="textarea" placeholder="Locatie" value={locatie} onChange={(e) => setLocatie(e.target.value)}></textarea>
+//<textarea className="textarea" placeholder="Organisator" value={organisator} onChange={(e) => setOrganisator(e.target.value)}></textarea>
