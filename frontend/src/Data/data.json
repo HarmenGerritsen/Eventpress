@@ -39,6 +39,16 @@
       "locatie": "4.094",
       "organisator": "Henk",
       "id": 4
+    },
+    {
+      "datum": "Harmen",
+      "tijd": "Zuigt",
+      "titel": "in",
+      "omschrijving": "forza",
+      "categorie": "en",
+      "locatie": "counter",
+      "organisator": "strike",
+      "id": 5
     }
   ]
 }
