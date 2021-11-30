@@ -72,7 +72,7 @@ function LoopTable(props) {
                   <td className="Omschrijving">{item.Omschrijving}</td>
                   <td>{item.Categorie}</td>
                   <td>{item.Locatie}</td>
-                  <td>{item.Organisator.username}</td>
+                  <td>{item.Organisator}</td>
                 </tr>
               )
               )}

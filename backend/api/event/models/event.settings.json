@@ -35,6 +35,10 @@
     },
     "Categorie": {
       "type": "string"
+    },
+    "mails": {
+      "via": "event",
+      "collection": "mails"
     }
   }
 }

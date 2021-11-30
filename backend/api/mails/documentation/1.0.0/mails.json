@@ -526,6 +526,55 @@
           "Mail": {
             "type": "string"
           },
+          "event": {
+            "required": [
+              "id",
+              "Titel",
+              "Locatie",
+              "Organisator"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Titel": {
+                "type": "string"
+              },
+              "Omschrijving": {
+                "type": "string"
+              },
+              "Locatie": {
+                "type": "string"
+              },
+              "Organisator": {
+                "type": "string"
+              },
+              "Datum": {
+                "type": "string"
+              },
+              "Tijd": {
+                "type": "string"
+              },
+              "Categorie": {
+                "type": "string"
+              },
+              "mails": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -538,6 +587,9 @@
         ],
         "properties": {
           "Mail": {
+            "type": "string"
+          },
+          "event": {
             "type": "string"
           },
           "published_at": {
