@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/events": {
+    "/mails": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the mails's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve mails document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Event"
+                    "$ref": "#/components/schemas/Mails"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Event"
+          "Mails"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new mails record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve mails document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Event"
+                  "$ref": "#/components/schemas/Mails"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Event"
+          "Mails"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEvent"
+                "$ref": "#/components/schemas/NewMails"
               }
             }
           }
         }
       }
     },
-    "/events/count": {
+    "/mails/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the number of mails documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve mails document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Event"
+          "Mails"
         ],
         "parameters": []
       }
     },
-    "/events/{id}": {
+    "/mails/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one mails record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve mails document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Event"
+                  "$ref": "#/components/schemas/Mails"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Event"
+          "Mails"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single mails record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve mails document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Event"
+                  "$ref": "#/components/schemas/Mails"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Event"
+          "Mails"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEvent"
+                "$ref": "#/components/schemas/NewMails"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single mails record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single mails based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Event"
+          "Mails"
         ],
         "parameters": [
           {
@@ -514,36 +514,16 @@
   },
   "components": {
     "schemas": {
-      "Event": {
+      "Mails": {
         "required": [
           "id",
-          "Titel",
-          "Locatie",
-          "Organisator"
+          "Mail"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Titel": {
-            "type": "string"
-          },
-          "Omschrijving": {
-            "type": "string"
-          },
-          "Locatie": {
-            "type": "string"
-          },
-          "Organisator": {
-            "type": "string"
-          },
-          "Datum": {
-            "type": "string"
-          },
-          "Tijd": {
-            "type": "string"
-          },
-          "Categorie": {
+          "Mail": {
             "type": "string"
           },
           "published_at": {
@@ -552,32 +532,12 @@
           }
         }
       },
-      "NewEvent": {
+      "NewMails": {
         "required": [
-          "Titel",
-          "Locatie",
-          "Organisator"
+          "Mail"
         ],
         "properties": {
-          "Titel": {
-            "type": "string"
-          },
-          "Omschrijving": {
-            "type": "string"
-          },
-          "Locatie": {
-            "type": "string"
-          },
-          "Organisator": {
-            "type": "string"
-          },
-          "Datum": {
-            "type": "string"
-          },
-          "Tijd": {
-            "type": "string"
-          },
-          "Categorie": {
+          "Mail": {
             "type": "string"
           },
           "published_at": {
@@ -596,7 +556,7 @@
   },
   "tags": [
     {
-      "name": "Event"
+      "name": "Mails"
     }
   ]
 }

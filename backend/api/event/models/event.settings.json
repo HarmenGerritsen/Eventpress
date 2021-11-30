@@ -16,32 +16,25 @@
       "type": "string",
       "required": true
     },
-    "Datum": {
-      "type": "date",
-      "required": true
-    },
-    "Tijd": {
-      "type": "time",
-      "required": true
-    },
     "Omschrijving": {
       "type": "text"
-    },
-    "Organisator": {
-      "plugin": "users-permissions",
-      "model": "user"
-    },
-    "Categorie": {
-      "type": "enumeration",
-      "enum": [
-        "frontend",
-        "backend",
-        "overig"
-      ]
     },
     "Locatie": {
       "type": "string",
       "required": true
+    },
+    "Organisator": {
+      "type": "string",
+      "required": true
+    },
+    "Datum": {
+      "type": "string"
+    },
+    "Tijd": {
+      "type": "string"
+    },
+    "Categorie": {
+      "type": "string"
     }
   }
 }
