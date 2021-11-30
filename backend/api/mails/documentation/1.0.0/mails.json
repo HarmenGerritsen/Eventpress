@@ -516,14 +516,10 @@
     "schemas": {
       "Mails": {
         "required": [
-          "id",
-          "Mail"
+          "id"
         ],
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "Mail": {
             "type": "string"
           },
           "event": {
@@ -575,6 +571,9 @@
               }
             }
           },
+          "mail": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -582,14 +581,11 @@
         }
       },
       "NewMails": {
-        "required": [
-          "Mail"
-        ],
         "properties": {
-          "Mail": {
+          "event": {
             "type": "string"
           },
-          "event": {
+          "mail": {
             "type": "string"
           },
           "published_at": {

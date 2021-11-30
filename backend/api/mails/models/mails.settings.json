@@ -12,13 +12,12 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Mail": {
-      "type": "email",
-      "required": true
-    },
     "event": {
       "via": "mails",
       "model": "event"
+    },
+    "mail": {
+      "type": "string"
     }
   }
 }

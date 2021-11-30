@@ -34,6 +34,7 @@ function LoopTable(props) {
   const [Categorie, setCategorie] = useState('');
   const [Locatie, setLocatie] = useState('');
   const [Organisator, setOrganisator] = useState('');
+  const [mails, setMail] = useState('');
 
   const handleSubmit = (e) => {
     const newData = { Datum, Tijd, Titel, Omschrijving, Categorie, Locatie, Organisator };
@@ -98,6 +99,7 @@ function LoopTable(props) {
             <textarea className="textarea" placeholder="Categorie" value={Categorie} onChange={(e) => setCategorie(e.target.value)}></textarea>
             <textarea className="textarea" placeholder="Locatie" value={Locatie} onChange={(e) => setLocatie(e.target.value)}></textarea>
             <textarea className="textarea" placeholder="Organisator" value={Organisator} onChange={(e) => setOrganisator(e.target.value)}></textarea>
+            <textarea className="textarea" placeholder="Organisator" value={mails} onChange={(e) => setMail(e.target.value)}></textarea>
 
           </Modal.Body>
 

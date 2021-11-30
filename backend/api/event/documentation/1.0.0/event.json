@@ -550,17 +550,16 @@
             "type": "array",
             "items": {
               "required": [
-                "id",
-                "Mail"
+                "id"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "Mail": {
+                "event": {
                   "type": "string"
                 },
-                "event": {
+                "mail": {
                   "type": "string"
                 },
                 "published_at": {
