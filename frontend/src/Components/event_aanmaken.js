@@ -11,7 +11,7 @@ function LoopTable(props) {
   const [events, setEvent] = useState([{}])
   const [data, setData] = useState([]);
   const getData = () => {
-    fetch('http://localhost:8000/Events'
+    fetch('http://localhost:1337/events/'
       , {
         headers: {
           'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ function LoopTable(props) {
   const handleSubmit = (e) => {
     const newData = { datum, tijd, titel, omschrijving, categorie, locatie, organisator };
 
-    fetch('http://localhost:8000/Events/', {
+    fetch('http://localhost:1337/events/', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newData)
@@ -67,13 +67,13 @@ function LoopTable(props) {
             <tbody>
               {events.map((index) => (
                 <tr key={index} onClick={() => { props.handles2(item); }}>
-                  <td>{item.datum}</td>
-                  <td>{item.tijd}</td>
-                  <td>{item.titel}</td>
-                  <td className="Omschrijving">{item.omschrijving}</td>
-                  <td>{item.categorie}</td>
-                  <td>{item.locatie}</td>
-                  <td>{item.organisator}</td>
+                  <td>{item.Datum}</td>
+                  <td>{item.Tijd}</td>
+                  <td>{item.Titel}</td>
+                  <td className="Omschrijving">{item.Omschrijving}</td>
+                  <td>{item.Categorie}</td>
+                  <td>{item.Locatie}</td>
+                  <td>{item.Organisator.username}</td>
                 </tr>
               )
               )}
@@ -91,13 +91,9 @@ function LoopTable(props) {
           <Modal.Body>
 
             <p>Maak evenement aan</p>
-            <textarea className="textarea" placeholder="Datum" value={datum} onChange={(e) => setDatum(e.target.value)} ></textarea>
-            <textarea className="textarea" placeholder="Tijd" value={tijd} onChange={(e) => setTijd(e.target.value)}></textarea>
-            <textarea className="textarea" placeholder="Titel" value={titel} onChange={(e) => setTitel(e.target.value)}></textarea>
-            <textarea className="textarea" placeholder="Omschrijving" value={omschrijving} onChange={(e) => setOmschrijving(e.target.value)}></textarea>
-            <textarea className="textarea" placeholder="Categorie" value={categorie} onChange={(e) => setCategorie(e.target.value)}></textarea>
-            <textarea className="textarea" placeholder="Locatie" value={locatie} onChange={(e) => setLocatie(e.target.value)}></textarea>
-            <textarea className="textarea" placeholder="Organisator" value={organisator} onChange={(e) => setOrganisator(e.target.value)}></textarea>
+            
+            <a target="_blank" href="http://localhost:1337/admin/plugins/content-manager/collectionType/application::event.event?page=1&pageSize=10&_sort=Titel:ASC">Klik hier om een evenement aan te maken</a>
+
           </Modal.Body>
 
           <Modal.Footer class="col text-center">
@@ -117,3 +113,11 @@ function LoopTable(props) {
   );
 }
 export default LoopTable;
+
+//<textarea className="textarea" placeholder="Datum" value={datum} onChange={(e) => setDatum(e.target.value)} ></textarea>
+//<textarea className="textarea" placeholder="Tijd" value={tijd} onChange={(e) => setTijd(e.target.value)}></textarea>
+//<textarea className="textarea" placeholder="Titel" value={titel} onChange={(e) => setTitel(e.target.value)}></textarea>
+//<textarea className="textarea" placeholder="Omschrijving" value={omschrijving} onChange={(e) => setOmschrijving(e.target.value)}></textarea>
+//<textarea className="textarea" placeholder="Categorie" value={categorie} onChange={(e) => setCategorie(e.target.value)}></textarea>
+//<textarea className="textarea" placeholder="Locatie" value={locatie} onChange={(e) => setLocatie(e.target.value)}></textarea>
+//<textarea className="textarea" placeholder="Organisator" value={organisator} onChange={(e) => setOrganisator(e.target.value)}></textarea>

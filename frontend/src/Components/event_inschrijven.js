@@ -15,11 +15,6 @@ function EventInschrijven(props) {
           </Modal.Body>
           <Modal.Footer className="popupFooter" class="col text-center">
             <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => {
-              props.handlec3(); props.handles2(); 
-              }}>
-              Terug
-            </button>
-            <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => {
               props.handlec3(); props.handles4(); 
               }}>
               Verzenden
