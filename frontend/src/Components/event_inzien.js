@@ -1,13 +1,54 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
+import Table from 'react-bootstrap/Table';
 import imgfe1 from '../Images/FE1.png';
+import data from './event_aanmaken.js'
+
 
 function EventInzien(props, state) {
 
-  function showData(item) {
-    return (
-      <div>{item}</div>
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
+  const [events, setEvent] = useState([{}])
+  const [data, setData] = useState([]);
+  const getData = () => {
+    fetch('http://localhost:1337/events/'
+      , {
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      }
     )
+      .then(function (response) {
+        return response.json()
+      })
+      .then(function (myJson) {
+        setData(myJson)
+      })
+  }
+  useEffect(() => { getData() }, [])
+
+  const [datum, setDatum] = useState('');
+  const [tijd, setTijd] = useState('');
+  const [titel, setTitel] = useState('');
+  const [omschrijving, setOmschrijving] = useState('');
+  const [categorie, setCategorie] = useState('');
+  const [locatie, setLocatie] = useState('');
+  const [organisator, setOrganisator] = useState('');
+
+  const handleSubmit = (e) => {
+    const newData = { datum, tijd, titel, omschrijving, categorie, locatie, organisator };
+
+    fetch('http://localhost:1337/events/', {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newData)
+    }).then(() => {
+      console.log('new data added')
+    })
   }
 
   return (
@@ -18,7 +59,27 @@ function EventInzien(props, state) {
           <button className="closeButton" onClick={props.handlec2}>X</button>
         </Modal.Header>
         <Modal.Body className="popupbody">
-          {Object.values(props.event).map(item => showData(item))}
+            <Table bordered hover>
+            
+            {data && data.length > 0 && data.map((item) => (
+              <tbody>
+                {events.map((index) => (
+                  <div>
+                    <h1>{item.Titel}</h1>
+                    <h1>{item.Datum}</h1>
+                    <h2>{item.Tijd}</h2>
+                    <h3>{item.Omschrijving}</h3>
+                    <h3>{item.Categorie}</h3>
+                    <h3>{item.Locatie}</h3>
+                    <h3>{item.Organisator}</h3>
+                  </div>
+
+                )
+                )}
+              </tbody>
+            )
+            )}
+          </Table>
           <img class="img-responsive" src={imgfe1} alt=""></img>
         </Modal.Body>
         <Modal.Footer class="col text-center">
