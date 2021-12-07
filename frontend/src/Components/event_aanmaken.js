@@ -16,8 +16,8 @@ function LoopTable(props) {
       , {
         headers: {
           'Content-Type': 'application/json',
-        },
-
+          'Accept': 'application/json'
+        }
       }
     )
       .then(function (response) {
@@ -124,20 +124,4 @@ function LoopTable(props) {
   );
 }
 export default LoopTable;
-
-
-
-
-
-
-
-
-
-//<td className="mails">{
-  //item.Inschrijvingen.inschrijving + ', '
-  //string = JSON.stringify(item.Inschrijvingen).split(re),
-  //newString = string.substr(item.Inschrijvingen.indexOf(',') + 26).slice(0, -125,
-//}
-//</td>
-
-//<textarea className="textarea" placeholder="Organisator" value={Inschrijvingen} onChange={(e) => setInschrijvingen(e.target.value)}></textarea>
+export const data = 900;
