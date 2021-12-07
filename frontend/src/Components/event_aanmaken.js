@@ -10,12 +10,14 @@ function LoopTable(props) {
 
   const [events, setEvent] = useState([{}])
   const [data, setData] = useState([]);
+  const [mail, setMail] = useState([]);
   const getData = () => {
     fetch('http://localhost:1337/events/'
       , {
         headers: {
           'Content-Type': 'application/json',
-        }
+        },
+
       }
     )
       .then(function (response) {
@@ -34,10 +36,10 @@ function LoopTable(props) {
   const [Categorie, setCategorie] = useState('');
   const [Locatie, setLocatie] = useState('');
   const [Organisator, setOrganisator] = useState('');
-  const [mails, setMail] = useState('');
+  const [Inschrijvingen, setInschrijvingen] = useState('');
 
   const handleSubmit = (e) => {
-    const newData = { Datum, Tijd, Titel, Omschrijving, Categorie, Locatie, Organisator };
+    const newData = { Datum, Tijd, Titel, Omschrijving, Categorie, Locatie, Organisator, Inschrijvingen };
 
     fetch('http://localhost:1337/events/', {
       method: 'POST',
@@ -61,6 +63,7 @@ function LoopTable(props) {
               <th>Categorie</th>
               <th>Locatie</th>
               <th>Organisator</th>
+              <th>Inschrijvingen</th>
             </tr>
           </thead>
           {data && data.length > 0 && data.map((item) => (
@@ -74,6 +77,10 @@ function LoopTable(props) {
                   <td>{item.Categorie}</td>
                   <td>{item.Locatie}</td>
                   <td>{item.Organisator}</td>
+                  {item.Inschrijvingen.map((inschrijving, index) => (
+                  <td className="mails" key={index}>
+                    {inschrijving.usermail}
+                  </td>))}
                 </tr>
               )
               )}
@@ -91,7 +98,6 @@ function LoopTable(props) {
           <Modal.Body>
 
             <p>Maak evenement aan</p>
-
             <textarea className="textarea" placeholder="Datum" value={Datum} onChange={(e) => setDatum(e.target.value)} ></textarea>
             <textarea className="textarea" placeholder="Tijd" value={Tijd} onChange={(e) => setTijd(e.target.value)}></textarea>
             <textarea className="textarea" placeholder="Titel" value={Titel} onChange={(e) => setTitel(e.target.value)}></textarea>
@@ -99,8 +105,6 @@ function LoopTable(props) {
             <textarea className="textarea" placeholder="Categorie" value={Categorie} onChange={(e) => setCategorie(e.target.value)}></textarea>
             <textarea className="textarea" placeholder="Locatie" value={Locatie} onChange={(e) => setLocatie(e.target.value)}></textarea>
             <textarea className="textarea" placeholder="Organisator" value={Organisator} onChange={(e) => setOrganisator(e.target.value)}></textarea>
-            <textarea className="textarea" placeholder="Organisator" value={mails} onChange={(e) => setMail(e.target.value)}></textarea>
-
           </Modal.Body>
 
           <Modal.Footer class="col text-center">
@@ -121,10 +125,19 @@ function LoopTable(props) {
 }
 export default LoopTable;
 
-//<textarea className="textarea" placeholder="Datum" value={Datum} onChange={(e) => setDatum(e.target.value)} ></textarea>
-//<textarea className="textarea" placeholder="Tijd" value={Tijd} onChange={(e) => setTijd(e.target.value)}></textarea>
-//<textarea className="textarea" placeholder="Titel" value={Titel} onChange={(e) => setTitel(e.target.value)}></textarea>
-//<textarea className="textarea" placeholder="Omschrijving" value={Omschrijving} onChange={(e) => setOmschrijving(e.target.value)}></textarea>
-//<textarea className="textarea" placeholder="Categorie" value={Categorie} onChange={(e) => setCategorie(e.target.value)}></textarea>
-//<textarea className="textarea" placeholder="Locatie" value={Locatie} onChange={(e) => setLocatie(e.target.value)}></textarea>
-//<textarea className="textarea" placeholder="Organisator" value={Organisator} onChange={(e) => setOrganisator(e.target.value)}></textarea>
+
+
+
+
+
+
+
+
+//<td className="mails">{
+  //item.Inschrijvingen.inschrijving + ', '
+  //string = JSON.stringify(item.Inschrijvingen).split(re),
+  //newString = string.substr(item.Inschrijvingen.indexOf(',') + 26).slice(0, -125,
+//}
+//</td>
+
+//<textarea className="textarea" placeholder="Organisator" value={Inschrijvingen} onChange={(e) => setInschrijvingen(e.target.value)}></textarea>

@@ -23,21 +23,20 @@
       "type": "string",
       "required": true
     },
-    "Organisator": {
-      "type": "string",
-      "required": true
-    },
-    "Datum": {
-      "type": "string"
-    },
     "Tijd": {
       "type": "string"
     },
     "Categorie": {
       "type": "string"
     },
-    "mails": {
-      "via": "event",
+    "Organisator": {
+      "type": "string"
+    },
+    "Datum": {
+      "type": "string"
+    },
+    "Inschrijvingen": {
+      "via": "events",
       "collection": "mails"
     }
   }

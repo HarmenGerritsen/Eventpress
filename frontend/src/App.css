@@ -180,18 +180,18 @@ td {
 
 .listItem {
   color: red
-  
-  
-
-
-
-  
 }
 
 .Omschrijving {
   display: block;
   height: auto;
-  width: 20vw;
+  width: 10vw;
+}
+
+.mails {
+  display: block;
+  height: auto;
+  width: 30vw;
 }
 
 #dropdownMenu {
