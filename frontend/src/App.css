@@ -164,7 +164,7 @@ tr {
 }
 
 td {
-  height: 5vh;
+  height: auto;
   width: 10vw;
   white-space: nowrap;
   overflow: hidden;
@@ -184,14 +184,14 @@ td {
 
 .Omschrijving {
   display: block;
-  height: auto;
-  width: 10vw;
+  width: 20vw;
 }
 
 .mails {
   display: block;
-  height: auto;
-  width: 30vw;
+  width: 20vw;
+  font-size: 50%;
+  line-height: 0.5;
 }
 
 #dropdownMenu {
