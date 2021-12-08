@@ -193,13 +193,7 @@ h2, h3 {
 
 .Omschrijving {
   display: block;
-  width: 20vw;
-}
-
-.mails {
-  display: block;
-  width: 20vw;
-  line-height: 0.5;
+  width: 30vw;
 }
 
 .EventInfo {

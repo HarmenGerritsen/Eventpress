@@ -66,7 +66,6 @@ function EventListAndAdd(props) {
               <th>Categorie</th>
               <th>Locatie</th>
               <th>Organisator</th>
-              <th>Inschrijvingen</th>
             </tr>
           </thead>
           {data && data.length > 0 && data.map((item) => (
@@ -80,10 +79,6 @@ function EventListAndAdd(props) {
                   <td>{item.Categorie}</td>
                   <td>{item.Locatie}</td>
                   <td>{item.Organisator}</td>
-                  {item.Inschrijvingen.map((inschrijving, index) => (
-                  <td className="mails" key={index}>
-                    {inschrijving.usermail}
-                  </td>))}
                 </tr>
               )
               )}
