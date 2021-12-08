@@ -8,9 +8,9 @@ function EventListAndAdd(props) {
     window.location.reload(false);
   }
 
-  const [events, setEvent] = useState([{}])
+  const [events] = useState([{}])
   const [data, setData] = useState([]);
-  const [mail, setMail] = useState([]);
+  //const [mail, setMail] = useState([]);
   const getData = () => {
     fetch('http://localhost:1337/events/'
       , {
@@ -50,6 +50,9 @@ function EventListAndAdd(props) {
     })
   }
 
+  
+
+
   return (
     <div>
       <div className="Table">
@@ -69,7 +72,7 @@ function EventListAndAdd(props) {
           {data && data.length > 0 && data.map((item) => (
             <tbody>
               {events.map((index) => (
-                <tr className="hover" key={index} onClick={() => { props.handlesEventInfo(item); }}>
+                <tr className="hover" key={index} onClick={() => { props.seteventid(item.id); props.handlesEventInfo(item.Datum); }}>
                   <td>{item.Datum}</td>
                   <td>{item.Tijd}</td>
                   <td>{item.Titel}</td>

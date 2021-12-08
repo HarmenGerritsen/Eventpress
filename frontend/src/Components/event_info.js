@@ -31,27 +31,8 @@ function EventInfo(props, state) {
   }
   useEffect(() => { getData() }, [])
 
-  const [datum, setDatum] = useState('');
-  const [tijd, setTijd] = useState('');
-  const [titel, setTitel] = useState('');
-  const [omschrijving, setOmschrijving] = useState('');
-  const [categorie, setCategorie] = useState('');
-  const [locatie, setLocatie] = useState('');
-  const [organisator, setOrganisator] = useState('');
-
-  const handleSubmit = (e) => {
-    const newData = { datum, tijd, titel, omschrijving, categorie, locatie, organisator };
-
-    fetch('http://localhost:1337/events/', {
-      method: 'POST',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newData)
-    }).then(() => {
-      console.log('new data added')
-    })
-  }
-
   return (
+
     <div>
       <Modal show={props.handleshowEventInfo} onHide={props.handlecEventInfo} className="modal">
         <Modal.Header className="modal-header">
@@ -63,7 +44,7 @@ function EventInfo(props, state) {
 
             {data && data.length > 0 && data.map((item) => (
               <tbody>
-                {events.map((index) => (
+                {events.map((index) => {if (item.id === (props.EventID))return(
                   <div>
                     <h1>{item.Titel}</h1>
                     <h1>{item.Datum}</h1>
@@ -78,7 +59,7 @@ function EventInfo(props, state) {
                       </hApply>))}
                   </div>
 
-                )
+                )}
                 )}
               </tbody>
             )

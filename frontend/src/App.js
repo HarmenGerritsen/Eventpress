@@ -39,12 +39,14 @@ function App() {
   const handleCloseSuggestAccepted = () => setShowSuggestAccepted(false);
   const handleShowSuggestAccepted = () => setShowSuggestAccepted(true);
 
+  const [EventID, setEventID] = useState("")
+
   return (
     <div className="App">
       <Sidebar handlecSuggestEvent={HandleCloseSuggestEvent} handlesSuggestEvent={HandleShowSuggestEvent} handlesAddEvent={handleShowAddEvent} />
       <EventListAndAddEvent handlesEventInfo={handleShowEventInfo} handleshowAddEvent={showAddEvent} handlecAddEvent={handleCloseAddEvent} handlesSuggestAccepted={handleShowSuggestAccepted} />
       <div>
-        <EventInfo handleshowEventInfo={showEventInfo} handlecEventInfo={handleCloseEventInfo} handlesApply={handleShowApply} />
+        <EventInfo handleshowEventInfo={showEventInfo} EventID={EventID} handlecEventInfo={handleCloseEventInfo} handlesApply={handleShowApply} />
         <EventApply handleshowApply={showApply} handlecApply={handleCloseApply} handlesEventInfo={handleShowEventInfo} handlesApplyAccepted={handleShowApplyAccepted} />
         <EventApplyAccepted handleshowApplyAccepted={showApplyAccepted} handlecApplyAccepted={handleCloseApplyAccepted} />
         <EventSuggestEventAccepted handlesSuggestAccepted={handleShowSuggestAccepted} handlecSuggestAccepted={handleCloseSuggestAccepted} />
