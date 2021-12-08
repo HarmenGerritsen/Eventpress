@@ -54,9 +54,9 @@ function EventInfo(props, state) {
                     <h1>{item.Locatie}</h1>
                     <h1>{item.Organisator}</h1>
                     {item.Inschrijvingen.map((inschrijving, index) => (
-                      <h1 key={index}>
+                      <h3 key={index}>
                         {inschrijving.usermail}
-                      </h1>))}
+                      </h3>))}
                   </div>
 
                 )}
