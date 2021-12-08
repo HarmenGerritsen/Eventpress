@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import Table from 'react-bootstrap/Table';
 import Modal from "react-bootstrap/Modal";
 
-function LoopTable(props) {
+function EventListAndAdd(props) {
 
   function refreshPage() {
     window.location.reload(false);
   }
 
-  const [events, setEvent] = useState([{}])
+  const [events] = useState([{}])
   const [data, setData] = useState([]);
-  const [mail, setMail] = useState([]);
+  //const [mail, setMail] = useState([]);
   const getData = () => {
     fetch('http://localhost:1337/events/'
       , {
@@ -50,10 +50,13 @@ function LoopTable(props) {
     })
   }
 
+  
+
+
   return (
     <div>
       <div className="Table">
-        <Table bordered hover>
+        <Table className="table table-borderless">
           <thead>
             <tr>
               <th>Datum</th>
@@ -69,7 +72,7 @@ function LoopTable(props) {
           {data && data.length > 0 && data.map((item) => (
             <tbody>
               {events.map((index) => (
-                <tr key={index} onClick={() => { props.handles2(item); }}>
+                <tr className="hover" key={index} onClick={() => { props.seteventid(item.id); props.handlesEventInfo(item.Datum); }}>
                   <td>{item.Datum}</td>
                   <td>{item.Tijd}</td>
                   <td>{item.Titel}</td>
@@ -90,10 +93,10 @@ function LoopTable(props) {
         </Table>
       </div>
       <div>
-        <Modal show={props.handleshow5} onHide={props.handlec5}>
+        <Modal show={props.handleshowAddEvent} onHide={props.handlecAddEvent}>
           <Modal.Header className="modal-header">
             <Modal.Title className="ModalTitle">Evenement Aanmaken</Modal.Title>
-            <button className="closeButton" onClick={props.handlec5}>X</button>
+            <button className="closeButton" onClick={props.handlecAddEvent}>X</button>
           </Modal.Header>
           <Modal.Body>
 
@@ -110,7 +113,7 @@ function LoopTable(props) {
           <Modal.Footer class="col text-center">
             <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => {
               handleSubmit();
-              props.handlec5();
+              props.handlecAddEvent();
               refreshPage();
             }}>
               Aanmaken
@@ -123,5 +126,4 @@ function LoopTable(props) {
     </div>
   );
 }
-export default LoopTable;
-export const data = 900;
+export default EventListAndAdd;

@@ -1,20 +1,20 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 
-function EventInschrijvenAccept(props) {
+function EventApplyAccepted(props) {
 
     return (
       <div>
-        <Modal show={props.handleshow4} onHide={props.handlec4}>
+        <Modal show={props.handleshowApplyAccepted} onHide={props.handlecApplyAccepted}>
           <Modal.Header className="modal-header">
             <Modal.Title className="ModalTitle">Inschrijven</Modal.Title>
-            <button className="closeButton" onClick={props.handlec4}>X</button>
+            <button className="closeButton" onClick={props.handlecApplyAccepted}>X</button>
           </Modal.Header>
           <Modal.Body>
             <p>Je bent ingeschreven</p>
           </Modal.Body>
           <Modal.Footer class="col text-center">
-            <button type="button" class="btn btn-dark button" variant="secondary" onClick={props.handlec4}>
+            <button type="button" class="btn btn-dark button" variant="secondary" onClick={props.handlecApplyAccepted}>
               Sluiten
             </button>
             <br />
@@ -24,4 +24,4 @@ function EventInschrijvenAccept(props) {
       </div>)
 }
 
-export default EventInschrijvenAccept;
+export default EventApplyAccepted;

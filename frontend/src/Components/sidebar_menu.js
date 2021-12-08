@@ -2,7 +2,7 @@ import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 
-function DropdownMenu() {
+function SidebarMenu() {
 
     return (
       <DropdownButton id="dropdownMenu" title="Sorteren">
@@ -13,4 +13,4 @@ function DropdownMenu() {
       </DropdownButton>
     )
 };
-export default DropdownMenu;
+export default SidebarMenu;

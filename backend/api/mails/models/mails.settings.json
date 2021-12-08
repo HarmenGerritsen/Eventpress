@@ -12,13 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "usermail": {
-      "type": "string"
-    },
     "events": {
       "via": "Inschrijvingen",
       "collection": "event",
       "dominant": true
+    },
+    "usermail": {
+      "type": "string"
     }
   }
 }
