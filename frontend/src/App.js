@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="App">
       <Sidebar handlecSuggestEvent={HandleCloseSuggestEvent} handlesSuggestEvent={HandleShowSuggestEvent} handlesAddEvent={handleShowAddEvent} />
-      <EventListAndAddEvent handlesEventInfo={handleShowEventInfo} handleshowAddEvent={showAddEvent} handlecAddEvent={handleCloseAddEvent} handlesSuggestAccepted={handleShowSuggestAccepted} />
+      <EventListAndAddEvent handlesEventInfo={handleShowEventInfo} seteventid={setEventID} handleshowAddEvent={showAddEvent} handlecAddEvent={handleCloseAddEvent} handlesSuggestAccepted={handleShowSuggestAccepted} />
       <div>
         <EventInfo handleshowEventInfo={showEventInfo} EventID={EventID} handlecEventInfo={handleCloseEventInfo} handlesApply={handleShowApply} />
         <EventApply handleshowApply={showApply} handlecApply={handleCloseApply} handlesEventInfo={handleShowEventInfo} handlesApplyAccepted={handleShowApplyAccepted} />
