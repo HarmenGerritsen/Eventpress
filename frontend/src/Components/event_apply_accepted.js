@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 
-function EventInschrijvenAccept(props) {
+function EventApplyAccepted(props) {
 
     return (
       <div>
@@ -24,4 +24,4 @@ function EventInschrijvenAccept(props) {
       </div>)
 }
 
-export default EventInschrijvenAccept;
+export default EventApplyAccepted;

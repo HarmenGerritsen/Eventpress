@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 
-function EventInschrijven(props) {
+function EventApply(props) {
 
     return (
       <div>
@@ -26,4 +26,4 @@ function EventInschrijven(props) {
       </div>)
 }
 
-export default EventInschrijven;
+export default EventApply;

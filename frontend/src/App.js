@@ -3,13 +3,13 @@ import { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Sidebar from "./Components/Sidebar.js";
-import EventInzien from "./Components/event_inzien.js";
-import EventInschrijven from "./Components/event_inschrijven.js";
-import EventInschrijvenAccept from "./Components/event_inschrijven_accept.js";
-import EventAanvragenAccept from "./Components/event_aanvragen_accept.js";
-import EventAanvragen from "./Components/event_aanvragen.js";
-import LoopTable from "./Components/event_aanmaken.js";
+import Sidebar from "./Components/sidebar.js";
+import EventInfo from "./Components/event_info.js";
+import EventApply from "./Components/event_apply.js";
+import EventApplyAccepted from "./Components/event_apply_accepted.js";
+import EventSuggestAccepted from "./Components/event_suggest_accepted.js";
+import EventSuggest from "./Components/event_suggest.js";
+import EventListAndAdd from "./Components/event_list_and_add.js";
 
 document.body.style.backgroundColor = "rgb(247, 248, 250)";
 
@@ -41,13 +41,13 @@ function App() {
   return (
     <div className="App">
       <Sidebar handlec1={handleClose1} handles1={handleShow1} handles5={handleShow5} />
-      <LoopTable handles2={handleShow2} handleshow5={show5} handlec5={handleClose5} handles6={handleShow6} />
+      <EventListAndAdd handles2={handleShow2} handleshow5={show5} handlec5={handleClose5} handles6={handleShow6} />
       <div>
-        <EventInzien handleshow2={show2} handlec2={handleClose2} handles3={handleShow3} />
-        <EventInschrijven handleshow3={show3} handlec3={handleClose3} handles2={handleShow2} handles4={handleShow4} />
-        <EventInschrijvenAccept handleshow4={show4} handlec4={handleClose4} />
-        <EventAanvragenAccept handles6={handleShow6} handlec6={handleClose6} />
-        <EventAanvragen handleshow1={show1} handlec1={handleClose1} />
+        <EventInfo handleshow2={show2} handlec2={handleClose2} handles3={handleShow3} />
+        <EventApply handleshow3={show3} handlec3={handleClose3} handles2={handleShow2} handles4={handleShow4} />
+        <EventApplyAccepted handleshow4={show4} handlec4={handleClose4} />
+        <EventSuggestAccepted handles6={handleShow6} handlec6={handleClose6} />
+        <EventSuggest handleshow1={show1} handlec1={handleClose1} />
       </div>
     </div>
   );

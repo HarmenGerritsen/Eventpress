@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Table from 'react-bootstrap/Table';
 import Modal from "react-bootstrap/Modal";
 
-function LoopTable(props) {
+function EventListAndAdd(props) {
 
   function refreshPage() {
     window.location.reload(false);
@@ -53,7 +53,7 @@ function LoopTable(props) {
   return (
     <div>
       <div className="Table">
-        <Table bordered hover>
+        <Table className="table table-borderless">
           <thead>
             <tr>
               <th>Datum</th>
@@ -69,7 +69,7 @@ function LoopTable(props) {
           {data && data.length > 0 && data.map((item) => (
             <tbody>
               {events.map((index) => (
-                <tr key={index} onClick={() => { props.handles2(item); }}>
+                <tr className="hover" key={index} onClick={() => { props.handles2(item); }}>
                   <td>{item.Datum}</td>
                   <td>{item.Tijd}</td>
                   <td>{item.Titel}</td>
@@ -123,5 +123,4 @@ function LoopTable(props) {
     </div>
   );
 }
-export default LoopTable;
-export const data = 900;
+export default EventListAndAdd;

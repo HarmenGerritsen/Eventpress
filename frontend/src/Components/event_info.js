@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
 import Table from 'react-bootstrap/Table';
 import imgfe1 from '../Images/FE1.png';
-import data from './event_aanmaken.js'
+import data from './event_list_and_add.js'
 
 
-function EventInzien(props, state) {
+function EventInfo(props, state) {
 
   function refreshPage() {
     window.location.reload(false);
@@ -59,8 +59,8 @@ function EventInzien(props, state) {
           <button className="closeButton" onClick={props.handlec2}>X</button>
         </Modal.Header>
         <Modal.Body className="popupbody">
-            <Table bordered hover>
-            
+          <Table bordered hover>
+
             {data && data.length > 0 && data.map((item) => (
               <tbody>
                 {events.map((index) => (
@@ -72,6 +72,10 @@ function EventInzien(props, state) {
                     <h3>{item.Categorie}</h3>
                     <h3>{item.Locatie}</h3>
                     <h3>{item.Organisator}</h3>
+                    {item.Inschrijvingen.map((inschrijving, index) => (
+                      <h3 key={index}>
+                        {inschrijving.usermail}
+                      </h3>))}
                   </div>
 
                 )
@@ -97,4 +101,4 @@ function EventInzien(props, state) {
   )
 }
 
-export default EventInzien;
+export default EventInfo;

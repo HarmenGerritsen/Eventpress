@@ -1,17 +1,17 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 
-function EventAanvragenAccept(props) {
+function EventSuggestAccepted(props) {
 
     return (
       <div>
         <Modal show={props.handleshow6} onHide={ props.handlec6 }>
           <Modal.Header className="modal-header">
-            <Modal.Title className="ModalTitle">Aanvragen</Modal.Title>
+            <Modal.Title className="ModalTitle">Suggereren</Modal.Title>
             <button className="closeButton" onClick={ props.handlec6 }>X</button>
           </Modal.Header>
           <Modal.Body>
-            <p>Evenement aangevraagd!</p>
+            <p>Evenement gesuggereerd!</p>
           </Modal.Body>
           <Modal.Footer class="col text-center">
             <button type="button" class="btn btn-dark button" variant="secondary" onClick={ props.handlec6 }>
@@ -24,4 +24,4 @@ function EventAanvragenAccept(props) {
       </div>)
 }
 
-export default EventAanvragenAccept;
+export default EventSuggestAccepted;

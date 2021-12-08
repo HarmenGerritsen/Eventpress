@@ -1,7 +1,7 @@
 import logo from "../Images/logo.png";
 import React from "react";
 import plus from "../Images/Plus.png";
-import DropdownMenu from "./Dropdown.js";
+import DropdownMenu from "./sidebar_menu.js";
 
 function Sidebar(props) {
 

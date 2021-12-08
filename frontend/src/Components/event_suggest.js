@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 
-function EventAanvragen(props) {
+function EventSuggest(props) {
     return (
       <div>
         <Modal show={props.handleshow1} onHide={props.handlec1}>
@@ -23,4 +23,4 @@ function EventAanvragen(props) {
       </div>)
 }
 
-export default EventAanvragen;
+export default EventSuggest;
