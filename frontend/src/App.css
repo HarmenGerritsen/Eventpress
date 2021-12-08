@@ -167,6 +167,10 @@ td {
   text-overflow: ellipsis;
 }
 
+h2, h3 {
+  display: inline;
+}
+
 .hover:hover {
   background-color: rgb(247, 248, 250)!important;
 }
@@ -196,6 +200,12 @@ td {
   display: block;
   width: 20vw;
   line-height: 0.5;
+}
+
+.EventInfo {
+  color: rgb(34, 28, 124);
+  font-size: 200%;
+  font-weight: 100;
 }
 
 #dropdownMenu {
