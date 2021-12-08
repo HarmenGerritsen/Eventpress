@@ -48,15 +48,15 @@ function EventInfo(props, state) {
                   <div>
                     <h1>{item.Titel}</h1>
                     <h1>{item.Datum}</h1>
-                    <hEventInfo>{item.Tijd}</hEventInfo>
-                    <hApply>{item.Omschrijving}</hApply>
-                    <hApply>{item.Categorie}</hApply>
-                    <hApply>{item.Locatie}</hApply>
-                    <hApply>{item.Organisator}</hApply>
+                    <h1>{item.Tijd}</h1>
+                    <h1>{item.Omschrijving}</h1>
+                    <h1>{item.Categorie}</h1>
+                    <h1>{item.Locatie}</h1>
+                    <h1>{item.Organisator}</h1>
                     {item.Inschrijvingen.map((inschrijving, index) => (
-                      <hApply key={index}>
+                      <h1 key={index}>
                         {inschrijving.usermail}
-                      </hApply>))}
+                      </h1>))}
                   </div>
 
                 )}
