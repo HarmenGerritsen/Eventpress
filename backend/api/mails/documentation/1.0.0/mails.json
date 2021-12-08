@@ -522,57 +522,59 @@
           "id": {
             "type": "string"
           },
-          "event": {
-            "required": [
-              "id",
-              "Titel",
-              "Locatie",
-              "Organisator"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Titel": {
-                "type": "string"
-              },
-              "Omschrijving": {
-                "type": "string"
-              },
-              "Locatie": {
-                "type": "string"
-              },
-              "Organisator": {
-                "type": "string"
-              },
-              "Datum": {
-                "type": "string"
-              },
-              "Tijd": {
-                "type": "string"
-              },
-              "Categorie": {
-                "type": "string"
-              },
-              "mails": {
-                "type": "array",
-                "items": {
+          "usermail": {
+            "type": "string"
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "Titel",
+                "Locatie"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "Titel": {
+                  "type": "string"
+                },
+                "Omschrijving": {
+                  "type": "string"
+                },
+                "Locatie": {
+                  "type": "string"
+                },
+                "Tijd": {
+                  "type": "string"
+                },
+                "Categorie": {
+                  "type": "string"
+                },
+                "Organisator": {
+                  "type": "string"
+                },
+                "Datum": {
+                  "type": "string"
+                },
+                "Inschrijvingen": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
                   "type": "string"
                 }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
-          },
-          "mail": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -582,11 +584,14 @@
       },
       "NewMails": {
         "properties": {
-          "event": {
+          "usermail": {
             "type": "string"
           },
-          "mail": {
-            "type": "string"
+          "events": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",

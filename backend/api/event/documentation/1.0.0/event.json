@@ -518,8 +518,7 @@
         "required": [
           "id",
           "Titel",
-          "Locatie",
-          "Organisator"
+          "Locatie"
         ],
         "properties": {
           "id": {
@@ -534,19 +533,19 @@
           "Locatie": {
             "type": "string"
           },
-          "Organisator": {
-            "type": "string"
-          },
-          "Datum": {
-            "type": "string"
-          },
           "Tijd": {
             "type": "string"
           },
           "Categorie": {
             "type": "string"
           },
-          "mails": {
+          "Organisator": {
+            "type": "string"
+          },
+          "Datum": {
+            "type": "string"
+          },
+          "Inschrijvingen": {
             "type": "array",
             "items": {
               "required": [
@@ -556,11 +555,14 @@
                 "id": {
                   "type": "string"
                 },
-                "event": {
+                "usermail": {
                   "type": "string"
                 },
-                "mail": {
-                  "type": "string"
+                "events": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "string"
@@ -583,8 +585,7 @@
       "NewEvent": {
         "required": [
           "Titel",
-          "Locatie",
-          "Organisator"
+          "Locatie"
         ],
         "properties": {
           "Titel": {
@@ -596,19 +597,19 @@
           "Locatie": {
             "type": "string"
           },
-          "Organisator": {
-            "type": "string"
-          },
-          "Datum": {
-            "type": "string"
-          },
           "Tijd": {
             "type": "string"
           },
           "Categorie": {
             "type": "string"
           },
-          "mails": {
+          "Organisator": {
+            "type": "string"
+          },
+          "Datum": {
+            "type": "string"
+          },
+          "Inschrijvingen": {
             "type": "array",
             "items": {
               "type": "string"

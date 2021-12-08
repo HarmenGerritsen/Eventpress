@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "mails",
   "info": {
-    "name": "Mails",
+    "name": "Inschrijvingen",
     "description": ""
   },
   "options": {
@@ -12,12 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "event": {
-      "via": "mails",
-      "model": "event"
-    },
-    "mail": {
+    "usermail": {
       "type": "string"
+    },
+    "events": {
+      "via": "Inschrijvingen",
+      "collection": "event",
+      "dominant": true
     }
   }
 }

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/30/2021 4:01:46 PM"
+    "x-generation-date": "12/07/2021 10:11:03 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3300,8 +3300,7 @@
         "required": [
           "id",
           "Titel",
-          "Locatie",
-          "Organisator"
+          "Locatie"
         ],
         "properties": {
           "id": {
@@ -3316,19 +3315,19 @@
           "Locatie": {
             "type": "string"
           },
-          "Organisator": {
-            "type": "string"
-          },
-          "Datum": {
-            "type": "string"
-          },
           "Tijd": {
             "type": "string"
           },
           "Categorie": {
             "type": "string"
           },
-          "mails": {
+          "Organisator": {
+            "type": "string"
+          },
+          "Datum": {
+            "type": "string"
+          },
+          "Inschrijvingen": {
             "type": "array",
             "items": {
               "required": [
@@ -3338,11 +3337,14 @@
                 "id": {
                   "type": "string"
                 },
-                "event": {
+                "usermail": {
                   "type": "string"
                 },
-                "mail": {
-                  "type": "string"
+                "events": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "string"
@@ -3365,8 +3367,7 @@
       "NewEvent": {
         "required": [
           "Titel",
-          "Locatie",
-          "Organisator"
+          "Locatie"
         ],
         "properties": {
           "Titel": {
@@ -3378,19 +3379,19 @@
           "Locatie": {
             "type": "string"
           },
-          "Organisator": {
-            "type": "string"
-          },
-          "Datum": {
-            "type": "string"
-          },
           "Tijd": {
             "type": "string"
           },
           "Categorie": {
             "type": "string"
           },
-          "mails": {
+          "Organisator": {
+            "type": "string"
+          },
+          "Datum": {
+            "type": "string"
+          },
+          "Inschrijvingen": {
             "type": "array",
             "items": {
               "type": "string"
@@ -3416,57 +3417,59 @@
           "id": {
             "type": "string"
           },
-          "event": {
-            "required": [
-              "id",
-              "Titel",
-              "Locatie",
-              "Organisator"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Titel": {
-                "type": "string"
-              },
-              "Omschrijving": {
-                "type": "string"
-              },
-              "Locatie": {
-                "type": "string"
-              },
-              "Organisator": {
-                "type": "string"
-              },
-              "Datum": {
-                "type": "string"
-              },
-              "Tijd": {
-                "type": "string"
-              },
-              "Categorie": {
-                "type": "string"
-              },
-              "mails": {
-                "type": "array",
-                "items": {
+          "usermail": {
+            "type": "string"
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "Titel",
+                "Locatie"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "Titel": {
+                  "type": "string"
+                },
+                "Omschrijving": {
+                  "type": "string"
+                },
+                "Locatie": {
+                  "type": "string"
+                },
+                "Tijd": {
+                  "type": "string"
+                },
+                "Categorie": {
+                  "type": "string"
+                },
+                "Organisator": {
+                  "type": "string"
+                },
+                "Datum": {
+                  "type": "string"
+                },
+                "Inschrijvingen": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
                   "type": "string"
                 }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
-          },
-          "mail": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -3476,11 +3479,14 @@
       },
       "NewMails": {
         "properties": {
-          "event": {
+          "usermail": {
             "type": "string"
           },
-          "mail": {
-            "type": "string"
+          "events": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",

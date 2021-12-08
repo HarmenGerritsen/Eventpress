@@ -164,7 +164,7 @@ tr {
 }
 
 td {
-  height: 5vh;
+  height: auto;
   width: 10vw;
   white-space: nowrap;
   overflow: hidden;
@@ -180,18 +180,18 @@ td {
 
 .listItem {
   color: red
-  
-  
-
-
-
-  
 }
 
 .Omschrijving {
   display: block;
-  height: auto;
   width: 20vw;
+}
+
+.mails {
+  display: block;
+  width: 20vw;
+  font-size: 50%;
+  line-height: 0.5;
 }
 
 #dropdownMenu {
