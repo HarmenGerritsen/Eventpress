@@ -61,7 +61,7 @@ function EventInzien(props, state) {
         <Modal.Body className="popupbody">
             <Table bordered hover>
             
-            {data && data.length > 0 && data.map((item) => (
+            {data && data.length >0 && data.map((item) => (
               <tbody>
                 {events.map((index) => (
                   <div>
