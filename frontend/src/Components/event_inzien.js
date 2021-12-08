@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
 import Table from 'react-bootstrap/Table';
 import imgfe1 from '../Images/FE1.png';
-import data from './event_aanmaken.js'
 
 
-function EventInzien(props, state) {
+
+function EventInzien(props) {
 
   function refreshPage() {
     window.location.reload(false);
@@ -31,27 +31,8 @@ function EventInzien(props, state) {
   }
   useEffect(() => { getData() }, [])
 
-  const [datum, setDatum] = useState('');
-  const [tijd, setTijd] = useState('');
-  const [titel, setTitel] = useState('');
-  const [omschrijving, setOmschrijving] = useState('');
-  const [categorie, setCategorie] = useState('');
-  const [locatie, setLocatie] = useState('');
-  const [organisator, setOrganisator] = useState('');
-
-  const handleSubmit = (e) => {
-    const newData = { datum, tijd, titel, omschrijving, categorie, locatie, organisator };
-
-    fetch('http://localhost:1337/events/', {
-      method: 'POST',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newData)
-    }).then(() => {
-      console.log('new data added')
-    })
-  }
-
   return (
+
     <div>
       <Modal show={props.handleshow2} onHide={props.handlec2} className="modal">
         <Modal.Header className="modal-header">
@@ -59,11 +40,11 @@ function EventInzien(props, state) {
           <button className="closeButton" onClick={props.handlec2}>X</button>
         </Modal.Header>
         <Modal.Body className="popupbody">
-            <Table bordered hover>
-            
+          <Table bordered hover>
+
             {data && data.length > 0 && data.map((item) => (
               <tbody>
-                {events.map((index) => (
+                {events.map((index) => {if (item.id === (props.EventID))return(
                   <div>
                     <h1>{item.Titel}</h1>
                     <h1>{item.Datum}</h1>
@@ -74,7 +55,7 @@ function EventInzien(props, state) {
                     <h3>{item.Organisator}</h3>
                   </div>
 
-                )
+                )}
                 )}
               </tbody>
             )

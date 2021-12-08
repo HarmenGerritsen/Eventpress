@@ -37,13 +37,15 @@ function App() {
 
   const handleClose6 = () => setShow6(false);
   const handleShow6 = () => setShow6(true);
+  
+  const [EventID, setEventID] = useState("")
 
   return (
     <div className="App">
       <Sidebar handlec1={handleClose1} handles1={handleShow1} handles5={handleShow5} />
-      <LoopTable handles2={handleShow2} handleshow5={show5} handlec5={handleClose5} handles6={handleShow6} />
+      <LoopTable handles2={handleShow2} seteventid={setEventID} handleshow5={show5} handlec5={handleClose5} handles6={handleShow6} />
       <div>
-        <EventInzien handleshow2={show2} handlec2={handleClose2} handles3={handleShow3} />
+        <EventInzien handleshow2={show2} EventID={EventID} handlec2={handleClose2} handles3={handleShow3} />
         <EventInschrijven handleshow3={show3} handlec3={handleClose3} handles2={handleShow2} handles4={handleShow4} />
         <EventInschrijvenAccept handleshow4={show4} handlec4={handleClose4} />
         <EventAanvragenAccept handles6={handleShow6} handlec6={handleClose6} />
