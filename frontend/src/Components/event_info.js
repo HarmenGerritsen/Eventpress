@@ -53,10 +53,10 @@ function EventInfo(props, state) {
 
   return (
     <div>
-      <Modal show={props.handleshow2} onHide={props.handlec2} className="modal">
+      <Modal show={props.handleshowEventInfo} onHide={props.handlecEventInfo} className="modal">
         <Modal.Header className="modal-header">
           <Modal.Title className="modal-title">Evenement inzien</Modal.Title>
-          <button className="closeButton" onClick={props.handlec2}>X</button>
+          <button className="closeButton" onClick={props.handlecEventInfo}>X</button>
         </Modal.Header>
         <Modal.Body className="popupbody">
           <Table bordered hover>
@@ -67,15 +67,15 @@ function EventInfo(props, state) {
                   <div>
                     <h1>{item.Titel}</h1>
                     <h1>{item.Datum}</h1>
-                    <h2>{item.Tijd}</h2>
-                    <h3>{item.Omschrijving}</h3>
-                    <h3>{item.Categorie}</h3>
-                    <h3>{item.Locatie}</h3>
-                    <h3>{item.Organisator}</h3>
+                    <hEventInfo>{item.Tijd}</hEventInfo>
+                    <hApply>{item.Omschrijving}</hApply>
+                    <hApply>{item.Categorie}</hApply>
+                    <hApply>{item.Locatie}</hApply>
+                    <hApply>{item.Organisator}</hApply>
                     {item.Inschrijvingen.map((inschrijving, index) => (
-                      <h3 key={index}>
+                      <hApply key={index}>
                         {inschrijving.usermail}
-                      </h3>))}
+                      </hApply>))}
                   </div>
 
                 )
@@ -87,10 +87,10 @@ function EventInfo(props, state) {
           <img class="img-responsive" src={imgfe1} alt=""></img>
         </Modal.Body>
         <Modal.Footer class="col text-center">
-          <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { props.handlec2(); props.handles3(); }}>
+          <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { props.handlecEventInfo(); props.handlesApply(); }}>
             Inschrijven
           </button>
-          <button type="button" class="btn btn-dark button" variant="secondary" onClick={props.handlec2}>
+          <button type="button" class="btn btn-dark button" variant="secondary" onClick={props.handlecEventInfo}>
             Sluiten
           </button>
           <br />

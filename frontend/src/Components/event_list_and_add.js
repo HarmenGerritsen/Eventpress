@@ -69,7 +69,7 @@ function EventListAndAdd(props) {
           {data && data.length > 0 && data.map((item) => (
             <tbody>
               {events.map((index) => (
-                <tr className="hover" key={index} onClick={() => { props.handles2(item); }}>
+                <tr className="hover" key={index} onClick={() => { props.handlesEventInfo(item); }}>
                   <td>{item.Datum}</td>
                   <td>{item.Tijd}</td>
                   <td>{item.Titel}</td>
@@ -90,10 +90,10 @@ function EventListAndAdd(props) {
         </Table>
       </div>
       <div>
-        <Modal show={props.handleshow5} onHide={props.handlec5}>
+        <Modal show={props.handleshowAddEvent} onHide={props.handlecAddEvent}>
           <Modal.Header className="modal-header">
             <Modal.Title className="ModalTitle">Evenement Aanmaken</Modal.Title>
-            <button className="closeButton" onClick={props.handlec5}>X</button>
+            <button className="closeButton" onClick={props.handlecAddEvent}>X</button>
           </Modal.Header>
           <Modal.Body>
 
@@ -110,7 +110,7 @@ function EventListAndAdd(props) {
           <Modal.Footer class="col text-center">
             <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => {
               handleSubmit();
-              props.handlec5();
+              props.handlecAddEvent();
               refreshPage();
             }}>
               Aanmaken

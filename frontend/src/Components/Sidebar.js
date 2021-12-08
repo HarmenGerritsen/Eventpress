@@ -10,16 +10,16 @@ function Sidebar(props) {
       <div className="App-header">
         <img className="logo" src={logo}></img>
         <div className="menu">
-          <button type="button" className="menuButton hide" onClick={props.handlec1}>Categorie</button>
-          <button type="button" className="menuButton hide" onClick={props.handlec1}>Niveau</button>
-          <button type="button" className="menuButton hide" onClick={props.handlec1}>Locatie</button>
-          <button type="button" className="menuButton hide" onClick={props.handlec1}>Sorteren</button>
+          <button type="button" className="menuButton hide" onClick={props.handlecSuggestEvent}>Categorie</button>
+          <button type="button" className="menuButton hide" onClick={props.handlecSuggestEvent}>Niveau</button>
+          <button type="button" className="menuButton hide" onClick={props.handlecSuggestEvent}>Locatie</button>
+          <button type="button" className="menuButton hide" onClick={props.handlecSuggestEvent}>Sorteren</button>
           <DropdownMenu />
         </div>
         <a href="#">
-          <img className="plus plus2" onClick={props.handles5} src={plus} alt=''></img>
+          <img className="plus plus2" onClick={props.handlesAddEvent} src={plus} alt=''></img>
         </a>
-        <button type="button" className="requestButton" onClick={props.handles1}><div className="hide">Evenement<br /></div>suggereren</button>
+        <button type="button" className="requestButton" onClick={props.handlesSuggestEvent}><div className="hide">Evenement<br /></div>suggereren</button>
       </div>
     )
 }
