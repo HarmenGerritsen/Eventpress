@@ -47,15 +47,15 @@ function EventInfo(props, state) {
                 {events.map((index) => {if (item.id === (props.EventID))return(
                   <div>
                     <h1>{item.Titel}</h1>
-                    <h1>{item.Datum}</h1>
-                    <h1>{item.Tijd}</h1>
-                    <h1>{item.Omschrijving}</h1>
-                    <h1>{item.Categorie}</h1>
-                    <h1>{item.Locatie}</h1>
-                    <h1>{item.Organisator}</h1>
+                    <h3>{item.Datum} - {item.Tijd}</h3>
+                    <h3>Omschrijving: <br/><br/> {item.Omschrijving}</h3>
+                    <h2>Categorie: {item.Categorie}</h2>
+                    <h2>Locatie: {item.Locatie}</h2>
+                    <h2>Organisator: {item.Organisator}</h2>
+                    <h2>Inschrijvingen:</h2>
                     {item.Inschrijvingen.map((inschrijving, index) => (
                       <h3 key={index}>
-                        {inschrijving.usermail}
+                         <br/>{inschrijving.usermail}
                       </h3>))}
                   </div>
 
