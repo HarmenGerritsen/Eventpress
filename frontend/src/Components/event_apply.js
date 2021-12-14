@@ -13,7 +13,7 @@ function EventApply(props) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
+      body: JSON.stringify({ 
         usermail: Email,
         //events: Event
       

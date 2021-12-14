@@ -27,7 +27,7 @@
     {
       "method": "POST",
       "path": "/mails",
-      "handler": "mails.create",
+      "handler": "mails.send",
       "config": {
         "policies": []
       }

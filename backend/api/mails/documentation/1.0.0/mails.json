@@ -201,7 +201,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Mails"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -247,7 +251,11 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMails"
+                "properties": {
+                  "foo": {
+                    "type": "string"
+                  }
+                }
               }
             }
           }
@@ -522,9 +530,6 @@
           "id": {
             "type": "string"
           },
-          "usermail": {
-            "type": "string"
-          },
           "events": {
             "type": "array",
             "items": {
@@ -576,6 +581,9 @@
               }
             }
           },
+          "usermail": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -584,14 +592,14 @@
       },
       "NewMails": {
         "properties": {
-          "usermail": {
-            "type": "string"
-          },
           "events": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "usermail": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
