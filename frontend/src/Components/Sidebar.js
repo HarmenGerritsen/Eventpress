@@ -1,7 +1,7 @@
 import logo from "../Images/logo.png";
 import React from "react";
 import plus from "../Images/Plus.png";
-import DropdownMenu from "./sidebar_menu.js";
+import SidebarMenu from "./sidebar_menu.js";
 
 function Sidebar(props) {
 
@@ -14,7 +14,7 @@ function Sidebar(props) {
           <button type="button" className="menuButton hide" onClick={props.handlecSuggestEvent}>Niveau</button>
           <button type="button" className="menuButton hide" onClick={props.handlecSuggestEvent}>Locatie</button>
           <button type="button" className="menuButton hide" onClick={props.handlecSuggestEvent}>Sorteren</button>
-          <DropdownMenu />
+          <SidebarMenu />
         </div>
         <a href="#">
           <img className="plus plus2" onClick={props.handlesAddEvent} src={plus} alt=''></img>
