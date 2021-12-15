@@ -52,7 +52,7 @@ function EventInfo(props, state) {
                     <h2>Categorie:</h2><h2 className="EventInfo">{item.Categorie}</h2><br/><br/>
                     <h2>Locatie:</h2><h2 className="EventInfo">{item.Locatie}</h2><br/><br/>
                     <h2>Organisator:</h2><h2 className="EventInfo">{item.Organisator}</h2><br/><br/>
-                    <h2>Inschrijvingen:</h2><br/>
+                    <h2>Inschrijvingen:</h2>
                     {item.Inschrijvingen.map((inschrijving, index) => (
                       <h3 key={index} className="EventInfo">
                          <br/>{inschrijving.usermail}

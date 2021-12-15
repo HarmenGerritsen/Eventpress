@@ -3,7 +3,6 @@ import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import Modal from "react-bootstrap/Modal";
 import moment from 'moment';
-import { DatePicker, TimePicker } from '@buffetjs/core';
 
 function EventListAndAdd(props) {
 
@@ -104,7 +103,7 @@ function EventListAndAdd(props) {
                 onChange={(e) => setDatum(e.target.value)}
                 value={Datum}
               />
-              <TimePicker
+              <Form.Control type="time"
                 onChange={(e) => setTijd(e.target.value)}
                 seconds={false}
                 value={Tijd}
