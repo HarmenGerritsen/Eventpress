@@ -107,9 +107,9 @@ function EventListAndAdd(props) {
                 onChange={(e) => setDatum(e.target.value)}
                 value={Datum}
               />
-              <Form.Control type="time"
+              <TimePicker
                 onChange={(e) => setTijd(e.target.value)}
-
+                seconds={false}
                 value={Tijd}
               />
             </div>
