@@ -533,16 +533,10 @@
           "Locatie": {
             "type": "string"
           },
-          "Tijd": {
-            "type": "string"
-          },
           "Categorie": {
             "type": "string"
           },
           "Organisator": {
-            "type": "string"
-          },
-          "Datum": {
             "type": "string"
           },
           "Inschrijvingen": {
@@ -555,14 +549,14 @@
                 "id": {
                   "type": "string"
                 },
-                "usermail": {
-                  "type": "string"
-                },
                 "events": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                },
+                "usermail": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -575,6 +569,14 @@
                 }
               }
             }
+          },
+          "Datum": {
+            "type": "string",
+            "format": "date"
+          },
+          "Tijd": {
+            "type": "string",
+            "default": "00:00:00"
           },
           "published_at": {
             "type": "string",
@@ -597,16 +599,10 @@
           "Locatie": {
             "type": "string"
           },
-          "Tijd": {
-            "type": "string"
-          },
           "Categorie": {
             "type": "string"
           },
           "Organisator": {
-            "type": "string"
-          },
-          "Datum": {
             "type": "string"
           },
           "Inschrijvingen": {
@@ -614,6 +610,14 @@
             "items": {
               "type": "string"
             }
+          },
+          "Datum": {
+            "type": "string",
+            "format": "date"
+          },
+          "Tijd": {
+            "type": "string",
+            "default": "00:00:00"
           },
           "published_at": {
             "type": "string",

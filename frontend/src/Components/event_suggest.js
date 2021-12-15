@@ -13,7 +13,7 @@ function EventSuggest(props) {
             <textarea className="textarea eventtextarea" placeholder="Vul hier je event informatie in..."></textarea>
           </Modal.Body>
           <Modal.Footer class="col text-center">
-            <button type="button" class="btn btn-dark button" variant="secondary" onClick={props.handlecSuggestEvent}>
+            <button type="button" class="btn btn-dark button" variant="secondary" onClick={props.handlecSuggestEvent()}>
               Sluiten
             </button>
             <br />

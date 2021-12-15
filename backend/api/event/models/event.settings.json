@@ -23,21 +23,22 @@
       "type": "string",
       "required": true
     },
-    "Tijd": {
-      "type": "string"
-    },
     "Categorie": {
       "type": "string"
     },
     "Organisator": {
       "type": "string"
     },
-    "Datum": {
-      "type": "string"
-    },
     "Inschrijvingen": {
       "via": "events",
       "collection": "mails"
+    },
+    "Datum": {
+      "type": "date"
+    },
+    "Tijd": {
+      "type": "time",
+      "default": "00:00:00"
     }
   }
 }

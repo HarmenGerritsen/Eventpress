@@ -62,11 +62,29 @@
   width: 22vw;
   height: 5vh;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto auto 3vh auto;
   border: solid 1px lightgrey;
   border-radius: 2%;
   padding: 2%;
+}
+
+.Prikker {
+  color: black;
+  width: 22vw;
+  height: 6vh;
+  display: block;
+  margin: auto auto 3vh auto;
+}
+
+.datepicker{
+  width: 14vw!important;
+  display: block;
+  float: left;
+}
+.time {
+  width: 8vw!important;
+  display: block;
+  float: left;
 }
 
 .eventtextarea {
@@ -106,14 +124,12 @@
   box-shadow: 0 0.3em rgb(124, 124, 155);
   margin-bottom: 10vh;
   margin-top: 15vh;
-  display: none;
 }
 
 .menu {
   display: block;
   align-items: center;
   margin: 1vh 5vw 1vh 5vw;
-  display: none;
 }
 
 .menuButton {
@@ -202,7 +218,6 @@ h2, h3 {
 }
 
 #dropdownMenu {
-  display: none;
   color: black;
   background-color: white;
   font-size: 75%;
@@ -212,7 +227,10 @@ h2, h3 {
   border-radius: 10px;
   box-shadow: 0 0.3em rgb(124, 124, 155);
   margin-top: 7%;
+  display: none;
 }
+
+
 
 @media only screen and (max-width: 1300px) {
   .menuButton {

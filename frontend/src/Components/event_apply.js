@@ -35,6 +35,9 @@ function EventApply(props) {
             <textarea className="textarea" placeholder="Vul hier je email in" value={Email} onChange={(e) => setEmail(e.target.value)}></textarea>
           </Modal.Body>
           <Modal.Footer className="popupFooter" class="col text-center">
+          <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => {props.handlesEventInfo()}}>
+              Terug
+            </button>
             <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => {
               handleSubmit();
               props.handlecApply();
