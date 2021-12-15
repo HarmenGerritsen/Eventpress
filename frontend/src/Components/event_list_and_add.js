@@ -55,9 +55,6 @@ function EventListAndAdd(props) {
     })
   }
 
-
-
-
   return (
     <div>
       <div className="Table">
