@@ -1,14 +1,6 @@
-// File /api/email/controllers/Email.js
 'use strict'
 
-/**
- * Read the documentation () to implement custom controller functions
- */
-
 module.exports = {
-  /**
-   * Sends an email to the recipient in the body of the request
-   */
   send: async (ctx) => {
     const body = ctx.request.body
     const sendTo = body.usermail
@@ -17,8 +9,8 @@ module.exports = {
     try {
       const emailOptions = {
         to: sendTo,
-        subject: 'Je bent ingeschreven',
-        html: `<h1>Eventpress</h1><p>Je bent ingeschreven!</p>`,
+        subject: 'Eventpress',
+        html: `<h1>Gelukt!</h1><p>Je bent ingeschreven.</p>`,
       }
       await strapi.plugins['email'].services.email.send(emailOptions)
       strapi.log.debug(`Email sent to ${sendTo}`)
