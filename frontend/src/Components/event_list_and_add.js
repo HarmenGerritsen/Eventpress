@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import Modal from "react-bootstrap/Modal";
-import moment from 'moment';
 
 function EventListAndAdd(props) {
 
@@ -39,8 +38,6 @@ function EventListAndAdd(props) {
   const [Locatie, setLocatie] = useState('');
   const [Organisator, setOrganisator] = useState('');
   const [Inschrijvingen, setInschrijvingen] = useState('');
-  const [value, setState] = useState(moment([2021, 11, 14]));
-  const [val, setValue] = useState('');
 
   const handleSubmit = (e) => {
     const newData = { Datum, Tijd, Titel, Omschrijving, Categorie, Locatie, Organisator, Inschrijvingen };
@@ -51,6 +48,7 @@ function EventListAndAdd(props) {
       body: JSON.stringify(newData)
     }).then(() => {
       console.log('new data added')
+      console.log(Datum)
     })
   }
 
@@ -95,21 +93,9 @@ function EventListAndAdd(props) {
             <button className="closeButton" onClick={props.handlecAddEvent}>X</button>
           </Modal.Header>
           <Modal.Body>
-
             <p>Maak evenement aan</p>
-
-            <div className="Prikker">
-              <Form.Control type="date"
-                onChange={(e) => setDatum(e.target.value)}
-                value={Datum}
-              />
-              <Form.Control type="time"
-                onChange={(e) => setTijd(e.target.value)}
-                seconds={false}
-                value={Tijd}
-              />
-            </div>
-            
+            <textarea className="textarea" placeholder="Datum" value={Datum} onChange={(e) => setDatum(e.target.value)}></textarea>
+            <textarea className="textarea" placeholder="Tijd" value={Tijd} onChange={(e) => setTijd(e.target.value)}></textarea>
             <textarea className="textarea" placeholder="Titel" value={Titel} onChange={(e) => setTitel(e.target.value)}></textarea>
             <textarea className="textarea" placeholder="Omschrijving" value={Omschrijving} onChange={(e) => setOmschrijving(e.target.value)}></textarea>
             <textarea className="textarea" placeholder="Categorie" value={Categorie} onChange={(e) => setCategorie(e.target.value)}></textarea>
@@ -134,3 +120,17 @@ function EventListAndAdd(props) {
   );
 }
 export default EventListAndAdd;
+
+
+//<div className="Prikker">
+//<Form.Control type="date"
+  //onChange={(e) => setDatum(e.target.value)}
+  //value={Datum}
+///>
+//{console.log(Datum)}
+//<Form.Control type="time"
+  //onChange={(e) => setTijd(e.target.value)}
+  //seconds={false}
+  //value={Tijd}
+///>
+//</div>
