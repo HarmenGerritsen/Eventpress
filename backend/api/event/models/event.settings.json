@@ -33,11 +33,11 @@
       "via": "events",
       "collection": "mails"
     },
-    "Datum": {
-      "type": "string"
-    },
     "Tijd": {
       "type": "string"
+    },
+    "Datum": {
+      "type": "date"
     }
   }
 }

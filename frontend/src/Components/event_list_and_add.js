@@ -94,7 +94,12 @@ function EventListAndAdd(props) {
           </Modal.Header>
           <Modal.Body>
             <p>Maak evenement aan</p>
-            <textarea className="textarea" placeholder="Datum" value={Datum} onChange={(e) => setDatum(e.target.value)}></textarea>
+            <div className="Prikker">
+              <Form.Control type="date"
+                onChange={(e) => setDatum(e.target.value)}
+                value={Datum}
+              />
+            </div>
             <textarea className="textarea" placeholder="Tijd" value={Tijd} onChange={(e) => setTijd(e.target.value)}></textarea>
             <textarea className="textarea" placeholder="Titel" value={Titel} onChange={(e) => setTitel(e.target.value)}></textarea>
             <textarea className="textarea" placeholder="Omschrijving" value={Omschrijving} onChange={(e) => setOmschrijving(e.target.value)}></textarea>

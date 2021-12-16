@@ -570,11 +570,12 @@
               }
             }
           },
-          "Datum": {
-            "type": "string"
-          },
           "Tijd": {
             "type": "string"
+          },
+          "Datum": {
+            "type": "string",
+            "format": "date"
           },
           "published_at": {
             "type": "string",
@@ -609,11 +610,12 @@
               "type": "string"
             }
           },
-          "Datum": {
-            "type": "string"
-          },
           "Tijd": {
             "type": "string"
+          },
+          "Datum": {
+            "type": "string",
+            "format": "date"
           },
           "published_at": {
             "type": "string",
