@@ -34,11 +34,10 @@
       "collection": "mails"
     },
     "Datum": {
-      "type": "date"
+      "type": "string"
     },
     "Tijd": {
-      "type": "time",
-      "default": "00:00:00"
+      "type": "string"
     }
   }
 }

@@ -571,12 +571,10 @@
             }
           },
           "Datum": {
-            "type": "string",
-            "format": "date"
+            "type": "string"
           },
           "Tijd": {
-            "type": "string",
-            "default": "00:00:00"
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -612,12 +610,10 @@
             }
           },
           "Datum": {
-            "type": "string",
-            "format": "date"
+            "type": "string"
           },
           "Tijd": {
-            "type": "string",
-            "default": "00:00:00"
+            "type": "string"
           },
           "published_at": {
             "type": "string",
