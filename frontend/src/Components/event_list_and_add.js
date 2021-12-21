@@ -39,6 +39,10 @@ function EventListAndAdd(props) {
   const [Organisator, setOrganisator] = useState('');
   const [Inschrijvingen, setInschrijvingen] = useState('');
 
+  var newTijd = Tijd;
+  JSON.stringify(newTijd)
+  console.log(newTijd)
+
   const handleSubmit = (e) => {
     const newData = { Datum, Tijd, Titel, Omschrijving, Categorie, Locatie, Organisator, Inschrijvingen };
 
@@ -48,7 +52,6 @@ function EventListAndAdd(props) {
       body: JSON.stringify(newData)
     }).then(() => {
       console.log('new data added')
-      console.log(Datum)
     })
   }
 
@@ -99,8 +102,13 @@ function EventListAndAdd(props) {
                 onChange={(e) => setDatum(e.target.value)}
                 value={Datum}
               />
+              <Form.Control type="time"
+                onChange={(e) => setTijd(e.target.value)}
+                seconds={true}
+                value={newTijd}
+                
+              />
             </div>
-            <textarea className="textarea" placeholder="Tijd" value={Tijd} onChange={(e) => setTijd(e.target.value)}></textarea>
             <textarea className="textarea" placeholder="Titel" value={Titel} onChange={(e) => setTitel(e.target.value)}></textarea>
             <textarea className="textarea" placeholder="Omschrijving" value={Omschrijving} onChange={(e) => setOmschrijving(e.target.value)}></textarea>
             <textarea className="textarea" placeholder="Categorie" value={Categorie} onChange={(e) => setCategorie(e.target.value)}></textarea>
@@ -113,6 +121,7 @@ function EventListAndAdd(props) {
               handleSubmit();
               props.handlecAddEvent();
               refreshPage();
+              console.log(setTijd);
             }}>
               Aanmaken
             </button>
@@ -125,17 +134,3 @@ function EventListAndAdd(props) {
   );
 }
 export default EventListAndAdd;
-
-
-//<div className="Prikker">
-//<Form.Control type="date"
-  //onChange={(e) => setDatum(e.target.value)}
-  //value={Datum}
-///>
-//{console.log(Datum)}
-//<Form.Control type="time"
-  //onChange={(e) => setTijd(e.target.value)}
-  //seconds={false}
-  //value={Tijd}
-///>
-//</div>
