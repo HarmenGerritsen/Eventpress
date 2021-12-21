@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import Modal from "react-bootstrap/Modal";
+import moment from 'moment';
 
 function EventListAndAdd(props) {
 
@@ -39,9 +40,9 @@ function EventListAndAdd(props) {
   const [Organisator, setOrganisator] = useState('');
   const [Inschrijvingen, setInschrijvingen] = useState('');
 
-  var newTijd = Tijd;
-  JSON.stringify(newTijd)
-  console.log(newTijd)
+
+  var newTijd = moment(Tijd, "HH:mm:ss").format('HH:mm:ss.SSS');
+  console.log(newTijd);
 
   const handleSubmit = (e) => {
     const newData = { Datum, Tijd, Titel, Omschrijving, Categorie, Locatie, Organisator, Inschrijvingen };
