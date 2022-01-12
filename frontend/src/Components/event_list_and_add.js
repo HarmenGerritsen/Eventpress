@@ -193,12 +193,3 @@ function EventListAndAddEvent(props) {
   );
 }
 export default EventListAndAddEvent;
-
-//<Row>
-//<Form.Group controlId="formFile" className="mb-3">
-//<Form.Label>Kies thumbnail*:</Form.Label>
-//<Form.Control type="file" />
-//</Form.Group>
-//</Row>
-//<br />+
-//<p>* is niet vereist</p>
