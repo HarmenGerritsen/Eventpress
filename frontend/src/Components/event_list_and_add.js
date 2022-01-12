@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import Modal from "react-bootstrap/Modal";
+import Row from "react-bootstrap/Row";
+import Col from 'react-bootstrap/Col'
 import moment from 'moment';
 
-function EventListAndAdd(props) {
+function EventListAndAddEvent(props) {
 
   function refreshPage() {
     window.location.reload(false);
@@ -40,12 +42,19 @@ function EventListAndAdd(props) {
   const [Organisator, setOrganisator] = useState('');
   const [Inschrijvingen, setInschrijvingen] = useState('');
 
-
-  var newTijd = moment(Tijd, "HH:mm:ss").format('HH:mm:ss.SSS');
-  console.log(newTijd);
-
   const handleSubmit = (e) => {
-    const newData = { Datum, Tijd, Titel, Omschrijving, Categorie, Locatie, Organisator, Inschrijvingen };
+    var newTijd = moment(Tijd, "hh:mm").format('HH:mm:ss.SSS');
+    const newData = {
+      Datum,
+      Tijd: newTijd,
+      Titel,
+      Omschrijving,
+      Categorie,
+      Locatie,
+      Organisator,
+      Inschrijvingen
+    };
+
 
     fetch('http://localhost:1337/events/', {
       method: 'POST',
@@ -97,24 +106,74 @@ function EventListAndAdd(props) {
             <button className="closeButton" onClick={props.handlecAddEvent}>X</button>
           </Modal.Header>
           <Modal.Body>
-            <p>Maak evenement aan</p>
+            <p>Maak evenement aan:</p>
             <div className="Prikker">
-              <Form.Control type="date"
-                onChange={(e) => setDatum(e.target.value)}
-                value={Datum}
-              />
-              <Form.Control type="time"
-                onChange={(e) => setTijd(e.target.value)}
-                seconds={true}
-                value={newTijd}
-                
-              />
+
+              <Row>
+                <Form.Group as={Col} >
+                  <Form.Control type="date"
+                    onChange={(e) => setDatum(e.target.value)}
+                    value={Datum}
+                  />
+                </Form.Group>
+                <Form.Group as={Col} >
+                  <Form.Control type="time"
+                    onChange={(e) => setTijd(e.target.value)}
+                    seconds={true}
+                    value={Tijd}
+                  />
+                </Form.Group>
+              </Row>
+              <br />
+
+              <Row>
+                <Form.Group as={Col} >
+                  <Form.Label>Titel</Form.Label>
+                  <Form.Control value={Titel} onChange={(e) => setTitel(e.target.value)} type="title" placeholder="Titel van event..." />
+                </Form.Group>
+                <Form.Group as={Col} >
+                  <Form.Label>Locatie</Form.Label>
+                  <Form.Control value={Locatie} onChange={(e) => setLocatie(e.target.value)} type="title" placeholder="Locatie van event..." />
+                </Form.Group>
+                <Form.Group as={Col} >
+                  <Form.Label>Organisator</Form.Label>
+                  <Form.Control value={Organisator} onChange={(e) => setOrganisator(e.target.value)} type="title" placeholder="Organisator van event..." />
+                </Form.Group>
+              </Row>
+              <br />
+
+              <Row>
+                <Form.Group controlId="formBasicSelect">
+                  <Form.Label>Categorie</Form.Label>
+                  <Form.Control
+                    as="select"
+                    value={Categorie}
+                    onChange={(e) => setCategorie(e.target.value)}
+                  >
+                    <option value={Categorie}>Overig</option>
+                    <option value={Categorie}>FE Gilde</option>
+                    <option value={Categorie}>BE Gilde</option>
+
+                  </Form.Control>
+                </Form.Group>
+              </Row>
+              <br />
+
+              <Row><Form.Group as={Col} >
+                <Form.Label>Omschrijving</Form.Label>
+                <Form.Control value={Omschrijving} onChange={(e) => setOmschrijving(e.target.value)} as="textarea" rows={7} type="title" placeholder="Omschrijving van event..." />
+              </Form.Group>
+              </Row>
+              <br />
+              {/* <Row>
+                <Form.Group controlId="formFile" className="mb-3">
+                  <Form.Label>Kies thumbnail*:</Form.Label>
+                  <Form.Control type="file" />
+                </Form.Group>
+              </Row>
+              <br /> */}
+              <p>* is niet vereist</p>
             </div>
-            <textarea className="textarea" placeholder="Titel" value={Titel} onChange={(e) => setTitel(e.target.value)}></textarea>
-            <textarea className="textarea" placeholder="Omschrijving" value={Omschrijving} onChange={(e) => setOmschrijving(e.target.value)}></textarea>
-            <textarea className="textarea" placeholder="Categorie" value={Categorie} onChange={(e) => setCategorie(e.target.value)}></textarea>
-            <textarea className="textarea" placeholder="Locatie" value={Locatie} onChange={(e) => setLocatie(e.target.value)}></textarea>
-            <textarea className="textarea" placeholder="Organisator" value={Organisator} onChange={(e) => setOrganisator(e.target.value)}></textarea>
           </Modal.Body>
 
           <Modal.Footer class="col text-center">
@@ -122,7 +181,6 @@ function EventListAndAdd(props) {
               handleSubmit();
               props.handlecAddEvent();
               refreshPage();
-              console.log(setTijd);
             }}>
               Aanmaken
             </button>
@@ -134,4 +192,13 @@ function EventListAndAdd(props) {
     </div>
   );
 }
-export default EventListAndAdd;
+export default EventListAndAddEvent;
+
+//<Row>
+//<Form.Group controlId="formFile" className="mb-3">
+//<Form.Label>Kies thumbnail*:</Form.Label>
+//<Form.Control type="file" />
+//</Form.Group>
+//</Row>
+//<br />+
+//<p>* is niet vereist</p>

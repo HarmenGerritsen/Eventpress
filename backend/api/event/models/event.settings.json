@@ -37,7 +37,7 @@
       "type": "date"
     },
     "Tijd": {
-      "type": "string"
+      "type": "time"
     }
   }
 }
