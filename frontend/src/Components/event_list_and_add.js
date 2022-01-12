@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import Modal from "react-bootstrap/Modal";
-import moment from 'moment';
 
 function EventListAndAdd(props) {
 
@@ -41,8 +40,7 @@ function EventListAndAdd(props) {
   const [Inschrijvingen, setInschrijvingen] = useState('');
 
 
-  var newTijd = moment(Tijd, "HH:mm:ss").format('HH:mm:ss.SSS');
-  console.log(newTijd);
+  
 
   const handleSubmit = (e) => {
     const newData = { Datum, Tijd, Titel, Omschrijving, Categorie, Locatie, Organisator, Inschrijvingen };
@@ -103,12 +101,9 @@ function EventListAndAdd(props) {
                 onChange={(e) => setDatum(e.target.value)}
                 value={Datum}
               />
-              <Form.Control type="time"
-                onChange={(e) => setTijd(e.target.value)}
-                seconds={true}
-                value={newTijd}
+             
                 
-              />
+              
             </div>
             <textarea className="textarea" placeholder="Titel" value={Titel} onChange={(e) => setTitel(e.target.value)}></textarea>
             <textarea className="textarea" placeholder="Omschrijving" value={Omschrijving} onChange={(e) => setOmschrijving(e.target.value)}></textarea>
