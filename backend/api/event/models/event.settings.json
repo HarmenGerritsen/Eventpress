@@ -23,9 +23,6 @@
       "type": "string",
       "required": true
     },
-    "Categorie": {
-      "type": "string"
-    },
     "Organisator": {
       "type": "string"
     },
@@ -38,6 +35,26 @@
     },
     "Tijd": {
       "type": "time"
+    },
+    "Limiet": {
+      "type": "integer"
+    },
+    "Categorie": {
+      "type": "enumeration",
+      "enum": [
+        "Overig",
+        "Frontend",
+        "Backend"
+      ]
+    },
+    "Niveau": {
+      "type": "enumeration",
+      "enum": [
+        "Beginner",
+        "Gevorderd",
+        "Expert",
+        "Overig"
+      ]
     }
   }
 }

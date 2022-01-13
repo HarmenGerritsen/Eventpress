@@ -41,6 +41,8 @@ function EventListAndAddEvent(props) {
   const [Locatie, setLocatie] = useState('');
   const [Organisator, setOrganisator] = useState('');
   const [Inschrijvingen, setInschrijvingen] = useState('');
+  const [Limiet, setLimiet] = useState('');
+  const [Niveau, setNiveau] = useState('');
 
   const handleSubmit = (e) => {
     var newTijd = moment(Tijd, "hh:mm").format('HH:mm:ss.SSS');
@@ -52,7 +54,9 @@ function EventListAndAddEvent(props) {
       Categorie,
       Locatie,
       Organisator,
-      Inschrijvingen
+      Inschrijvingen,
+      Limiet,
+      Niveau
     };
 
 
@@ -110,19 +114,31 @@ function EventListAndAddEvent(props) {
             <div className="Prikker">
 
               <Row>
-                <Form.Group as={Col} >
-                  <Form.Control type="date"
-                    onChange={(e) => setDatum(e.target.value)}
-                    value={Datum}
-                  />
-                </Form.Group>
-                <Form.Group as={Col} >
-                  <Form.Control type="time"
-                    onChange={(e) => setTijd(e.target.value)}
-                    seconds={true}
-                    value={Tijd}
-                  />
-                </Form.Group>
+                <Col lg="2">
+                  <Form.Label>Datum:</Form.Label>
+                  <Form.Group as={Col} >
+                    <Form.Control type="date"
+                      onChange={(e) => setDatum(e.target.value)}
+                      value={Datum}
+                    />
+                  </Form.Group>
+                </Col>
+                <Col lg="2">
+                  <Form.Label>Tijdstip:</Form.Label>
+                  <Form.Group as={Col} >
+                    <Form.Control type="time"
+                      onChange={(e) => setTijd(e.target.value)}
+                      seconds={true}
+                      value={Tijd}
+                    />
+                  </Form.Group>
+                </Col>
+                <Col>
+                  <Form.Group as={Col} >
+                    <Form.Label>Locatie</Form.Label>
+                    <Form.Control value={Locatie} onChange={(e) => setLocatie(e.target.value)} type="title" placeholder="Locatie van event..." />
+                  </Form.Group>
+                </Col>
               </Row>
               <br />
 
@@ -131,18 +147,15 @@ function EventListAndAddEvent(props) {
                   <Form.Label>Titel</Form.Label>
                   <Form.Control value={Titel} onChange={(e) => setTitel(e.target.value)} type="title" placeholder="Titel van event..." />
                 </Form.Group>
-                <Form.Group as={Col} >
-                  <Form.Label>Locatie</Form.Label>
-                  <Form.Control value={Locatie} onChange={(e) => setLocatie(e.target.value)} type="title" placeholder="Locatie van event..." />
-                </Form.Group>
-                <Form.Group as={Col} >
+
+                <Form.Group as={Col}>
                   <Form.Label>Organisator</Form.Label>
                   <Form.Control value={Organisator} onChange={(e) => setOrganisator(e.target.value)} type="title" placeholder="Organisator van event..." />
                 </Form.Group>
               </Row>
               <br />
-
               <Row>
+                <Col>
                 <Form.Group controlId="formBasicSelect">
                   <Form.Label>Categorie</Form.Label>
                   <Form.Control
@@ -150,21 +163,45 @@ function EventListAndAddEvent(props) {
                     value={Categorie}
                     onChange={(e) => setCategorie(e.target.value)}
                   >
-                    <option value={Categorie}>Overig</option>
-                    <option value={Categorie}>FE Gilde</option>
-                    <option value={Categorie}>BE Gilde</option>
-
+                    <option>Overig</option>
+                    <option>Frontend</option>
+                    <option>Backend</option>
                   </Form.Control>
+                </Form.Group>
+                </Col>
+                <Col>
+                <Form.Group controlId="formBasicSelect">
+                  <Form.Label>Niveau</Form.Label>
+                  <Form.Control
+                    as="select"
+                    value={Niveau}
+                    onChange={(e) => setNiveau(e.target.value)}
+                  >
+                    <option>Overig</option>
+                    <option>Beginner</option>
+                    <option>Gevorderd</option>
+                    <option>Expert</option>
+                  </Form.Control>
+                </Form.Group>
+                </Col>
+              </Row>
+              <br />
+
+              <Row>
+                <Form.Group as={Col} >
+                  <Form.Label>Omschrijving</Form.Label>
+                  <Form.Control value={Omschrijving} onChange={(e) => setOmschrijving(e.target.value)} as="textarea" rows={7} type="title" placeholder="Omschrijving van event..." />
                 </Form.Group>
               </Row>
               <br />
-
-              <Row><Form.Group as={Col} >
-                <Form.Label>Omschrijving</Form.Label>
-                <Form.Control value={Omschrijving} onChange={(e) => setOmschrijving(e.target.value)} as="textarea" rows={7} type="title" placeholder="Omschrijving van event..." />
-              </Form.Group>
+              <Row>
+                <Form.Group as={Col} >
+                  <Form.Label>Persoonslimiet*</Form.Label>
+                  <Form.Control value={Limiet} onChange={(e) => setLimiet(e.target.value)} type="number" placeholder="Maximaal aantal deelnemers..." />
+                </Form.Group>
+                <Col></Col>
+                <Col></Col>
               </Row>
-              <br />
               {/* <Row>
                 <Form.Group controlId="formFile" className="mb-3">
                   <Form.Label>Kies thumbnail*:</Form.Label>
@@ -172,6 +209,7 @@ function EventListAndAddEvent(props) {
                 </Form.Group>
               </Row>
               <br /> */}
+              <br />
               <p>* is niet vereist</p>
             </div>
           </Modal.Body>

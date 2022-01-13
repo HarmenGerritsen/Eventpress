@@ -551,9 +551,6 @@
                 "Locatie": {
                   "type": "string"
                 },
-                "Categorie": {
-                  "type": "string"
-                },
                 "Organisator": {
                   "type": "string"
                 },
@@ -568,6 +565,26 @@
                 },
                 "Tijd": {
                   "type": "string"
+                },
+                "Limiet": {
+                  "type": "integer"
+                },
+                "Categorie": {
+                  "type": "string",
+                  "enum": [
+                    "Overig",
+                    "Frontend",
+                    "Backend"
+                  ]
+                },
+                "Niveau": {
+                  "type": "string",
+                  "enum": [
+                    "Beginner",
+                    "Gevorderd",
+                    "Expert",
+                    "Overig"
+                  ]
                 },
                 "published_at": {
                   "type": "string"

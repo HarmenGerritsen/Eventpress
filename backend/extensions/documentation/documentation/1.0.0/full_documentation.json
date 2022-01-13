@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/16/2021 9:46:10 AM"
+    "x-generation-date": "01/13/2022 2:17:57 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3323,9 +3323,6 @@
           "Locatie": {
             "type": "string"
           },
-          "Categorie": {
-            "type": "string"
-          },
           "Organisator": {
             "type": "string"
           },
@@ -3360,12 +3357,32 @@
               }
             }
           },
-          "Tijd": {
-            "type": "string"
-          },
           "Datum": {
             "type": "string",
             "format": "date"
+          },
+          "Tijd": {
+            "type": "string"
+          },
+          "Limiet": {
+            "type": "integer"
+          },
+          "Categorie": {
+            "type": "string",
+            "enum": [
+              "Overig",
+              "Frontend",
+              "Backend"
+            ]
+          },
+          "Niveau": {
+            "type": "string",
+            "enum": [
+              "Beginner",
+              "Gevorderd",
+              "Expert",
+              "Overig"
+            ]
           },
           "published_at": {
             "type": "string",
@@ -3388,9 +3405,6 @@
           "Locatie": {
             "type": "string"
           },
-          "Categorie": {
-            "type": "string"
-          },
           "Organisator": {
             "type": "string"
           },
@@ -3400,12 +3414,32 @@
               "type": "string"
             }
           },
-          "Tijd": {
-            "type": "string"
-          },
           "Datum": {
             "type": "string",
             "format": "date"
+          },
+          "Tijd": {
+            "type": "string"
+          },
+          "Limiet": {
+            "type": "integer"
+          },
+          "Categorie": {
+            "type": "string",
+            "enum": [
+              "Overig",
+              "Frontend",
+              "Backend"
+            ]
+          },
+          "Niveau": {
+            "type": "string",
+            "enum": [
+              "Beginner",
+              "Gevorderd",
+              "Expert",
+              "Overig"
+            ]
           },
           "published_at": {
             "type": "string",
@@ -3448,9 +3482,6 @@
                 "Locatie": {
                   "type": "string"
                 },
-                "Categorie": {
-                  "type": "string"
-                },
                 "Organisator": {
                   "type": "string"
                 },
@@ -3465,6 +3496,26 @@
                 },
                 "Tijd": {
                   "type": "string"
+                },
+                "Limiet": {
+                  "type": "integer"
+                },
+                "Categorie": {
+                  "type": "string",
+                  "enum": [
+                    "Overig",
+                    "Frontend",
+                    "Backend"
+                  ]
+                },
+                "Niveau": {
+                  "type": "string",
+                  "enum": [
+                    "Beginner",
+                    "Gevorderd",
+                    "Expert",
+                    "Overig"
+                  ]
                 },
                 "published_at": {
                   "type": "string"

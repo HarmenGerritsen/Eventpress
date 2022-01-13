@@ -40,19 +40,19 @@ function EventInfo(props, state) {
           <button className="closeButton" onClick={props.handlecEventInfo}>X</button>
         </Modal.Header>
         <Modal.Body className="popupbody">
-          <Table bordered hover>
-
             {data && data.length > 0 && data.map((item) => (
               <tbody>
                 {events.map((index) => {if (item.id === (props.EventID))return(
                   <div>
                     <h1>{item.Titel}</h1>
                     <h3>{item.Datum} - {item.Tijd}</h3><br/><br/>
-                    <h3>Omschrijving:</h3><h3 className="Omschrijving EventInfo">{item.Omschrijving}</h3><br/>
-                    <h2>Categorie:</h2><h2 className="EventInfo">{item.Categorie}</h2><br/><br/>
-                    <h2>Locatie:</h2><h2 className="EventInfo">{item.Locatie}</h2><br/><br/>
-                    <h2>Organisator:</h2><h2 className="EventInfo">{item.Organisator}</h2><br/><br/>
-                    <h2>Inschrijvingen:</h2>
+                    <h3>Omschrijving: </h3><h3 className="Omschrijving EventInfo">{item.Omschrijving}</h3><br/>
+                    <h2>Categorie:  </h2><h2 className="EventInfo">{item.Categorie}</h2><br/><br/>
+                    <h2>Locatie:  </h2><h2 className="EventInfo">{item.Locatie}</h2><br/><br/>
+                    <h2>Organisator:  </h2><h2 className="EventInfo">{item.Organisator}</h2><br/><br/>
+                    <h2>Niveau: </h2><h2 className="EventInfo">{item.Niveau}</h2><br/><br/>
+                    <h2>Persoonslimiet: </h2><h2 className="EventInfo">{item.Limiet}</h2><br/><br/>
+                    <h2>Inschrijvingen: </h2>
                     {item.Inschrijvingen.map((inschrijving, index) => (
                       <h3 key={index} className="EventInfo">
                          <br/>{inschrijving.usermail}
@@ -64,8 +64,7 @@ function EventInfo(props, state) {
               </tbody>
             )
             )}
-          </Table>
-          <img class="img-responsive" src={imgfe1} alt=""></img>
+          {/* <img class="img-responsive" src={imgfe1} alt=""></img> */}
         </Modal.Body>
         <Modal.Footer class="col text-center">
           <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => { props.handlecEventInfo(); props.handlesApply(); }}>

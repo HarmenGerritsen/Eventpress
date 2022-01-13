@@ -533,9 +533,6 @@
           "Locatie": {
             "type": "string"
           },
-          "Categorie": {
-            "type": "string"
-          },
           "Organisator": {
             "type": "string"
           },
@@ -570,12 +567,32 @@
               }
             }
           },
-          "Tijd": {
-            "type": "string"
-          },
           "Datum": {
             "type": "string",
             "format": "date"
+          },
+          "Tijd": {
+            "type": "string"
+          },
+          "Limiet": {
+            "type": "integer"
+          },
+          "Categorie": {
+            "type": "string",
+            "enum": [
+              "Overig",
+              "Frontend",
+              "Backend"
+            ]
+          },
+          "Niveau": {
+            "type": "string",
+            "enum": [
+              "Beginner",
+              "Gevorderd",
+              "Expert",
+              "Overig"
+            ]
           },
           "published_at": {
             "type": "string",
@@ -598,9 +615,6 @@
           "Locatie": {
             "type": "string"
           },
-          "Categorie": {
-            "type": "string"
-          },
           "Organisator": {
             "type": "string"
           },
@@ -610,12 +624,32 @@
               "type": "string"
             }
           },
-          "Tijd": {
-            "type": "string"
-          },
           "Datum": {
             "type": "string",
             "format": "date"
+          },
+          "Tijd": {
+            "type": "string"
+          },
+          "Limiet": {
+            "type": "integer"
+          },
+          "Categorie": {
+            "type": "string",
+            "enum": [
+              "Overig",
+              "Frontend",
+              "Backend"
+            ]
+          },
+          "Niveau": {
+            "type": "string",
+            "enum": [
+              "Beginner",
+              "Gevorderd",
+              "Expert",
+              "Overig"
+            ]
           },
           "published_at": {
             "type": "string",
