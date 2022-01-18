@@ -8,7 +8,7 @@ import moment from 'moment';
 
 function EventListAndAddEvent(props) {
 
-  function refreshPage() {
+  const refreshPage = () => {
     window.location.reload(false);
   }
 
@@ -59,14 +59,15 @@ function EventListAndAddEvent(props) {
       Niveau
     };
 
-
     fetch('http://localhost:1337/events/', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newData)
     }).then(() => {
       console.log('new data added')
-    })
+    });
+    e.preventDefault();
+    refreshPage();
   }
 
   return (
@@ -112,116 +113,158 @@ function EventListAndAddEvent(props) {
           <Modal.Body>
             <p>Maak evenement aan:</p>
             <div className="Prikker">
+              <form onSubmit={handleSubmit}>
 
-              <Row>
-                <Col lg="2">
-                  <Form.Label>Datum:</Form.Label>
+                <Row>
+                  <Col lg="2">
+                    <Form.Label>Datum:</Form.Label>
+                    <Form.Group as={Col} >
+                      <Form.Control
+                        required
+                        type="date"
+                        onChange={(e) => setDatum(e.target.value)}
+                        value={Datum}
+                      />
+                      <Form.Control.Feedback type="invalid" />
+                    </Form.Group>
+                  </Col>
+                  <Col lg="2">
+                    <Form.Label>Tijdstip:</Form.Label>
+                    <Form.Group as={Col} >
+                      <Form.Control
+                        required
+                        type="time"
+                        onChange={(e) => setTijd(e.target.value)}
+                        seconds={true}
+                        value={Tijd}
+                      />
+                      <Form.Control.Feedback type="invalid" />
+                    </Form.Group>
+                  </Col>
+                  <Col>
+                    <Form.Group as={Col} >
+                      <Form.Label>Locatie</Form.Label>
+                      <Form.Control
+                        required
+                        value={Locatie}
+                        onChange={(e) => setLocatie(e.target.value)}
+                        type="title"
+                        placeholder="Locatie van event..." />
+                      <Form.Control.Feedback type="invalid" />
+
+                    </Form.Group>
+                  </Col>
+                </Row>
+
+                <br />
+
+                <Row>
                   <Form.Group as={Col} >
-                    <Form.Control type="date"
-                      onChange={(e) => setDatum(e.target.value)}
-                      value={Datum}
-                    />
+                    <Form.Label>Titel</Form.Label>
+                    <Form.Control
+                      required
+                      value={Titel}
+                      onChange={(e) => setTitel(e.target.value)}
+                      type="title"
+                      placeholder="Titel van event..." />
+                    <Form.Control.Feedback type="invalid" />
                   </Form.Group>
-                </Col>
-                <Col lg="2">
-                  <Form.Label>Tijdstip:</Form.Label>
+                  <Form.Group as={Col}>
+                    <Form.Label>Organisator</Form.Label>
+                    <Form.Control
+                      required
+                      value={Organisator}
+                      onChange={(e) => setOrganisator(e.target.value)}
+                      type="title"
+                      placeholder="Organisator van event..." />
+                    <Form.Control.Feedback type="invalid" />
+                  </Form.Group>
+                </Row>
+
+                <br />
+
+                <Row>
+                  <Col>
+                    <Form.Group controlId="formBasicSelect">
+                      <Form.Label>Categorie</Form.Label>
+                      <Form.Control
+                        required
+                        as="select"
+                        value={Categorie}
+                        onChange={(e) => setCategorie(e.target.value)}>
+                        <option>Kies een optie...</option>
+                        <option>Overig</option>
+                        <option>Frontend</option>
+                        <option>Backend</option>
+                      </Form.Control>
+                      <Form.Control.Feedback type="invalid" />
+                    </Form.Group>
+                  </Col>
+                  <Col>
+                    <Form.Group controlId="formBasicSelect">
+                      <Form.Label>Niveau</Form.Label>
+                      <Form.Control
+                        required
+                        as="select"
+                        value={Niveau}
+                        onChange={(e) => setNiveau(e.target.value)}>
+                        <option>Kies een optie...</option>
+                        <option>Overig</option>
+                        <option>Beginner</option>
+                        <option>Gevorderd</option>
+                        <option>Expert</option>
+                      </Form.Control>
+                      <Form.Control.Feedback type="invalid" />
+                    </Form.Group>
+                  </Col>
+                </Row>
+
+                <br />
+
+                <Row>
                   <Form.Group as={Col} >
-                    <Form.Control type="time"
-                      onChange={(e) => setTijd(e.target.value)}
-                      seconds={true}
-                      value={Tijd}
-                    />
+                    <Form.Label>Omschrijving</Form.Label>
+                    <Form.Control
+                      required
+                      value={Omschrijving}
+                      onChange={(e) => setOmschrijving(e.target.value)}
+                      as="textarea"
+                      rows={7}
+                      type="title"
+                      placeholder="Omschrijving van event..." />
+                    <Form.Control.Feedback type="invalid" />
                   </Form.Group>
-                </Col>
-                <Col>
+                </Row>
+
+                <br />
+
+                <Row>
                   <Form.Group as={Col} >
-                    <Form.Label>Locatie</Form.Label>
-                    <Form.Control value={Locatie} onChange={(e) => setLocatie(e.target.value)} type="title" placeholder="Locatie van event..." />
+                    <Form.Label>Persoonslimiet</Form.Label>
+                    <Form.Control
+                      required
+                      value={Limiet}
+                      onChange={(e) => setLimiet(e.target.value)}
+                      type="number"
+                      placeholder="Maximaal aantal deelnemers..." />
                   </Form.Group>
-                </Col>
-              </Row>
-              <br />
+                  <Col></Col>
+                  <Col></Col>
+                </Row>
 
-              <Row>
-                <Form.Group as={Col} >
-                  <Form.Label>Titel</Form.Label>
-                  <Form.Control value={Titel} onChange={(e) => setTitel(e.target.value)} type="title" placeholder="Titel van event..." />
-                </Form.Group>
-
-                <Form.Group as={Col}>
-                  <Form.Label>Organisator</Form.Label>
-                  <Form.Control value={Organisator} onChange={(e) => setOrganisator(e.target.value)} type="title" placeholder="Organisator van event..." />
-                </Form.Group>
-              </Row>
-              <br />
-              <Row>
-                <Col>
-                <Form.Group controlId="formBasicSelect">
-                  <Form.Label>Categorie</Form.Label>
-                  <Form.Control
-                    as="select"
-                    value={Categorie}
-                    onChange={(e) => setCategorie(e.target.value)}
-                  >
-                    <option>Overig</option>
-                    <option>Frontend</option>
-                    <option>Backend</option>
-                  </Form.Control>
-                </Form.Group>
-                </Col>
-                <Col>
-                <Form.Group controlId="formBasicSelect">
-                  <Form.Label>Niveau</Form.Label>
-                  <Form.Control
-                    as="select"
-                    value={Niveau}
-                    onChange={(e) => setNiveau(e.target.value)}
-                  >
-                    <option>Overig</option>
-                    <option>Beginner</option>
-                    <option>Gevorderd</option>
-                    <option>Expert</option>
-                  </Form.Control>
-                </Form.Group>
-                </Col>
-              </Row>
-              <br />
-
-              <Row>
-                <Form.Group as={Col} >
-                  <Form.Label>Omschrijving</Form.Label>
-                  <Form.Control value={Omschrijving} onChange={(e) => setOmschrijving(e.target.value)} as="textarea" rows={7} type="title" placeholder="Omschrijving van event..." />
-                </Form.Group>
-              </Row>
-              <br />
-              <Row>
-                <Form.Group as={Col} >
-                  <Form.Label>Persoonslimiet*</Form.Label>
-                  <Form.Control value={Limiet} onChange={(e) => setLimiet(e.target.value)} type="number" placeholder="Maximaal aantal deelnemers..." />
-                </Form.Group>
-                <Col></Col>
-                <Col></Col>
-              </Row>
-              {/* <Row>
-                <Form.Group controlId="formFile" className="mb-3">
-                  <Form.Label>Kies thumbnail*:</Form.Label>
-                  <Form.Control type="file" />
-                </Form.Group>
-              </Row>
-              <br /> */}
-              <br />
-              <p>* is niet vereist</p>
+                <button
+                  type="submit"
+                  class="btn btn-dark button"
+                  variant="secondary"
+                  className="submitButton">
+                  Aanmaken
+                </button>
+              </form>
             </div>
           </Modal.Body>
 
           <Modal.Footer class="col text-center">
-            <button type="button" class="btn btn-dark button" variant="secondary" onClick={() => {
-              handleSubmit();
-              props.handlecAddEvent();
-              refreshPage();
-            }}>
-              Aanmaken
-            </button>
+
             <br />
             <p className="white">.</p>
           </Modal.Footer>

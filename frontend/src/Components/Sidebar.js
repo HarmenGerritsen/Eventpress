@@ -21,7 +21,7 @@ function Sidebar(props) {
       <a href="#">
         <img className="plus plus2" onClick={props.handlesAddEvent} src={plus} alt=''></img>
       </a>
-      <button type="button" className="requestButton" onClick={props.handlesSuggestEvent}><div className="hide">Evenement<br /></div>suggereren</button>
+      {/* <button type="button" className="requestButton" onClick={props.handlesSuggestEvent}><div className="hide">Evenement<br /></div>suggereren</button> */}
     </div>
   )
 }
