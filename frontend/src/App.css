@@ -1,8 +1,18 @@
+/* Main */
+
 .App {
   text-align: center;
   height: auto;
   padding-bottom: auto;
   font-family: Gill Sans, sans-serif;
+}
+
+/* Sidebar */
+
+.logo {
+  width: 13vw;
+  height: auto;
+  margin: 3vh 0 3vh 0;
 }
 
 .App-header {
@@ -38,85 +48,10 @@
   box-shadow: 0 0.2em rgba(0, 0, 0, 0.4);
 }
 
-.popup {
-  width: auto;
-  background-color: rgb(36, 36, 158); 
-}
-
-.modal-dialog {
-  max-width: 80vw !important;
-}
-
-.ModalTitle {
-  color: white;
-    
-}
-
-.modal-content {
-  width: auto;
-}
-
-
-.textarea {
-  color: black;
-  width: 22vw;
-  height: 5vh;
+.menu {
   display: block;
-  margin: auto auto 3vh auto;
-  border: solid 1px lightgrey;
-  border-radius: 2%;
-  padding: 2%;
-}
-
-
-.datepicker{
-  width: 14vw!important;
-  display: block;
-  float: left;
-}
-.time {
-  width: 8vw!important;
-  display: block;
-  float: left;
-}
-
-.eventtextarea {
-  height: 50vh;
-}
-
-.white {
-  color: white;
-}
-
-.closeButton {
-  color: white;
-  float: right;
-  background-color: rgba(0,0,0,0);
-  border: none;
-  font-size: 150%;
-}
-
-.backButton {
-  color: white;
-  background-color: rgba(0,0,0,0);
-  border: none;
-  font-size: 200%;
-}
-
-.submitButton {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5vh;
-  color: white;
-  background-color: rgb(36, 36, 158);
-  border: none;
-  padding: 1vh 1vw;
-  border-radius: 1rem;
-}
-
-.button {
-  margin: 1%;
+  align-items: center;
+  margin: 1vh 5vw 1vh 5vw;
 }
 
 .requestButton {
@@ -131,12 +66,6 @@
   margin-top: 15vh;
 }
 
-.menu {
-  display: block;
-  align-items: center;
-  margin: 1vh 5vw 1vh 5vw;
-}
-
 .menuButton {
   background-color: white;
   font-size: 75%;
@@ -148,23 +77,73 @@
   margin-top: 7%;
 }
 
-.logo {
-  width: 13vw;
-  height: auto;
-  margin: 3vh 0 3vh 0;
-}
-
-.modal-header {
-  background-color: rgb(36, 36, 167);
-  color: white;
-}
-
 figcaption {
   position: absolute;
   font-size: 1.5vw;
   color: white;
   padding: 0.1% 0.5%;
 }
+
+/* Event Aanmaken */
+
+.datepicker{
+  width: 14vw!important;
+  display: block;
+  float: left;
+}
+
+.time {
+  width: 8vw!important;
+  display: block;
+  float: left;
+}
+
+.eventtextarea {
+  height: 50vh;
+}
+
+.submitButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+  color: white;
+  background-color: rgb(36, 36, 158);
+  border: none;
+  padding: 1vh 1vw;
+  border-radius: 1rem;
+}
+
+/* Event Info */
+
+.column {
+  display: flex;
+  float: left;
+  width: 75vw;
+}
+
+.leftcolumn {
+  display: block;
+  width: 50vw;
+}
+
+.right-column {
+  display: block;
+  float: left;
+  width: auto;
+}
+
+.subtitle {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.datetime {
+  font-size: 150%;
+}
+
+
+/* Event Tabel */
 
 .Table {
   width: 80vw;
@@ -187,11 +166,6 @@ td {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-h2, h3 {
-  display: inline;
-}
-
 .hover:hover {
   background-color: rgb(247, 248, 250)!important;
 }
@@ -221,6 +195,48 @@ h2, h3 {
   font-size: 200%;
   font-weight: 100;
 }
+
+/* Event Suggest */
+
+.textarea {
+  color: black;
+  width: 22vw;
+  height: 5vh;
+  display: block;
+  margin: auto auto 3vh auto;
+  border: solid 1px lightgrey;
+  border-radius: 2%;
+  padding: 2%;
+}
+
+/* Popup Opmaak */
+
+.modal-dialog {
+  max-width: 80vw !important;
+}
+
+.ModalTitle {
+  color: white; 
+}
+
+.white {
+  color: white;
+}
+
+.closeButton {
+  color: white;
+  float: right;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  font-size: 150%;
+}
+
+.modal-header {
+  background-color: rgb(36, 36, 167);
+  color: white;
+}
+
+/* Phone Website */
 
 #dropdownMenu {
   color: black;
