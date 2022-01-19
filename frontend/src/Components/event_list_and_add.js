@@ -90,7 +90,7 @@ function EventListAndAddEvent(props) {
               {events.map((index) => (
                 <tr className="hover" key={index} onClick={() => { props.seteventid(item.id); props.handlesEventInfo(item.Datum); }}>
                   <td>{item.Datum}</td>
-                  <td>{item.Tijd}</td>
+                  <td>{item.Tijd.slice(0, -7)}</td>
                   <td>{item.Titel}</td>
                   <td className="Omschrijving">{item.Omschrijving}</td>
                   <td>{item.Categorie}</td>
