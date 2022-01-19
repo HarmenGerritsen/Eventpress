@@ -14,7 +14,7 @@ function EventInfo(props, state) {
   const [events, setEvent] = useState([{}])
   const [data, setData] = useState([]);
   const getData = () => {
-    fetch('http://localhost:1337/events/'
+    fetch('http://145.89.192.115:1337/Events'
       , {
         headers: {
           'Content-Type': 'application/json',

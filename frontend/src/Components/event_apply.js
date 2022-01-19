@@ -8,7 +8,7 @@ function EventApply(props) {
 
   const handleSubmit = (e) => {
 
-    fetch('http://localhost:1337/mails', {
+    fetch('http://145.89.192.115:1337/mails', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
