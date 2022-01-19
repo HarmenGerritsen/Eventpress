@@ -16,7 +16,7 @@ function EventListAndAddEvent(props) {
   const [data, setData] = useState([]);
   //const [mail, setMail] = useState([]);
   const getData = () => {
-    fetch('http://145.89.192.115:1337/Events'
+    fetch('http://145.89.192.115:8080/Events'
       , {
         headers: {
           'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ function EventListAndAddEvent(props) {
       Niveau
     };
 
-    fetch('http://145.89.192.115:1337/Events', {
+    fetch('http://145.89.192.115:8080/Events', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newData)
