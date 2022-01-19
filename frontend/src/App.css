@@ -236,6 +236,10 @@ td {
   color: white;
 }
 
+.button {
+  margin: 1vw;
+}
+
 /* Phone Website */
 
 #dropdownMenu {
