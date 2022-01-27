@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Sidebar from "./Components/sidebar.js";
+import './App.css';
+// import Sidebar from "./Components/sidebar.js";
 import EventInfo from "./Components/event_info.js";
 import EventApply from "./Components/event_apply.js";
 import EventApplyAccepted from "./Components/event_apply_accepted.js";
@@ -40,11 +40,12 @@ function App() {
   const handleShowSuggestAccepted = () => setShowSuggestAccepted(true);
 
   const [EventID, setEventID] = useState("")
+  const [sortCat] = useState("")
 
   return (
     <div className="App">
-      <Sidebar handlecSuggestEvent={HandleCloseSuggestEvent} handlesSuggestEvent={HandleShowSuggestEvent} handlesAddEvent={handleShowAddEvent} />
-      <EventListAndAddEvent handlesEventInfo={handleShowEventInfo} seteventid={setEventID} handleshowAddEvent={showAddEvent} handlecAddEvent={handleCloseAddEvent} handlesSuggestAccepted={handleShowSuggestAccepted} />
+      {/* <Sidebar handlecSuggestEvent={HandleCloseSuggestEvent} handlesSuggestEvent={HandleShowSuggestEvent} handlesAddEvent={handleShowAddEvent} handleSorting={sortCat}/> */}
+      <EventListAndAddEvent handlecSuggestEvent={HandleCloseSuggestEvent} handlesSuggestEvent={HandleShowSuggestEvent} handlesAddEvent={handleShowAddEvent} handlesEventInfo={handleShowEventInfo} seteventid={setEventID} handleshowAddEvent={showAddEvent} handlecAddEvent={handleCloseAddEvent} handlesSuggestAccepted={handleShowSuggestAccepted} />
       <div>
         <EventInfo handleshowEventInfo={showEventInfo} EventID={EventID} handlecEventInfo={handleCloseEventInfo} handlesApply={handleShowApply} />
         <EventApply handleshowApply={showApply} handlecApply={handleCloseApply} handlesEventInfo={handleShowEventInfo} handlesApplyAccepted={handleShowApplyAccepted} />

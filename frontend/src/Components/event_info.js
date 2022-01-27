@@ -51,38 +51,38 @@ function EventInfo(props, state) {
               {events.map((index) => {
                 if (item.id === (props.EventID)) return (
                   <div className="column">
-                      <div className="leftcolumn">
-                          <div className="datetime">{item.Datum} - {item.Tijd.slice(0, -7)}</div>
-                          <br /><br />
+                    <div className="leftcolumn">
+                      <div className="datetime">{item.Datum} - {item.Tijd.slice(0, -7)}</div>
+                      <br /><br />
 
-                          <div className="subtitle">Omschrijving: </div>
+                      <div className="subtitle">Omschrijving: </div>
 
-                          <div className="Omschrijving EventInfo">{item.Omschrijving}</div>
+                      <div className="Omschrijving EventInfo">{item.Omschrijving}</div>
 
-                      </div>
-                      <div class="rightcolumn">
-                          <div className="subtitle">Categorie:  </div>
-                          <div className="EventInfo">{item.Categorie}</div>
+                    </div>
+                    <div class="rightcolumn">
+                      <div className="subtitle">Categorie:  </div>
+                      <div className="EventInfo">{item.Categorie}</div>
 
-                          <div className="subtitle">Locatie:  </div>
-                          <div className="EventInfo">{item.Locatie}</div>
+                      <div className="subtitle">Locatie:  </div>
+                      <div className="EventInfo">{item.Locatie}</div>
 
-                          <div className="subtitle">Organisator:  </div>
-                          <div className="EventInfo">{item.Organisator}</div>
+                      <div className="subtitle">Organisator:  </div>
+                      <div className="EventInfo">{item.Organisator}</div>
 
-                          <div className="subtitle">Niveau: </div>
-                          <div className="EventInfo">{item.Niveau}</div>
+                      <div className="subtitle">Niveau: </div>
+                      <div className="EventInfo">{item.Niveau}</div>
 
-                          <div className="subtitle">Persoonslimiet: </div>
-                          <div className="EventInfo">{item.Limiet}</div>
+                      <div className="subtitle">Persoonslimiet: </div>
+                      <div className="EventInfo">{item.Limiet}</div>
 
-                          <div className="subtitle mails">Inschrijvingen: </div>
-                          {item.Inschrijvingen.map((inschrijving, index) => (
-                            <li className="mails" key={index} className="EventInfo">{inschrijving.usermail}
-                            </li>))}
-                        </div>
-                      </div>
-                    
+                      <div className="subtitle mails">Inschrijvingen: </div>
+                      {item.Inschrijvingen.map((inschrijving, index) => (
+                        <li className="mails" key={index} className="EventInfo">{inschrijving.usermail}
+                        </li>))}
+                    </div>
+                  </div>
+
                 )
               }
               )}

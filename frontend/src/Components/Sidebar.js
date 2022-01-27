@@ -4,6 +4,7 @@ import plus from "../Images/Plus.png";
 import SidebarMenu from "./sidebar_menu.js";
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
+import EventListAndAddEvent from "./event_list_and_add.js";
 
 function Sidebar(props) {
 
@@ -12,10 +13,7 @@ function Sidebar(props) {
     <div className="App-header">
       <img className="logo" src={logo}></img>
       <div className="menu">
-        <button type="button" className="menuButton hide" onClick={props.handlecSuggestEvent}>Categorie</button>
-        <button type="button" className="menuButton hide" onClick={props.handlecSuggestEvent}>Niveau</button>
-        <button type="button" className="menuButton hide" onClick={props.handlecSuggestEvent}>Locatie</button>
-        <button type="button" className="menuButton hide" onClick={props.handlecSuggestEvent}>Sorteren</button>
+        <button type="button" className="menuButton hide" onClick={''}>Sorteer op Categorie</button>
         <SidebarMenu />
       </div>
       <a href="#">

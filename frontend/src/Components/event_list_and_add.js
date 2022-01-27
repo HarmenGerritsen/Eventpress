@@ -3,8 +3,14 @@ import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
-import Col from 'react-bootstrap/Col'
+import Col from 'react-bootstrap/Col';
 import moment from 'moment';
+import logo from "../Images/logo.png";
+import plus from "../Images/Plus.png";
+import SidebarMenu from "./sidebar_menu.js";
+import DropdownButton from 'react-bootstrap/DropdownButton'
+import Dropdown from 'react-bootstrap/Dropdown'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
 
 function EventListAndAddEvent(props) {
 
@@ -12,15 +18,15 @@ function EventListAndAddEvent(props) {
     window.location.reload(false);
   }
 
-  const [events] = useState([{}])
+  const [events, setevents] = useState([{}])
   const [data, setData] = useState([]);
-  //const [mail, setMail] = useState([]);
   const getData = () => {
     fetch('http://localhost:1337/events/'
       , {
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
+          'Accept': 'application/json',
+
         }
       }
     )
@@ -32,6 +38,25 @@ function EventListAndAddEvent(props) {
       })
   }
   useEffect(() => { getData() }, [])
+
+  const [order, setorder] = useState("ASC");
+
+  const sorting = (col) => {
+    if (order === "ASC") {
+      const sorted = [...data].sort((a, b) =>
+        a[col].toLowerCase() > b[col].toLowerCase() ? 1 : -1
+      );
+      setData(sorted)
+      setorder("DSC")
+    }
+    if (order === "DSC") {
+      const sorted = [...data].sort((a, b) =>
+        a[col].toLowerCase() < b[col].toLowerCase() ? 1 : -1
+      );
+      setData(sorted)
+      setorder("ASC")
+    }
+  };
 
   const [Datum, setDatum] = useState('');
   const [Tijd, setTijd] = useState('');
@@ -71,7 +96,7 @@ function EventListAndAddEvent(props) {
   }
 
   return (
-    <div>
+    <div className="body">
       <div className="Table">
         <Table className="table table-borderless">
           <thead>
@@ -80,7 +105,7 @@ function EventListAndAddEvent(props) {
               <th>Tijd</th>
               <th>Titel</th>
               <th className="Omschrijving">Omschrijving</th>
-              <th>Categorie</th>
+              <th onClick={() => sorting("Categorie")}>Categorie</th>
               <th>Locatie</th>
               <th>Organisator</th>
             </tr>
@@ -89,7 +114,7 @@ function EventListAndAddEvent(props) {
             <tbody>
               {events.map((index) => (
                 <tr className="hover" key={index} onClick={() => { props.seteventid(item.id); props.handlesEventInfo(item.Datum); }}>
-                  <td>{item.Datum}</td>
+                  <td>{moment(item.Datum).format("DD/MM/YYYY")}</td>
                   <td>{item.Tijd.slice(0, -7)}</td>
                   <td>{item.Titel}</td>
                   <td className="Omschrijving">{item.Omschrijving}</td>
@@ -104,6 +129,9 @@ function EventListAndAddEvent(props) {
           )}
         </Table>
       </div>
+
+      {/* Event Aanmaken */}
+
       <div>
         <Modal show={props.handleshowAddEvent} onHide={props.handlecAddEvent}>
           <Modal.Header className="modal-header">
@@ -151,7 +179,6 @@ function EventListAndAddEvent(props) {
                         type="title"
                         placeholder="Locatie van event..." />
                       <Form.Control.Feedback type="invalid" />
-
                     </Form.Group>
                   </Col>
                 </Row>
@@ -259,6 +286,7 @@ function EventListAndAddEvent(props) {
                   className="submitButton">
                   Aanmaken
                 </button>
+
               </form>
             </div>
           </Modal.Body>
@@ -268,7 +296,41 @@ function EventListAndAddEvent(props) {
             <br />
             <p className="white">.</p>
           </Modal.Footer>
+
         </Modal>
+      </div>
+      <div className="App-header">
+        <img className="logo" src={logo}></img>
+        <div className="menu">
+          {/* {['start'].map((direction) => (
+            <DropdownButton
+              className="menuButton hide"
+              key={direction}
+              id={`dropdown-button-drop-${direction}`}
+              drop={direction}
+              title={` Sorteren `}
+              type="button"
+            >
+              <Dropdown.Item eventKey="1" onClick={() => sorting("Categorie")}>Categorie</Dropdown.Item>
+              <Dropdown.Item eventKey="2" onClick={() => sorting("Locatie")}>Locatie</Dropdown.Item>
+              <Dropdown.Item eventKey="3" onClick={() => sorting("Organisator")}>Organisator</Dropdown.Item>
+            </DropdownButton>
+          ))} */}
+          <div class="dropdown">
+            <button class="menuButton">Sorteren</button>
+            <div class="dropdown-content">
+              <p className="sorterenTitle">Sorteren op:</p>
+              <a href="#" onClick={() => sorting("Categorie")}>Categorie</a>
+              <a href="#" onClick={() => sorting("Locatie")}>Locatie</a>
+              <a href="#" onClick={() => sorting("Organisator")}>Organisator</a>
+            </div>
+          </div>
+          <SidebarMenu />
+        </div>
+        <a href="#">
+          <img className="plus plus2" onClick={props.handlesAddEvent} src={plus} alt=''></img>
+        </a>
+        {/* <button type="button" className="requestButton" onClick={props.handlesSuggestEvent}><div className="hide">Evenement<br /></div>suggereren</button> */}
       </div>
     </div>
   );

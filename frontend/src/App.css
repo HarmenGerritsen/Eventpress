@@ -7,6 +7,12 @@
   font-family: Gill Sans, sans-serif;
 }
 
+.body {
+  justify-content:space-between;
+  display: flex;
+  flex: row;
+}
+
 /* Sidebar */
 
 .logo {
@@ -27,13 +33,14 @@
   width: 20vw;
   position: fixed;
   left: 80vw;
+
 }
 
 .plus {
   width: 8vw;
   color: white;
   height: auto;
-  margin-top: 5vh;
+  margin-top: 10vh;
   padding: 15%;
   border: 5px solid rgb(59, 59, 129);
   background-color: rgb(27, 27, 90);
@@ -51,7 +58,7 @@
 .menu {
   display: block;
   align-items: center;
-  margin: 1vh 5vw 1vh 5vw;
+  margin: 5vh 5vw 1vh 5vw;
 }
 
 .requestButton {
@@ -66,6 +73,13 @@
   margin-top: 15vh;
 }
 
+figcaption {
+  position: absolute;
+  font-size: 1.5vw;
+  color: white;
+  padding: 0.1% 0.5%;
+}
+
 .menuButton {
   background-color: white;
   font-size: 75%;
@@ -77,11 +91,53 @@
   margin-top: 7%;
 }
 
-figcaption {
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.dropdown-content {
+  display: none;
   position: absolute;
-  font-size: 1.5vw;
-  color: white;
-  padding: 0.1% 0.5%;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 150%;
+  width: 10vw;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 50%;
+  width: 10vw;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;
+  border-radius: 10px;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  border-radius: 10px;
+  
+}
+
+.dropdown:hover .menuButton {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}
+
+.sorterenTitle{
+  color: black;
+  background-color: rgb(211, 211, 211);
+  font-size: 50%;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 /* Event Aanmaken */
@@ -113,6 +169,8 @@ figcaption {
   padding: 1vh 1vw;
   border-radius: 1rem;
 }
+
+
 
 /* Event Info */
 
@@ -194,6 +252,10 @@ td {
 .EventInfo {
   font-size: 200%;
   font-weight: 100;
+}
+
+.hiddenTable {
+  display: none;
 }
 
 /* Event Suggest */
